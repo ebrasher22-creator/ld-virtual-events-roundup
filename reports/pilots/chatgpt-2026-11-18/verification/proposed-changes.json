@@ -1,0 +1,18 @@
+{
+  "after": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-intro-to-facilitating-groups-the-basics-b272120c",
+  "application_note": "Apply only through an authorized canonical resolution or initial ingestion workflow. Preserve original event identity and raw provenance; recompute hash after resolution and assignment. Appending an updated intake record without resolution can flag a registration_url conflict.",
+  "before": "https://www.leadstrat.com/services/facilitation-webinars/",
+  "canonical_modified": false,
+  "field": "registration_url",
+  "independently_human_verified": false,
+  "preview_event_id": "evt_a63bc389a99b233d",
+  "raw_intake_modified": false,
+  "reason": "Replace shared webinar index with user-supplied, organizer-linked session destination.",
+  "requested_by": "user",
+  "source_ids": [
+    "S1",
+    "S8"
+  ],
+  "status": "proposed_only_not_applied",
+  "title": "Intro to Facilitating Groups: The Basics"
+}

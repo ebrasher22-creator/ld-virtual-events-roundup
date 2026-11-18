@@ -1,0 +1,69 @@
+{
+  "method": "Web tool text extraction, including cached crawls; no registrations submitted. These are assistant observations, not human verification.",
+  "observed_at": "2026-11-18T19:25:49Z",
+  "sources": [
+    {
+      "id": "S1",
+      "limits": "Registration forms not readable; dates may change; both descriptions promote related services, so human must assess learning value.",
+      "observed": "Organizer lists Dec 1 and Dec 10, 2026 at 1 PM ET as upcoming, free and live online; links both sessions to Contrast.",
+      "retrieval": "source text retrieved; cache described as crawled yesterday",
+      "url": "https://www.leadstrat.com/services/facilitation-webinars/"
+    },
+    {
+      "id": "S2",
+      "limits": "Event date lacks explicit year. 2026 research, footer and other event dates are contextual clues, not confirmation. Submission, attendance access and live status not tested.",
+      "observed": "iSpring event page shows Dec 2 at 10 AM EST, one hour, free, speaker details, learning outcomes and a registration form.",
+      "retrieval": "source text retrieved; cache described as crawled 2 days ago",
+      "url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+    },
+    {
+      "id": "S3",
+      "limits": "Form submission, capacity and current cancellation status not tested; human must confirm this is a scheduled live session.",
+      "observed": "Langevin lists Dec 2, 2026, 11 AM–noon ET, Adobe Connect, free, learning outcomes and a registration form with a session date option.",
+      "retrieval": "source text retrieved; cache described as crawled last week",
+      "url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+    },
+    {
+      "id": "S4",
+      "limits": "No independent page text retrieved. All supplied claims still need human source inspection; tool error does not prove event cancellation or site failure.",
+      "observed": null,
+      "retrieval": "tool access error on both www and bare-host versions",
+      "url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+    },
+    {
+      "id": "S5",
+      "limits": "No event-specific free-price statement found. Registration control returned to the same page. Multi-session duration/access, actual destination and current availability need confirmation.",
+      "observed": "Training Industry lists Dec 3, 2026 at 11 AM ET, an agenda with multiple sessions, and learning-experience topics.",
+      "retrieval": "source text retrieved; cache described as crawled 4 days ago",
+      "url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+    },
+    {
+      "id": "S6",
+      "limits": "No event-specific free-price statement found. Zoom destination yielded no readable registration details; live access and submission were not tested.",
+      "observed": "Training Industry lists Dec 8, 2026 at 11 AM ET, panel topics and a Zoom Events registration link.",
+      "retrieval": "source text retrieved; cache described as crawled today",
+      "url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+    },
+    {
+      "id": "S7",
+      "limits": "Form availability, zero-price enrollment and successful registration untested.",
+      "observed": "Organizer link resolves to the Planning Sprint Contrast URL, with tracking parameters.",
+      "retrieval": "direct open tool error; organizer-link follow yielded event title but zero readable content lines",
+      "url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint"
+    },
+    {
+      "id": "S8",
+      "limits": "Destination corroborated as organizer-linked; actual form, date/time details and enrollment untested.",
+      "observed": "Organizer session link points to the user-provided Intro to Facilitating Groups URL, with tracking parameters.",
+      "retrieval": "direct open tool error; organizer-link follow yielded event title but zero readable content lines",
+      "url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-intro-to-facilitating-groups-the-basics-b272120c"
+    },
+    {
+      "id": "S9",
+      "limits": "No readable price, availability or registration form; link may change. Not proposed as a canonical correction here.",
+      "observed": "Destination linked by Training Industry for AI in the Flow of Work.",
+      "retrieval": "organizer-link follow produced a page title and an analytics iframe only",
+      "url": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA"
+    }
+  ]
+}

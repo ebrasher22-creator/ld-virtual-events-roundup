@@ -1,0 +1,15 @@
+{
+  "official_original_intake_validator": "passed",
+  "official_proposed_records_validator": "passed",
+  "regression_tests_passed": 14,
+  "regression_tests_failed": 0,
+  "synthetic_smoke": "passed",
+  "human_ledger_templates": 7,
+  "eligible_with_draft_ledger": 0,
+  "rw49_candidates": 5,
+  "verified": 0,
+  "selected": 0,
+  "original_data_matches_prior_pilot_hashes": true,
+  "canonical_and_actual_ledger_modified": false,
+  "registration_or_personal_data_submitted": false
+}
