@@ -44,21 +44,55 @@ Prioritize discovering high-signal, practitioner-relevant events across the foll
 
 ### Cross-Stream Overlap Policy
 
-- **Search beyond the existing source registry.** Do not restrict searches to `config/sources.yml`.
-- **Maintain intentional overlap with ChatGPT's independent research stream.** If ChatGPT also discovers an event, `scripts/ingest.py` deterministically consolidates matching submissions and preserves provenance from both streams.
+- **Complement ChatGPT's Research Stream:** Emphasize learning technology platforms, AI in learning, instructional design tools, HR technology, leadership/OD consulting, learning analytics, and practitioner workshops to broaden overall discovery coverage.
+- **Search Independently:** Never consult ChatGPT's raw intake or previously identified event titles before completing independent research.
+- **Search Beyond the Registry:** Expand beyond `config/sources.yml` whenever a credible, relevant event source is discovered.
+- **Intentional Overlap Is Acceptable:** The GitHub consolidation pipeline (`scripts/ingest.py`), not the research stage, compares and consolidates discoveries from both agents while preserving provenance from both streams.
 
 ---
 
-## 3. Source Discovery
+## 3. Source Discovery and Staged Research Workflow
 
-1. **Initial Source Directory (`config/sources.yml`):**
-   - Use `config/sources.yml` as the starting directory of research leads (`learning`, `leadership`, `research`, and `thought_leader` categories).
-   - **Important:** `config/sources.yml` is a lead list, **not** an allowlist and **not** proof of active event publication. Most entries intentionally have `"url": null` and require independent web discovery to locate current event calendars and registration pages.
+### 3.1 Treat the Source Registry as a Discovery Guide, Not a Checklist
+
+1. **Reference Directory (`config/sources.yml`):**
+   - Treat `config/sources.yml` as a reference directory of research leads (`learning`, `leadership`, `research`, and `thought_leader` categories), **not** a checklist of websites that must all be opened or visited on every run.
+   - Do not browse every organization merely because it appears in the registry, and do not open multiple unrelated homepages when focused searches can identify relevant event pages more efficiently.
+   - `config/sources.yml` is neither an allowlist nor proof of active event publication; most entries intentionally have `"url": null`.
 2. **Expand Beyond the Directory:**
-   - Proactively search beyond `config/sources.yml` when credible L&D, AI-in-learning, HR tech, or leadership organizations publish relevant live virtual events.
+   - Use focused web searches and promising source calendars to find events occurring in the target publication window, expanding beyond `config/sources.yml` whenever credible organizations host relevant live virtual sessions.
 3. **Source Recommendations (Read-Only Registry):**
-   - Record newly discovered, credible organizations and event hubs in the run's **Source Coverage Report** as recommendations for future inclusion.
+   - Record newly discovered, credible organizations and event hubs in the run's **Research Effectiveness & Source Coverage Report** as recommendations for future inclusion.
    - **Do not modify `config/sources.yml`** without explicit repository-owner approval.
+
+### 3.2 Research Effort Allocation (70 / 20 / 10 Planning Guideline)
+
+Prioritize producing a strong collection of eligible target-week events before conducting extensive research into later months:
+
+- **~70% Target Week:** Focus primary search and page-inspection effort on events occurring during the immediate target roundup week (for the pilot: November 29 through December 5, 2026, `RW49`, with `as_of=2026-11-24`).
+- **~20% Later Confirmed Events:** Retain and verify high-quality future events discovered for subsequent weeks rather than conducting exhaustive multi-month calendar sweeps ahead of target-week coverage.
+- **~10% New Source Discovery:** Identify and evaluate promising new event organizers, practitioner communities, and webinar calendars beyond the existing registry.
+
+*(These percentages are planning guidelines rather than rigid restrictions.)*
+
+### 3.3 Staged Research Process (Stages A–E)
+
+Conduct discovery in five disciplined stages to maximize coverage while minimizing unnecessary browsing:
+
+- **Stage A — Targeted Search:** Run focused web queries combining target dates, virtual event formats (`webinar`, `virtual workshop`, `online conference`, `live session`), and priority L&D / AI / leadership / learning-technology topics or organizers.
+- **Stage B — Candidate Screening:** Screen search results for practitioner relevance, confirmed event dates (verifying the exact year, e.g., 2026 vs. 2025), live virtual availability, and presence of registration information before opening pages in the browser.
+- **Stage C — Selective Primary-Page Inspection:** Inspect original event pages and registration destinations for promising screened candidates to verify mandatory fields and capture verbatim evidence excerpts.
+- **Stage D — Structured JSON Intake:** Prepare schema-compliant JSON records in `intake/gemini/gemini-YYYY-MM-DD.json` only for candidates with all 16 mandatory fields supported by primary-source evidence.
+- **Stage E — Incomplete Lead Reporting:** Document promising leads that lack a confirmed start time, IANA timezone, or accessible registration destination (or that were blocked by site access controls) in a separate follow-up section of the research report.
+
+### 3.4 Selective and Safe Browser Usage
+
+- **Practical Inspection Budget:** Use browser research selectively on screened, high-priority candidates rather than opening large unprioritized batches of homepages. Begin with a practical budget of approximately **15 to 20 high-priority primary event-page inspections** per run, adjusting as needed based on result quality.
+- **Handling Access Controls, Redirects, and Bot Checks:** When encountering cross-domain redirects requiring new permissions, Cloudflare challenges, CAPTCHAs, or HTTP `403` / `429` responses:
+  - **Do not** attempt to bypass access controls, security checkpoints, or bot challenges.
+  - **Do not** repeatedly retry the same blocked page.
+  - **Do not** automatically approve new browser permissions or broaden site access without authorization.
+  - Document the restriction clearly, preserve the candidate as an incomplete/follow-up lead when appropriate, and move immediately to the next promising source.
 
 ---
 
@@ -186,18 +220,21 @@ Every intake file must conform **exactly** to [schemas/event-discovery.schema.js
 
 ## 8. Validation and Reporting Requirements
 
-Every discovery run **must** produce and present all seven of the following outputs:
+Every discovery run **must** produce and present all of the following outputs (without comparing findings against ChatGPT's intake until the independent research dataset has been finalized):
 
 1. **Structured JSON intake:** `intake/gemini/gemini-YYYY-MM-DD.json` (or locally staged `gemini-YYYY-MM-DD.json` if repo writes are unavailable).
-2. **Research summary:** High-level overview of themes, event quality, and notable discoveries.
-3. **Source coverage report:**
-   - Which leads from `config/sources.yml` were checked
-   - Which sources beyond `config/sources.yml` were searched
-   - Recommended new organizations/URLs for future inclusion in `config/sources.yml` (without editing `config/sources.yml`)
-4. **Schema validation results:** Exact validation command(s) executed and observed pass/fail output.
-5. **Event counts:** Count of valid events discovered for the target week (e.g., `RW49`) and count of valid events retained for future weeks.
-6. **Excluded or incomplete leads:** List of candidate events excluded from machine intake and the specific missing mandatory field(s) (e.g., missing start time, ambiguous timezone, missing registration URL) for human follow-up.
-7. **Repository handoff status:** Branch name, commit SHA, and PR/comparison link if pushed; or explicit manual handoff instructions if repository writes were unavailable.
+2. **Research summary & effectiveness report:**
+   - Total number of event candidates discovered
+   - Number of candidates with sufficient primary-source information for JSON intake
+   - Target-week (`RW49` for the pilot) vs. future-week event counts
+   - Primary sources directly inspected
+   - Source categories represented (`learning`, `leadership`, `research`, `thought_leader`, and newly discovered categories/sources)
+   - Incomplete or inaccessible leads preserved for human follow-up (distinguishing primary-page-verified candidates from leads needing additional investigation)
+   - Browser or access restrictions encountered (e.g., HTTP 403/429, Cloudflare, cross-domain redirect permissions)
+   - New source recommendations for future inclusion in `config/sources.yml` (without editing `config/sources.yml`)
+   - Approximate research effort allocation spent on the target week versus future weeks and new source discovery (targeting ~70% / ~20% / ~10%)
+3. **Schema validation results:** Exact validation command(s) executed (`python3 scripts/validate.py`, unit tests, isolated week-assignment verification) and observed pass/fail output.
+4. **Repository handoff status:** Branch name, commit SHA, and PR/comparison readiness; or explicit manual handoff instructions if repository writes were unavailable.
 
 > **Truthfulness Rule:** Never claim that schema validation, unit tests, Git commits, or PR submissions succeeded unless they were actually executed and verified in tool output.
 
