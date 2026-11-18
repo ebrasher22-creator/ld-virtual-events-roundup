@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "compact_caption": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "editorial_input_sha256": {
+      "type": "string"
+    },
+    "format_version": {
+      "enum": [
+        1
+      ],
+      "type": "number"
+    },
+    "full_caption": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "roundup_identifier": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "format_version",
+    "roundup_identifier",
+    "editorial_input_sha256",
+    "full_caption",
+    "compact_caption"
+  ],
+  "type": "object"
+}

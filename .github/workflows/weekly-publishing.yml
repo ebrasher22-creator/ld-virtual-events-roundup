@@ -7,6 +7,11 @@ on:
         required: false
         default: '2026-11-24'
         type: string
+      draft_path:
+        description: 'Optional owner-uploaded JSON under editorial-drafts/ to validate (no unattended Work write assumed)'
+        required: false
+        default: ''
+        type: string
 # Recurrence deliberately inactive. After owner approval, remove the fixed pilot default,
 # enable config/schedule.yml, add UTC cron entries for 12:00 and 13:00 Wednesdays,
 # and use the America/Chicago guard to run only the matching 07:00 local window.
@@ -57,6 +62,23 @@ jobs:
           if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
           if [[ "$EVENT_NAME" == schedule ]]; then args+=(--scheduled); fi
           python scripts/prepare_wednesday.py "${args[@]}"
+      - name: Validate returned Work editorial draft
+        if: steps.gate.outputs.run == 'true' && inputs.draft_path != ''
+        env:
+          DRAFT_PATH: ${{ inputs.draft_path }}
+          AS_OF: ${{ inputs.as_of }}
+        shell: bash
+        run: |
+          args=()
+          if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
+          python scripts/validate_editorial_drafts.py "${args[@]}" -- "$DRAFT_PATH"
+      - name: Upload Work validation report
+        if: always() && inputs.draft_path != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: work-editorial-validation
+          path: reports/work-editorial/
+          if-no-files-found: error
       - name: Upload review artifacts (including editorial exceptions)
         if: always() && steps.gate.outputs.run == 'true'
         uses: actions/upload-artifact@v4

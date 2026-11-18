@@ -15,7 +15,7 @@ https://www.ispringsolutions.com/webinars/l-d-as-a-conductor
 Renovate Your Instructional Design Process: A Blueprint for Success
 Langevin Learning Services
 Wed, Dec 2, 2026 | 10:00 AM CST
-https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226
+https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/
 
 Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members
 Greater Rochester Quality Council
@@ -25,7 +25,7 @@ https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and
 [Leader Talk] The 2027 Learning Experience
 Training Industry
 Thu, Dec 3, 2026 | 10:00 AM CST
-https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience
+https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/
 
 Which sessions are on your calendar? Share another worthwhile learning opportunity below.
 

@@ -5,7 +5,7 @@ import os
 import subprocess
 from pathlib import Path
 from pipeline import (ROOT, CENTRAL, read, write, dt, week, target, fingerprint,
-                      approval_problem, confirmed_price_label)
+                      approval_problem, confirmed_price_label, editorial_registration_url)
 
 
 def source_commit(root):
@@ -26,7 +26,7 @@ def render_events(events, reviews, include_descriptions):
         lines=[e['title'],e['organizer'],time+(f' | {label}' if label else '')]
         if e['event_format']=='hybrid': lines[-1]+=' | Hybrid (virtual access)'
         if include_descriptions: lines.append(e['summary'])
-        lines.append(e['registration_url'])
+        lines.append(editorial_registration_url(e))
         blocks.append('\n'.join(lines))
     return '\n\n'.join(blocks)
 
@@ -110,6 +110,8 @@ def generate_week(root=ROOT, day=None, generated_at=None):
                 publication_approval_status='awaiting_final_human_review',workflow_run_url=run_url,artifact_relative_path='weeks/'+label,editorial_exceptions=exceptions,approval_blockers=blockers,caption_strategy=strategy)
     folder=root/'weeks'/label
     folder.mkdir(parents=True,exist_ok=True)
+    from editorial_input import export_input
+    export_input(root,day)
     (folder/'linkedin-post.md').write_text(full)
     (folder/'linkedin-post-compact.md').write_text(compact)
     write(folder/'editorial-report.json',report)
@@ -145,7 +147,11 @@ Optional pricing omitted for {len(report['missing_optional_pricing'])} events.
 
 Download the Wednesday Actions artifact, or open this repository folder. Attach this file, the selected draft and editorial report to the intended Jarvis briefing/chat. Paste the exact caption below if attachment access is unavailable. Include the workflow run/artifact link when available; repository paths alone do not grant Jarvis access. No automatic Jarvis connection or duplicate briefing task was created. Final posting remains manual.
 
-## LinkedIn draft
+## Primary Work editorial handoff
+
+Use editorial-input.json with agents/linkedin-editor-work.md for community-centered editorial writing. The caption below is the deterministic fallback, not a completed ChatGPT Work draft. Validate returned work-submission.json before sharing it as a mechanically validated candidate. No Work task was scheduled.
+
+## Deterministic fallback draft
 
 {full}'''
     (folder/'jarvis-handoff.md').write_text(handoff)

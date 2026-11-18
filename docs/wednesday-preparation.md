@@ -1,5 +1,7 @@
 # Wednesday LinkedIn preparation and Jarvis handoff
 
+The primary creative editor is now ChatGPT Work; this document describes deterministic preparation/fallback. See [Work editorial exchange and handoff](work-editorial-handoff.md) for the current primary authoring path.
+
 ## Current pilot
 
 The repository owner explicitly approved all seven events in the attached implementation request. The exact request is preserved in `approvals/2026-11-18-owner-wednesday-authorization.md`. Each event's review binds the source-file SHA-256, the verbatim approval statement and the final canonical record SHA-256. No per-event observations or historic verification time were invented: `claims` is empty and `verified_at` / `last_verified_at` are null. `attestation.recorded_at` is when the decision was recorded, not when source pages were checked. All seven are fact-approved and editorially selected for their own assigned weeks, but the final caption is not publication-approved.

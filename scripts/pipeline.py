@@ -33,6 +33,15 @@ def url(value):
     query = sorted((k,v) for k,v in parse_qsl(p.query) if not k.lower().startswith('utm_') and k.lower() not in {'fbclid','gclid'})
     return urlunsplit((p.scheme.lower(),p.netloc.lower(),p.path.rstrip('/') or '/',urlencode(query),''))
 
+def editorial_registration_url(e):
+    """Preserve an approved original spelling; never undo a resolved destination change."""
+    submissions=sorted(e.get('submissions',[]),key=lambda s:(s.get('raw',{}).get('discovered_at',''),s.get('file',''),s.get('sha256','')))
+    for submission in submissions:
+        original=submission.get('raw',{}).get('registration_url')
+        if original and url(original)==url(e['registration_url']): return original
+    return e['registration_url']
+
+
 def dt(value):
     if not isinstance(value,str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})',value):
         raise ValueError('RFC3339 timestamp with explicit offset required')

@@ -1,0 +1,255 @@
+{
+  "as_of": "2026-11-24",
+  "blocking_selected_record_count": 0,
+  "brand": {
+    "audience": "Learning and development professionals, instructional designers, learning leaders and people-development practitioners",
+    "name": "Next Week in L&D",
+    "suggested_hashtags": [
+      "#LearningAndDevelopment",
+      "#InstructionalDesign",
+      "#ContinuousLearning"
+    ],
+    "voice": [
+      "professional and conversational",
+      "community-centered",
+      "credible",
+      "specific without sales hype"
+    ]
+  },
+  "constraints": {
+    "character_limit": 3000,
+    "creative_scope": [
+      "varied audience-centered hook",
+      "themes grounded in supplied summaries and topics",
+      "brief professional reflection, never invented personal experience",
+      "authentic participation CTA"
+    ],
+    "eligibility": "Fixed by Python; no additions, omissions, swaps or future-week padding.",
+    "factual_prose_rule": "Do not repeat or add dates, clock times, timezone tokens, prices, numeric claims or URLs outside the required heading/fact blocks.",
+    "maximum_hashtags": 3,
+    "original_urls": "Use registration_url exactly; no shortened URLs, rewritten paths or extra links.",
+    "preserve_event_order": true,
+    "pricing": "Use price_label only when present in a required fact block; otherwise omit price claims.",
+    "publication": "Human final approval and manual posting only; validation is not publication approval.",
+    "required_event_count": 5,
+    "required_fact_blocks": "Copy each block exactly once, in order, with blank lines separating it from other prose.",
+    "unsupported_claims": "No new speakers, guarantees, personal anecdotes, statistics, scarcity, endorsements or outcomes; semantic accuracy still requires human review."
+  },
+  "editorial_advisories": {
+    "below_target": true,
+    "minimum_is_not_a_gate": true,
+    "target_max": 12,
+    "target_min": 8
+  },
+  "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "events": [
+    {
+      "audience": [
+        "Facilitators",
+        "Leadership development professionals",
+        "Organizational development consultants"
+      ],
+      "canonical_registration_url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+      "central_timezone": "CST",
+      "cost_original": null,
+      "end_datetime": "2026-12-01T14:00:00-05:00",
+      "event_format": "virtual",
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+      "human_approval": "current",
+      "language": "English",
+      "organizer": "Leadership Strategies",
+      "organizer_url": null,
+      "original_registration_urls": [
+        "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint"
+      ],
+      "price_label": null,
+      "price_type_original": "free",
+      "record_sha256": "6f45e3359d8a6c66f3bbcf0e0c9ea14400d9d4210e7efde7b620b8eaf89d7acf",
+      "registration_url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+      "required_fact_block": "2027 Planning Sprint\nLeadership Strategies\nTue, Dec 1, 2026 | 12:00 PM CST\nhttps://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+      "source_urls": [
+        "https://www.leadstrat.com/services/facilitation-webinars/"
+      ],
+      "start_central": "2026-12-01T12:00:00-06:00",
+      "start_datetime": "2026-12-01T13:00:00-05:00",
+      "summary": "Live strategy-planning workshop with Michael Wilkinson focused on prioritization and using the Drivers Model to move from strategy to implementation.",
+      "summary_grounding": "Exact summary from the current human-approved canonical record; no additional outcomes inferred.",
+      "timezone": "America/New_York",
+      "title": "2027 Planning Sprint",
+      "topics": [
+        "Strategic planning",
+        "Facilitation",
+        "Leadership"
+      ]
+    },
+    {
+      "audience": [
+        "L&D leaders",
+        "Instructional designers",
+        "Learning evaluation professionals"
+      ],
+      "canonical_registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+      "central_timezone": "CST",
+      "cost_original": null,
+      "end_datetime": "2026-12-02T11:00:00-05:00",
+      "event_format": "virtual",
+      "event_id": "evt_3f2f090963c7e1d0",
+      "event_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+      "human_approval": "current",
+      "language": "English",
+      "organizer": "iSpring",
+      "organizer_url": null,
+      "original_registration_urls": [
+        "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+      ],
+      "price_label": null,
+      "price_type_original": "free",
+      "record_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+      "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+      "required_fact_block": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities\niSpring\nWed, Dec 2, 2026 | 9:00 AM CST\nhttps://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+      "source_urls": [
+        "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+      ],
+      "start_central": "2026-12-02T09:00:00-06:00",
+      "start_datetime": "2026-12-02T10:00:00-05:00",
+      "summary": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+      "summary_grounding": "Exact summary from the current human-approved canonical record; no additional outcomes inferred.",
+      "timezone": "America/New_York",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+      "topics": [
+        "Learning ROI",
+        "AI in L&D",
+        "Stakeholder alignment"
+      ]
+    },
+    {
+      "audience": [
+        "Instructional designers",
+        "Trainers",
+        "L&D professionals"
+      ],
+      "canonical_registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226",
+      "central_timezone": "CST",
+      "cost_original": null,
+      "end_datetime": "2026-12-02T12:00:00-05:00",
+      "event_format": "virtual",
+      "event_id": "evt_1b02f4289e55abe4",
+      "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+      "human_approval": "current",
+      "language": "English",
+      "organizer": "Langevin Learning Services",
+      "organizer_url": null,
+      "original_registration_urls": [
+        "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      ],
+      "price_label": null,
+      "price_type_original": "free",
+      "record_sha256": "25d07b2e776b43b4b7082e9a573dc34c45f1d49e9163e669b1544cafe3b58fe7",
+      "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+      "required_fact_block": "Renovate Your Instructional Design Process: A Blueprint for Success\nLangevin Learning Services\nWed, Dec 2, 2026 | 10:00 AM CST\nhttps://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+      "source_urls": [
+        "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      ],
+      "start_central": "2026-12-02T10:00:00-06:00",
+      "start_datetime": "2026-12-02T11:00:00-05:00",
+      "summary": "Marsha Weisleder reviews practical steps for planning instructional design, analyzing learners, categorizing content and designing assessments.",
+      "summary_grounding": "Exact summary from the current human-approved canonical record; no additional outcomes inferred.",
+      "timezone": "America/New_York",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+      "topics": [
+        "Instructional design",
+        "Learner analysis",
+        "Assessment"
+      ]
+    },
+    {
+      "audience": [
+        "Leadership development professionals",
+        "People managers",
+        "Organizational development professionals"
+      ],
+      "canonical_registration_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+      "central_timezone": "CST",
+      "cost_original": null,
+      "end_datetime": "2026-12-02T13:00:00-05:00",
+      "event_format": "virtual",
+      "event_id": "evt_7c9ea52644b1eb38",
+      "event_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+      "human_approval": "current",
+      "language": "English",
+      "organizer": "Greater Rochester Quality Council",
+      "organizer_url": null,
+      "original_registration_urls": [
+        "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+      ],
+      "price_label": null,
+      "price_type_original": "free",
+      "record_sha256": "4e1f30b2f196f686c2f767f1e7ca8140e0c8eef9517811c74a1f95ae8ade8d3a",
+      "registration_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+      "required_fact_block": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members\nGreater Rochester Quality Council\nWed, Dec 2, 2026 | 11:00 AM CST\nhttps://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+      "source_urls": [
+        "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+      ],
+      "start_central": "2026-12-02T11:00:00-06:00",
+      "start_datetime": "2026-12-02T12:00:00-05:00",
+      "summary": "Samantha Koury introduces trauma-informed approaches to difficult performance conversations, including sample dialogue and practical support tools.",
+      "summary_grounding": "Exact summary from the current human-approved canonical record; no additional outcomes inferred.",
+      "timezone": "America/New_York",
+      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+      "topics": [
+        "Trauma-informed leadership",
+        "Coaching",
+        "Accountability"
+      ]
+    },
+    {
+      "audience": [
+        "L&D leaders",
+        "Learning experience designers",
+        "Learning technology leaders"
+      ],
+      "canonical_registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience",
+      "central_timezone": "CST",
+      "cost_original": null,
+      "end_datetime": null,
+      "event_format": "virtual",
+      "event_id": "evt_5b0c2b55e8407e36",
+      "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+      "human_approval": "current",
+      "language": "English",
+      "organizer": "Training Industry",
+      "organizer_url": null,
+      "original_registration_urls": [
+        "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      ],
+      "price_label": null,
+      "price_type_original": "free",
+      "record_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+      "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+      "required_fact_block": "[Leader Talk] The 2027 Learning Experience\nTraining Industry\nThu, Dec 3, 2026 | 10:00 AM CST\nhttps://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+      "source_urls": [
+        "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      ],
+      "start_central": "2026-12-03T10:00:00-06:00",
+      "start_datetime": "2026-12-03T11:00:00-05:00",
+      "summary": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+      "summary_grounding": "Exact summary from the current human-approved canonical record; no additional outcomes inferred.",
+      "timezone": "America/New_York",
+      "title": "[Leader Talk] The 2027 Learning Experience",
+      "topics": [
+        "Learning experience",
+        "Learning technology",
+        "AI"
+      ]
+    }
+  ],
+  "export_status": "ready",
+  "format_version": 1,
+  "required_heading": "Next Week in L&D | 2026-11-29 to 2026-12-05",
+  "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
+  "source_versions": {
+    "canonical_sha256": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+    "reviews_sha256": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934"
+  }
+}

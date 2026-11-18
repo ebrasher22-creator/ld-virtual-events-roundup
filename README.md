@@ -4,6 +4,10 @@ A GitHub-based event discovery intake, canonical record and LinkedIn preparation
 
 The current implementation is on `review/chatgpt-2026-11-18-pilot`. The temporary remote default remains `feature/github-event-pipeline`; no merge/default promotion has been authorized. See [branch strategy](docs/branch-strategy.md).
 
+## Primary Work editorial agent and deterministic fallback
+
+ChatGPT Work owns creative framing, grounded themes, professional storytelling and community engagement. Python owns eligibility and facts, exports `editorial-input.json`, and mechanically validates the returned captions. Python full/compact captions remain the fallback. See [Work handoff and validation](docs/work-editorial-handoff.md) and [agent instructions](agents/linkedin-editor-work.md). No Work task is scheduled; returned JSON enters through an owner-mediated file upload, never an assumed unattended GitHub write.
+
 ## Wednesday pilot
 
 ```sh

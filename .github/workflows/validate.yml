@@ -19,8 +19,15 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python scripts/validate.py
       - run: python scripts/smoke.py
+      - run: python scripts/validate_editorial_drafts.py
       - uses: actions/upload-artifact@v4
         with:
           name: synthetic-smoke-evidence
           path: tests/smoke-output/
           if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: work-editorial-validation
+          path: reports/work-editorial/
+          if-no-files-found: ignore

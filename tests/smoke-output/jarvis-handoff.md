@@ -14,7 +14,11 @@ Optional pricing omitted for 0 events.
 
 Download the Wednesday Actions artifact, or open this repository folder. Attach this file, the selected draft and editorial report to the intended Jarvis briefing/chat. Paste the exact caption below if attachment access is unavailable. Include the workflow run/artifact link when available; repository paths alone do not grant Jarvis access. No automatic Jarvis connection or duplicate briefing task was created. Final posting remains manual.
 
-## LinkedIn draft
+## Primary Work editorial handoff
+
+Use editorial-input.json with agents/linkedin-editor-work.md for community-centered editorial writing. The caption below is the deterministic fallback, not a completed ChatGPT Work draft. Validate returned work-submission.json before sharing it as a mechanically validated candidate. No Work task was scheduled.
+
+## Deterministic fallback draft
 
 Next Week in L&D | 2026-11-29 to 2026-12-05
 
