@@ -1,5 +1,11 @@
 {
   "name": "Next Week in L&D",
-  "introduction": "Make room for learning: here are next week\u2019s reviewed live sessions for L&D professionals.",
-  "cta": "Which session will you attend? Share a recommendation for the next roundup."
+  "introduction": "Make time for your own development. Here are next week’s learning opportunities for the L&D community.",
+  "cta": "Which sessions are on your calendar? Share another worthwhile learning opportunity below.",
+  "compact_introduction": "Learning opportunities for the L&D community.",
+  "hashtags": [
+    "#LearningAndDevelopment",
+    "#InstructionalDesign",
+    "#ContinuousLearning"
+  ]
 }

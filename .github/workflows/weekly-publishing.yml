@@ -1,19 +1,19 @@
-name: Prepare reviewed roundup artifacts
+name: Wednesday LinkedIn preparation (manual pilot)
 on:
   workflow_dispatch:
     inputs:
       as_of:
-        description: 'Discovery date YYYY-MM-DD (2026-11-24 targets Nov 29–Dec 5); blank uses current Chicago date'
+        description: 'Discovery date: 2026-11-24 targets RW49 (Nov 29–Dec 5); blank uses current Chicago date'
         required: false
-        default: ''
+        default: '2026-11-24'
         type: string
-  push:
-    branches: [main, feature/github-event-pipeline]
-    paths: ['intake/**', 'data/**', 'config/**']
+# Recurrence deliberately inactive. After owner approval, remove the fixed pilot default,
+# enable config/schedule.yml, add UTC cron entries for 12:00 and 13:00 Wednesdays,
+# and use the America/Chicago guard to run only the matching 07:00 local window.
 permissions:
   contents: read
 concurrency:
-  group: prepare-roundup-${{ github.ref }}
+  group: wednesday-preparation-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   prepare:
@@ -25,23 +25,48 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check future recurring activation and Chicago window
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          python - <<'PYTHON'
+          import os, sys
+          from datetime import datetime, timezone
+          sys.path.insert(0, 'scripts')
+          from pipeline import read
+          from prepare_wednesday import is_wednesday_slot
+          enabled = read('config/schedule.yml')['wednesday_preparation']['recurring_enabled']
+          run = os.environ['EVENT_NAME'] != 'schedule' or (enabled and is_wednesday_slot(datetime.now(timezone.utc)))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('run=' + str(run).lower() + '\n')
+          PYTHON
       - run: python -m unittest discover -s tests -v
+        if: steps.gate.outputs.run == 'true'
       - run: python scripts/validate.py
-      - run: python scripts/ingest.py
-      - name: Assign weeks and generate review draft
+        if: steps.gate.outputs.run == 'true'
+      - name: Prepare and validate approved target-week events
+        if: steps.gate.outputs.run == 'true'
         env:
           AS_OF: ${{ inputs.as_of }}
+          EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
           args=()
-          if [[ -n "$AS_OF" ]]; then args=(--as-of "$AS_OF"); fi
-          python scripts/assign_weeks.py "${args[@]}"
-          python scripts/generate_post.py "${args[@]}"
-      - run: python scripts/smoke.py
-      - uses: actions/upload-artifact@v4
+          if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
+          if [[ "$EVENT_NAME" == schedule ]]; then args+=(--scheduled); fi
+          python scripts/prepare_wednesday.py "${args[@]}"
+      - name: Upload review artifacts (including editorial exceptions)
+        if: always() && steps.gate.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
         with:
-          name: review-roundup-and-canonical-changes
-          path: |
-            weeks/
-            data/
-            tests/smoke-output/
+          name: wednesday-linkedin-review
+          path: weeks/
+          if-no-files-found: error
+      - name: Briefing handoff
+        if: always() && steps.gate.outputs.run == 'true'
+        shell: bash
+        run: |
+          echo 'Drafts and Jarvis handoff are in the wednesday-linkedin-review artifact.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Final human caption approval and manual LinkedIn publication remain required.' >> "$GITHUB_STEP_SUMMARY"

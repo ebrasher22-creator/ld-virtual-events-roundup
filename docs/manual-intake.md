@@ -10,6 +10,7 @@ import shutil
 root = Path('work/manual-intake-demo')
 root.mkdir(parents=True, exist_ok=False)
 shutil.copytree('config', root/'config')
+shutil.copytree('templates', root/'templates')
 (root/'data').mkdir()
 (root/'data/canonical-events.json').write_text('[]\n')
 (root/'data/reviews.json').write_text('{}\n')

@@ -7,5 +7,9 @@
     "pending",
     "conflicting",
     "sales_only"
-  ]
+  ],
+  "pricing_required": false,
+  "include_descriptions": false,
+  "target_min_is_advisory": true,
+  "target_max_is_advisory": true
 }

@@ -1,0 +1,50 @@
+{
+  "above_target": false,
+  "advisories": [
+    "BELOW_TARGET: shorter roundup permitted; do not fill from other weeks."
+  ],
+  "approval_blockers": [],
+  "artifact_relative_path": "weeks/2026/RW49_2026-11-29_to_2026-12-05",
+  "as_of": "2026-11-24",
+  "below_target": true,
+  "canonical_sha256": "6ef53c99b96f12b3c327fdc5eebdd6d24ecece5fc71a5eeaf859a5215273563a",
+  "caption_strategy": "full",
+  "character_counts": {
+    "compact": 315,
+    "full": 438,
+    "limit": 3000
+  },
+  "editorial_exceptions": [],
+  "events_excluded": [
+    {
+      "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "event_id": "evt_57f0a009caaeba39",
+      "reason": "missing_or_stale_approval",
+      "title": "Fixture: Learning transfer workshop"
+    },
+    {
+      "assigned_week": "2027/RW01_2027-01-03_to_2027-01-09",
+      "event_id": "evt_a5c040a6b949b710",
+      "reason": "outside_target_week",
+      "title": "Fixture: Future event"
+    }
+  ],
+  "events_included": [
+    {
+      "event_id": "evt_7385f7e1798f26e0",
+      "record_sha256": "9579f10bd2f06ebf2bbf3a7846aec10700b9da7ef072190895e950ce23d03b1c",
+      "title": "Fixture: Reviewed learning session"
+    }
+  ],
+  "generated_at": "2026-11-24T20:00:00Z",
+  "missing_optional_pricing": [],
+  "publication_approval_status": "awaiting_final_human_review",
+  "reviews_sha256": "e5e358cf8d75e2c593134894b9b9e47d158945cafe0c80d188b68313fe2f7af6",
+  "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
+  "source_commit": null,
+  "target_max": 12,
+  "target_min": 8,
+  "total_approved_events_for_target_week": 1,
+  "within_character_limit": true,
+  "workflow_run_url": null
+}

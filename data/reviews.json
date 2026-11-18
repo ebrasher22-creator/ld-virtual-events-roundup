@@ -1,1 +1,184 @@
-{}
+{
+  "evt_1b02f4289e55abe4": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "25d07b2e776b43b4b7082e9a573dc34c45f1d49e9163e669b1544cafe3b58fe7",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  },
+  "evt_3f2f090963c7e1d0": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  },
+  "evt_5b0c2b55e8407e36": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  },
+  "evt_7c9ea52644b1eb38": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "4e1f30b2f196f686c2f767f1e7ca8140e0c8eef9517811c74a1f95ae8ade8d3a",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  },
+  "evt_a63bc389a99b233d": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "0ec810170ac9eabf067eba1e19562b95beab7a2fc17a3249bb49ea2c3bb4f061",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  },
+  "evt_f1f0bd8d082f4b90": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "6f45e3359d8a6c66f3bbcf0e0c9ea14400d9d4210e7efde7b620b8eaf89d7acf",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  },
+  "evt_fb9c960a4c6a704d": {
+    "attestation": {
+      "authority": "repository_owner",
+      "covered_claims": [
+        "datetime",
+        "organizer",
+        "registration_url",
+        "relevance",
+        "status",
+        "virtual_availability"
+      ],
+      "pricing_confirmed": false,
+      "recorded_at": "2026-11-18T19:39:10+00:00",
+      "source_path": "approvals/2026-11-18-owner-wednesday-authorization.md",
+      "source_sha256": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+      "statement": "I have personally verified and approved the seven events in the ChatGPT pilot intake.",
+      "type": "explicit_owner_approval"
+    },
+    "claims": {},
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "c881861a1f191c06dbbbe08e10aca85c1ce4d69f416ef47a73586d9de34e7cae",
+    "reviewer": "Repository owner (explicit user instruction in Codex)",
+    "score": 0,
+    "verified_at": null
+  }
+}

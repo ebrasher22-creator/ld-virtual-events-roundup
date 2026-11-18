@@ -2,5 +2,19 @@
   "timezone": "America/Chicago",
   "discovery_day": "Tuesday",
   "period": "following Sunday through Saturday",
-  "week_number": "ISO week of Monday within period"
+  "week_number": "ISO week of Monday within period",
+  "wednesday_preparation": {
+    "local_time": "07:00",
+    "timezone": "America/Chicago",
+    "weekday": "Wednesday",
+    "recurring_enabled": false,
+    "planned_utc_crons": [
+      "0 12 * * 3",
+      "0 13 * * 3"
+    ],
+    "guard": "run only when America/Chicago weekday is Wednesday and hour is 7",
+    "pilot_as_of": "2026-11-24",
+    "jarvis_briefing_local_time": "08:00",
+    "jarvis_delivery": "manual packet transfer; no automatic access assumed"
+  }
 }

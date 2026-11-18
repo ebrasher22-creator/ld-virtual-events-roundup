@@ -1,0 +1,58 @@
+$ python3 -m unittest discover -s tests -v
+test_above_target_does_not_silently_cap_collection (test_editorial.EditorialTests) ... ok
+test_cdt_and_cst_display (test_editorial.EditorialTests) ... ok
+test_confirmed_free_and_paid_labels (test_editorial.EditorialTests) ... ok
+test_explicit_owner_attestation_has_no_invented_observations_or_check_time (test_editorial.EditorialTests) ... ok
+test_future_week_is_excluded_and_remains_available (test_editorial.EditorialTests) ... ok
+test_incomplete_or_fake_attestation_cannot_approve (test_editorial.EditorialTests) ... ok
+test_known_but_unconfirmed_price_is_not_advertised_or_changed (test_editorial.EditorialTests) ... ok
+test_legacy_observations_without_optional_price_claim (test_editorial.EditorialTests) ... ok
+test_overflow_writes_explicit_exception_and_preserves_all_events (test_editorial.EditorialTests) ... ok
+test_record_or_source_change_invalidates_approval (test_editorial.EditorialTests) ... ok
+test_repeat_execution_stable_except_declared_timestamp (test_editorial.EditorialTests) ... ok
+test_shorten_optional_text_before_dropping_essential_details (test_editorial.EditorialTests) ... ok
+test_stale_selected_record_causes_workflow_exception (test_editorial.EditorialTests) ... ok
+test_unknown_pricing_stays_eligible_without_price_claim (test_editorial.EditorialTests) ... ok
+test_wednesday_seven_central_guard_handles_dst (test_editorial.EditorialTests) ... ok
+test_agent_cannot_self_verify (test_pipeline.PipelineTests) ... ok
+test_dst (test_pipeline.PipelineTests) ... ok
+test_ingest_idempotence_provenance_conflict_future (test_pipeline.PipelineTests) ... ok
+test_invalid (test_pipeline.PipelineTests) ... ok
+test_length_limit (test_pipeline.PipelineTests) ... ok
+test_manual_cli_intake (test_pipeline.PipelineTests) ... ok
+test_review_binds_exact_record (test_pipeline.PipelineTests) ... ok
+test_schema_contract_invalid_shapes (test_pipeline.PipelineTests) ... ok
+test_schema_required_fields_and_registry (test_pipeline.PipelineTests) ... ok
+test_transactional_invalid_batch (test_pipeline.PipelineTests) ... ok
+test_unverified_excluded_and_output_reproducible (test_pipeline.PipelineTests) ... ok
+test_utc_instant_with_iana_display_zone (test_pipeline.PipelineTests) ... ok
+test_valid (test_pipeline.PipelineTests) ... ok
+test_week_boundaries (test_pipeline.PipelineTests) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.700s
+
+OK
+
+exit_code=0
+
+$ python3 scripts/smoke.py
+PASS: both agents, overlap, conflict, future retention, rerun stability, review gate and Markdown generation
+/Users/Eddie/Documents/Codex/2026-11-18/https-github-com-ebrasher22-creator-ld/work/repo/tests/smoke-output
+
+exit_code=0
+
+$ python3 scripts/pilot_acceptance.py
+{'result': 'PASS', 'approved_events': 7, 'rw49_eligible_and_included': 5, 'rw50_retained_and_eligible': 2, 'owner_approval_source_preserved': True, 'individual_observations_fabricated': False, 'price_values_preserved': True, 'unconfirmed_price_labels_omitted': 5, 'unknown_price_eligibility': 'covered by regression test_unknown_pricing_stays_eligible_without_price_claim', 'all_five_expected_cst_times': True, 'full_characters': 1367, 'compact_characters': 1244, 'limit': 3000, 'captions_stable_on_rerun': True, 'report_only_generation_timestamp_changed': True, 'intake_rerun_preserves_approvals': True, 'publication_approval_status': 'awaiting_final_human_review', 'publication_performed': False, 'merge_performed': False}
+
+exit_code=0
+
+$ python3 scripts/prepare_wednesday.py --as-of 2026-11-24
+/Users/Eddie/Documents/Codex/2026-11-18/https-github-com-ebrasher22-creator-ld/work/repo/weeks/2026/RW49_2026-11-29_to_2026-12-05
+
+exit_code=0
+
+$ python3 scripts/validate_post.py --as-of 2026-11-24
+/Users/Eddie/Documents/Codex/2026-11-18/https-github-com-ebrasher22-creator-ld/work/repo/weeks/2026/RW49_2026-11-29_to_2026-12-05
+
+exit_code=0

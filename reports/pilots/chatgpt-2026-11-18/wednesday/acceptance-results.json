@@ -1,0 +1,21 @@
+{
+  "all_five_expected_cst_times": true,
+  "approved_events": 7,
+  "captions_stable_on_rerun": true,
+  "compact_characters": 1244,
+  "full_characters": 1367,
+  "individual_observations_fabricated": false,
+  "intake_rerun_preserves_approvals": true,
+  "limit": 3000,
+  "merge_performed": false,
+  "owner_approval_source_preserved": true,
+  "price_values_preserved": true,
+  "publication_approval_status": "awaiting_final_human_review",
+  "publication_performed": false,
+  "report_only_generation_timestamp_changed": true,
+  "result": "PASS",
+  "rw49_eligible_and_included": 5,
+  "rw50_retained_and_eligible": 2,
+  "unconfirmed_price_labels_omitted": 5,
+  "unknown_price_eligibility": "covered by regression test_unknown_pricing_stays_eligible_without_price_claim"
+}

@@ -1,84 +1,52 @@
 # Next Week in L&D
 
-A platform-independent, GitHub-based event intake and editorial pipeline. Python 3.11+; no dependencies, paid AI calls, unattended discovery writes, or LinkedIn publication. This repository started empty.
+A GitHub-based event discovery intake, canonical record and LinkedIn preparation system. Python 3.11+ standard library; no paid AI APIs or automatic LinkedIn publication.
 
-## Local setup and operation
+The current implementation is on `review/chatgpt-2026-11-18-pilot`. The temporary remote default remains `feature/github-event-pipeline`; no merge/default promotion has been authorized. See [branch strategy](docs/branch-strategy.md).
+
+## Wednesday pilot
 
 ```sh
-git clone https://github.com/ebrasher22-creator/ld-virtual-events-roundup.git
-cd ld-virtual-events-roundup
-git switch feature/github-event-pipeline
 python3 -m unittest discover -s tests -v
+python3 scripts/validate.py
 python3 scripts/smoke.py
+python3 scripts/pilot_acceptance.py
+python3 scripts/prepare_wednesday.py --as-of 2026-11-24
+python3 scripts/validate_post.py --as-of 2026-11-24
+```
+
+The owner has explicitly approved seven pilot events through a preserved, hash-bound human attestation. Five are RW49 (November 29–December 5); two remain RW50. Actual source-check times and per-claim observations were not supplied and have not been invented. Event approval does not authorize a final caption or publication.
+
+Open `weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post.md` or the compact alternative. The folder also contains an editorial report, final publication checklist and Jarvis handoff. The configured 8–12 event target is advisory; the generator includes every eligible event for that week, never borrows from another week, and flags an explicit exception if essential details cannot fit the configured 3,000 characters.
+
+[Wednesday preparation, attestation contract, inactive schedule and Jarvis handoff](docs/wednesday-preparation.md) describes local/manual Actions execution and the later activation steps. Use the existing `weekly-publishing.yml` with the review branch and `as_of=2026-11-24`. Recurring preparation is not enabled. Publication remains manual.
+
+## Manual discovery intake
+
+Give external ChatGPT/Gemini sessions the prompts in `agents/`, the schema and source registry. Save returned JSON arrays to new `intake/chatgpt/` or `intake/gemini/` files on a review branch. Do not replace historical submissions. Never assume scheduled assistants have authenticated GitHub write access. The 76 classified source leads are not proof of current events or a source allowlist; 74 supplied names intentionally have no guessed URL.
+
+```sh
 python3 scripts/validate.py
 python3 scripts/ingest.py
 python3 scripts/assign_weeks.py --as-of 2026-11-24
-python3 scripts/generate_post.py --as-of 2026-11-24
 ```
 
-Without `--as-of`, assignment and generation use the current Chicago date. The parameter is the discovery date, not the event date. Tuesday November 24 targets `2026/RW49_2026-11-29_to_2026-12-05`. Sunday itself targets the next Sunday. Week labels use the Monday's ISO year and week, including across New Year. Display uses IANA America/Chicago and CST/CDT. Config `.yml` files use JSON syntax (valid YAML) so the standard library can read them. The schedule file describes the implemented V1 calendar policy; changing calendar policy requires a code change and boundary tests.
+Syntactic validation does not prove facts, URL availability or registration functionality. Uncertain events stay pending. Raw submissions, SHA-256 fingerprints, source URLs, agent attribution and intake paths remain auditable. Matching uses normalized registration URL, then normalized title + organizer + instant. Reused URLs with changed times flag conflicts; completely changed identities may need human duplicate review. New submissions invalidate approvals; exact reruns do not multiply events. Canonical records and review decisions persist through Git. `future-events.json` is a derived projection after the target Saturday.
 
-## Manual discovery and intake
+Review primary evidence and resolve conflicts before recording a human approval. The original detailed claim-observation ledger remains supported; explicit owner statements can instead be recorded through the documented human-attestation route. Both bind exact canonical fingerprints and keep editorial selection separate from final publication. Never fabricate observations or use an agent's verification assertion as approval. Original pricing is preserved; unknown or unconfirmed price is optional and omitted from captions. Confirmed labels are Free/Paid; no missing-price inference is made.
 
-1. Give ChatGPT or Gemini its prompt from `agents/`, the schema and source leads. Both may discover across every category. These are external human-operated discovery assistants, not API integrations.
-2. Save the returned JSON array to `intake/chatgpt/unique-name.json` or `intake/gemini/unique-name.json`. Open a pull request. Never replace historical intake files.
-3. Validate locally. Require branch protection and human approval before merging intake into main. This repository does not configure remote branch protection automatically.
-4. Run ingestion and assignment on a working branch and commit resulting canonical changes. GitHub is the persisted source of truth. `future-events.json` is a derived projection of events after the targeted Saturday, not a separate writable database. All other records remain in canonical storage.
+## Calendar and output policy
 
-Raw submissions remain in intake and in canonical `submissions`, with SHA-256 fingerprints and provenance paths. Canonical URLs remove tracking parameters and fragments. Matching uses registration URL first, then normalized title + organizer + timestamp. A reused URL with a changed time is quarantined as a conflict; recurring events sharing a URL require human separation. Completely changed identity with no matching URL or timestamp requires a human duplicate review. No fuzzy match silently combines records. Reruns skip exact submissions; new submissions invalidate review.
+Sunday–Saturday boundaries use America/Chicago. Labels use the ISO year/week of the Monday in that period. `as_of` is a discovery/preparation date; Tuesday November 24 or Wednesday November 25 targets RW49. Sunday itself targets the following Sunday. IANA timezone conversion handles CST/CDT. JSON-compatible YAML configuration avoids extra parser dependencies.
 
-## Independent verification and editorial review
+Caption content is deterministic; generation time and source-version metadata are explicitly reported. Source approval or canonical changes invalidate stale output. All generated artifacts require final human review. Never publish an over-limit or exception draft.
 
-Syntactic validation is offline: shape, links, timestamps, timezone offsets and selected enums. It does **not** establish that a URL exists, points to registration, or proves a claim. No script fetches untrusted discovery URLs. Humans must independently open primary organizer and registration pages and check relevance, virtual availability, date/time, registration destination, organizer identity, current status and price. Inaccessible or uncertain pages stay pending. Agent evidence alone never qualifies.
+## Safety and integration
 
-After ingestion and week assignment, compute the exact canonical fingerprint:
+Validation Actions use read-only permissions. Wednesday preparation on the pilot branch is manual-only, reads persisted approvals and uploads review artifacts; it does not ingest discoveries, create approvals, commit canonical data, merge, deploy or publish. No recurring Jarvis task was created. Owner-configured branch protections/required reviews remain necessary for enforced multi-contributor controls. Approval-source hashes are integrity checks, not a substitute for trusted write permissions. Existing action major tags can be hardened to immutable SHAs in a later authorized change.
 
-```sh
-python3 -c 'import sys; sys.path.insert(0,"scripts"); from pipeline import *; print([(e["event_id"],fingerprint(e)) for e in read(ROOT/"data/canonical-events.json")])'
-```
+Future authenticated intake should use a repository-limited GitHub App, short-lived credentials stored outside prompts, payload validation, signatures/replay protection and rate limits, submitting intake PRs rather than editing human approvals. Manual intake stays supported.
 
-Add a record to `data/reviews.json`, keyed by event ID:
+## Historical evidence
 
-```json
-{
-  "evt_REPLACE": {
-    "record_sha256": "REPLACE_WITH_CURRENT_FINGERPRINT",
-    "decision": "verified",
-    "editorial_decision": "selected",
-    "reviewer": "Human reviewer name",
-    "verified_at": "2026-11-24T20:00:00Z",
-    "score": 8,
-    "claims": {
-      "relevance": {"primary_url": "https://organizer.example/event", "observation": "Record what you independently checked"},
-      "virtual_availability": {"primary_url": "https://organizer.example/event", "observation": "..."},
-      "datetime": {"primary_url": "https://organizer.example/event", "observation": "..."},
-      "registration_url": {"primary_url": "https://organizer.example/register", "observation": "..."},
-      "organizer": {"primary_url": "https://organizer.example/event", "observation": "..."},
-      "status": {"primary_url": "https://organizer.example/event", "observation": "..."},
-      "price": {"primary_url": "https://organizer.example/event", "observation": "..."}
-    }
-  }
-}
-```
-
-This is a trusted human attestation, not automatic live verification. Protect reviews with CODEOWNERS/required approvals in repository settings. Discovery-supplied verified/editorial fields are discarded; authoritative review decisions live separately in reviews.json. Canonical verification defaults stay pending; effective eligibility is computed from the review ledger. Hashes invalidate approvals when any canonical content changes, including assignment. Review after assignment. Recheck time-sensitive pages before publication; V1 has no automatic review-expiry policy.
-
-To resolve conflicts, inspect all preserved submissions against primary evidence, edit canonical fields and clear only resolved conflict flags on a reviewed branch. Add `resolution_notes` with reviewer, time, source URLs and rationale; the old/new values remain in Git history and raw submissions. Then regenerate a fresh review hash. Never clear a flag simply to increase the event count.
-
-Generation prioritizes free virtual sessions, then human score, with a configurable target of 8–12. Paid and hybrid sessions are labeled. Humans must exclude vague sales pitches, duplicate promotions and weak learning value before selecting. Fewer qualified events produces a below-target warning in `review.json`, not invented filler. Markdown and compact alternative are deterministic; if even the compact version exceeds the configured character limit, generation fails for human reduction. No generated file constitutes publication approval. Review wording, links, timezone and count, then manually copy an approved post into LinkedIn.
-
-## Automation and security
-
-The temporary default/integration branch is `feature/github-event-pipeline`; see [branch strategy](docs/branch-strategy.md). Both workflows target that branch and future `main`. `validate.yml` tests pull requests with read-only permissions, without secrets or AI calls. `weekly-publishing.yml` prepares ingestion and optional regeneration on manual dispatch or intake/data/config changes to either integration branch. Manual dispatch accepts `as_of`; use `2026-11-24` for the November 29–December 5 pilot. It uploads canonical changes, drafts and isolated synthetic smoke evidence as review artifacts; it cannot commit, merge or publish. Download and inspect artifacts, then persist intended changes through a reviewed PR. No schedule is enabled: manual discovery is required. Action major-version tags should be pinned to reviewed immutable SHAs before a hardened production rollout. Never use pull_request_target to execute intake code.
-
-Future automated intake can use a GitHub App limited to one repository with contents and pull-request write permissions, short-lived installation tokens held outside prompts, strict payload/schema/size validation, request signatures, replay protection and rate limits. It should only create intake PRs, never edit the review ledger or canonical approvals. Keep manual upload available. Scheduled ChatGPT/Gemini tasks are not assumed to have authenticated write access.
-
-## Acceptance evidence and limitations
-
-`python3 scripts/smoke.py` operates in a temporary repository-shaped folder, imports both fixtures, consolidates overlap, flags conflicting times, retains a future event, proves rerun stability, simulates a separate trusted review, and emits a one-event sample draft under `tests/smoke-output/`. Every example is synthetic and uses example.org. No real event has been live-verified. Production intake/canonical/review files remain empty. The generated sample is deliberately below the editorial target and is not publishable.
-
-The tests cover valid/invalid submissions, missing timezone offsets, malformed URLs, duplicate provenance, changed dates/times, quarantine, unverified exclusion, DST gaps/folds, Sunday/Saturday boundaries, ISO year transitions, deterministic output, review invalidation and length failure. V1 deliberately requires human verification, conflict resolution, selection, final approval and publication. Remote Actions execution, branch protection and actual ChatGPT/Gemini task setup require repository-owner integration.
-
-## Readiness and manual pilot
-
-See [exact synthetic manual intake](docs/manual-intake.md), [branch strategy](docs/branch-strategy.md), and [readiness report](docs/readiness-report.md). The source registry contains 76 discovery leads, with only the two supplied URLs populated; the other 74 are intentional nulls, not verified source sites. Agents must find primary evidence independently.
+[Original synthetic manual intake](docs/manual-intake.md), [readiness report](docs/readiness-report.md), and `reports/pilots/chatgpt-2026-11-18/` preserve earlier pending-stage evidence. Those snapshots are historical; current approval state is in `data/reviews.json` and `approvals/`. Synthetic fixture reviews remain test-only.

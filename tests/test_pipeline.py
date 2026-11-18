@@ -15,7 +15,7 @@ class PipelineTests(unittest.TestCase):
         self.temp=tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name)
-        for directory in ['config','tests/fixtures']:
+        for directory in ['config','templates','tests/fixtures']:
             shutil.copytree(ROOT/directory,self.root/directory)
         for agent in ['chatgpt','gemini']:
             (self.root/f'intake/{agent}').mkdir(parents=True)

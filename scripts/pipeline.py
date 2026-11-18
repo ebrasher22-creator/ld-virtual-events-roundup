@@ -144,20 +144,65 @@ def ingest(root=ROOT):
 
 CLAIMS = {'relevance','virtual_availability','datetime','registration_url','organizer','status','price'}
 
-def eligible(e, reviews):
-    review = reviews.get(e['event_id'],{})
-    claims = review.get('claims',{})
-    # Human review must bind to the exact current record, with independently checked evidence.
-    if review.get('record_sha256') != fingerprint(e) or review.get('decision') != 'verified' or review.get('editorial_decision') != 'selected': return False
+def approval_problem(e, reviews, root=ROOT):
+    """Return an exclusion reason; trust only current, separately persisted human reviews."""
+    review = reviews.get(e.get('event_id'), {})
+    if not isinstance(review,dict): return 'invalid_review'
+    if review.get('record_sha256') != fingerprint(e): return 'missing_or_stale_approval'
+    if review.get('decision') != 'verified': return 'not_human_approved'
+    if review.get('editorial_decision') != 'selected': return 'not_editorially_selected'
+    if e.get('conflict_flags'): return 'unresolved_conflicts'
+    if e.get('event_format') not in {'virtual','hybrid'}: return 'not_live_virtual_or_hybrid'
+    if e.get('price_type') not in {'free','paid','unknown'}: return 'invalid_price_type'
     try:
-        dt(review['verified_at'])
-        if not review['reviewer'].strip(): return False
-        for key in CLAIMS:
-            item = claims[key]
-            url(item['primary_url'])
-            if not item['observation'].strip(): return False
-    except (KeyError,ValueError,TypeError): return False
-    return not e['conflict_flags'] and e['event_format'] in {'virtual','hybrid'} and e['price_type'] in {'free','paid'} and bool(e['summary'].strip())
+        # Canonical enrichment is outside the discovery schema; validate its discovery fields.
+        validate({k:v for k,v in e.items() if k in SCHEMA['items']['properties']})
+        if not isinstance(review.get('reviewer'),str) or not review['reviewer'].strip():
+            return 'missing_human_reviewer'
+        attestation=review.get('attestation')
+        if attestation is not None:
+            if not isinstance(attestation,dict): return 'invalid_attestation'
+            if attestation.get('type')!='explicit_owner_approval' or attestation.get('authority')!='repository_owner':
+                return 'invalid_attestation'
+            if not (CLAIMS-{'price'}) <= set(attestation['covered_claims']): return 'incomplete_attestation_scope'
+            dt(attestation['recorded_at'])
+            source=(Path(root)/attestation['source_path']).resolve()
+            source.relative_to((Path(root)/'approvals').resolve())
+            content=source.read_bytes()
+            if hashlib.sha256(content).hexdigest()!=attestation['source_sha256']: return 'changed_attestation_source'
+            statement=attestation['statement']
+            if not isinstance(statement,str) or not statement.strip() or statement not in content.decode('utf-8'):
+                return 'unsubstantiated_attestation'
+        else:
+            dt(review['verified_at'])
+            for key in CLAIMS-{'price'}:
+                item=review['claims'][key]
+                url(item['primary_url'])
+                if not isinstance(item['observation'],str) or not item['observation'].strip():
+                    return 'incomplete_human_observations'
+    except (KeyError,ValueError,TypeError,AttributeError,OSError):
+        return 'invalid_human_review_or_event'
+    return None
+
+
+def eligible(e, reviews, root=ROOT):
+    return approval_problem(e,reviews,root) is None
+
+
+def confirmed_price_label(e, review):
+    """Preserve raw price_type; display a label only with explicit price support."""
+    if e.get('price_type') not in {'free','paid'}: return None
+    claims=review.get('claims') or {}
+    price=claims.get('price',{}) if isinstance(claims,dict) else {}
+    try:
+        url(price['primary_url'])
+        if isinstance(price['observation'],str) and price['observation'].strip():
+            return e['price_type'].title()
+    except (KeyError,TypeError,ValueError): pass
+    # An owner may explicitly attest pricing separately; general approval does not infer it.
+    if isinstance(review.get('attestation'),dict) and review['attestation'].get('pricing_confirmed') is True:
+        return e['price_type'].title()
+    return None
 
 def assign(root=ROOT, day=None):
     day = day or datetime.now(CENTRAL).date()
@@ -167,31 +212,9 @@ def assign(root=ROOT, day=None):
     write(root/'data/future-events.json',[e for e in events if dt(e['start_datetime']).astimezone(CENTRAL).date() > date.fromisoformat(target(day).split('_to_')[1])])
     return events
 
-def generate(root=ROOT, day=None):
-    day = day or datetime.now(CENTRAL).date()
-    label = target(day)
-    rules = read(root/'config/editorial-rules.yml')
-    brand = read(root/'config/branding.yml')
-    reviews = read(root/'data/reviews.json')
-    candidates = [e for e in read(root/'data/canonical-events.json') if e['roundup_week']==label and eligible(e,reviews)]
-    candidates.sort(key=lambda e:(e['price_type']!='free',e['event_format']!='virtual',-reviews[e['event_id']].get('score',0),e['start_datetime'],e['event_id']))
-    selected = candidates[:rules['target_max']]
-    def render(compact=False):
-        lines=[brand['name']+' | '+label.split('/')[1],brand['introduction'],'']
-        for e in selected:
-            time=dt(e['start_datetime']).astimezone(CENTRAL).strftime('%a %b %d, %I:%M %p %Z')
-            lines += [f"{e['title']} — {e['organizer']}",f"{time} | {e['price_type']} | {e['event_format']}"]
-            if not compact: lines.append(e['summary'])
-            lines += [e['registration_url'],'']
-        return '\n'.join(lines+[brand['cta'],''])
-    full, compact = render(),render(True)
-    if len(compact)>rules['linkedin_max_characters']: raise ValueError('compact output exceeds configured limit; reduce selection')
-    folder=root/'weeks'/label
-    folder.mkdir(parents=True,exist_ok=True)
-    (folder/'linkedin-roundup.md').write_text(full if len(full)<=rules['linkedin_max_characters'] else compact)
-    (folder/'linkedin-compact.md').write_text(compact)
-    write(folder/'review.json',{'publication_status':'human_review_required','selected_ids':[e['event_id'] for e in selected],'below_target':len(selected)<rules['target_min'],'full_length':len(full),'compact_length':len(compact)})
-    return folder
+def generate(root=ROOT, day=None, generated_at=None):
+    from editorial import generate_week
+    return generate_week(Path(root), day, generated_at)
 
 def main(command):
     parser=argparse.ArgumentParser()

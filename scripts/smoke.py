@@ -9,6 +9,7 @@ def run():
     with tempfile.TemporaryDirectory() as temp:
         root=Path(temp)
         shutil.copytree(ROOT/'config',root/'config')
+        shutil.copytree(ROOT/'templates',root/'templates')
         for agent in ['chatgpt','gemini']: (root/'intake'/agent).mkdir(parents=True)
         write(root/'data/canonical-events.json',[])
         write(root/'data/reviews.json',{})
@@ -19,7 +20,7 @@ def run():
         sample.update(title='Fixture: Reviewed learning session',registration_url='https://example.org/register/reviewed')
         write(root/'intake/chatgpt/reviewed.json',[sample])
         ingest(root);events=assign(root,date(2026,11,24))
-        empty_folder=generate(root,date(2026,11,24))
+        empty_folder=generate(root,date(2026,11,24),generated_at='2026-11-24T20:00:00Z')
         assert read(empty_folder/'review.json')['selected_ids']==[]
         unverified=read(empty_folder/'review.json')
         before=(root/'data/canonical-events.json').read_bytes()
@@ -28,7 +29,7 @@ def run():
         chosen=next(e for e in events if e['title']==sample['title'])
         review=dict(record_sha256=fingerprint(chosen),decision='verified',editorial_decision='selected',reviewer='SYNTHETIC TEST REVIEW',verified_at='2026-11-24T20:00:00Z',claims={k:dict(primary_url=chosen['event_url'],observation='SIMULATED primary-source check for smoke test only') for k in CLAIMS})
         write(root/'data/reviews.json',{chosen['event_id']:review})
-        folder=generate(root,date(2026,11,24))
+        folder=generate(root,date(2026,11,24),generated_at='2026-11-24T20:00:00Z')
         assert len(events)==3 and len(read(root/'data/future-events.json'))==1
         assert len(read(folder/'review.json')['selected_ids'])==1
         output=ROOT/'tests/smoke-output'

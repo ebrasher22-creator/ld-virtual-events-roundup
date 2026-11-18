@@ -1,9 +1,12 @@
-Next Week in L&D | RW49_2026-11-29_to_2026-12-05
-Make room for learning: here are next week’s reviewed live sessions for L&D professionals.
+Next Week in L&D | 2026-11-29 to 2026-12-05
 
-Fixture: Reviewed learning session — Example Association
-Tue Dec 01, 12:00 PM CST | free | virtual
-Practice planning support for learning transfer.
+Make time for your own development. Here are next week’s learning opportunities for the L&D community.
+
+Fixture: Reviewed learning session
+Example Association
+Tue, Dec 1, 2026 | 12:00 PM CST | Free
 https://example.org/register/reviewed
 
-Which session will you attend? Share a recommendation for the next roundup.
+Which sessions are on your calendar? Share another worthwhile learning opportunity below.
+
+#LearningAndDevelopment #InstructionalDesign #ContinuousLearning

@@ -1,0 +1,101 @@
+{
+  "above_target": false,
+  "advisories": [
+    "BELOW_TARGET: shorter roundup permitted; do not fill from other weeks."
+  ],
+  "approval_blockers": [],
+  "artifact_relative_path": "weeks/2026/RW49_2026-11-29_to_2026-12-05",
+  "as_of": "2026-11-24",
+  "below_target": true,
+  "canonical_sha256": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+  "caption_strategy": "full",
+  "character_counts": {
+    "compact": 1244,
+    "full": 1367,
+    "limit": 3000
+  },
+  "editorial_exceptions": [],
+  "events_excluded": [
+    {
+      "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
+      "event_id": "evt_a63bc389a99b233d",
+      "reason": "outside_target_week",
+      "title": "Intro to Facilitating Groups: The Basics"
+    },
+    {
+      "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
+      "event_id": "evt_fb9c960a4c6a704d",
+      "reason": "outside_target_week",
+      "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI"
+    }
+  ],
+  "events_included": [
+    {
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "record_sha256": "6f45e3359d8a6c66f3bbcf0e0c9ea14400d9d4210e7efde7b620b8eaf89d7acf",
+      "title": "2027 Planning Sprint"
+    },
+    {
+      "event_id": "evt_3f2f090963c7e1d0",
+      "record_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "event_id": "evt_1b02f4289e55abe4",
+      "record_sha256": "25d07b2e776b43b4b7082e9a573dc34c45f1d49e9163e669b1544cafe3b58fe7",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success"
+    },
+    {
+      "event_id": "evt_7c9ea52644b1eb38",
+      "record_sha256": "4e1f30b2f196f686c2f767f1e7ca8140e0c8eef9517811c74a1f95ae8ade8d3a",
+      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
+    },
+    {
+      "event_id": "evt_5b0c2b55e8407e36",
+      "record_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+      "title": "[Leader Talk] The 2027 Learning Experience"
+    }
+  ],
+  "generated_at": "2026-11-18T19:45:59+00:00",
+  "missing_optional_pricing": [
+    {
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "original_price_type": "free",
+      "reason": "unknown_or_not_separately_confirmed",
+      "title": "2027 Planning Sprint"
+    },
+    {
+      "event_id": "evt_3f2f090963c7e1d0",
+      "original_price_type": "free",
+      "reason": "unknown_or_not_separately_confirmed",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "event_id": "evt_1b02f4289e55abe4",
+      "original_price_type": "free",
+      "reason": "unknown_or_not_separately_confirmed",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success"
+    },
+    {
+      "event_id": "evt_7c9ea52644b1eb38",
+      "original_price_type": "free",
+      "reason": "unknown_or_not_separately_confirmed",
+      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
+    },
+    {
+      "event_id": "evt_5b0c2b55e8407e36",
+      "original_price_type": "free",
+      "reason": "unknown_or_not_separately_confirmed",
+      "title": "[Leader Talk] The 2027 Learning Experience"
+    }
+  ],
+  "publication_approval_status": "awaiting_final_human_review",
+  "reviews_sha256": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
+  "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
+  "source_commit": "bf8e89d2c15e8d9f3b47e9cb99feb456c0cdb538",
+  "target_max": 12,
+  "target_min": 8,
+  "total_approved_events_for_target_week": 5,
+  "within_character_limit": true,
+  "workflow_run_url": null
+}
