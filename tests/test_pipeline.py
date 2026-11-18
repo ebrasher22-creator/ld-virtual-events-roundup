@@ -108,4 +108,189 @@ class PipelineTests(unittest.TestCase):
         write(self.root/'config/editorial-rules.yml',dict(target_min=8,target_max=12,linkedin_max_characters=10))
         with self.assertRaises(ValueError):generate(self.root,date(2026,11,24))
 
+    def test_scoped_organizer_aliases_and_domain_enforcement(self):
+        (self.root/'intake/chatgpt/sample.json').unlink()
+        (self.root/'intake/gemini/sample.json').unlink()
+        base = dict(
+            self.e,
+            title='AI in the Flow of Work: How L&D Professionals Are Working Alongside AI',
+            organizer='Training Industry',
+            event_url='https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work/',
+            registration_url='https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work/',
+            start_datetime='2026-12-08T11:00:00-05:00',
+            timezone='America/New_York',
+            source_urls=['https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work/'],
+            discovered_by=['chatgpt'],
+        )
+        corroborating = dict(
+            base,
+            organizer='Training Industry, Inc.',
+            organizer_url='https://trainingindustry.com',
+            registration_url='https://events.zoom.us/ev/example-zoom-registration',
+            discovered_by=['gemini'],
+        )
+        impostor_domain = dict(
+            base,
+            organizer='Training Industry, Inc.',
+            event_url='https://unverified-host.example.org/events/ai-flow',
+            registration_url='https://unverified-host.example.org/register/ai-flow',
+            source_urls=['https://unverified-host.example.org/events/ai-flow'],
+            discovered_by=['gemini'],
+        )
+        unlisted_suffix = dict(
+            base,
+            organizer='Example Association, Inc.',
+            event_url='https://example.org/events/unlisted',
+            registration_url='https://example.org/register/unlisted-1',
+            source_urls=['https://example.org/events/unlisted'],
+        )
+        unlisted_plain = dict(
+            unlisted_suffix,
+            organizer='Example Association',
+            registration_url='https://example.org/register/unlisted-2',
+            discovered_by=['gemini'],
+        )
+        write(self.root/'intake/chatgpt/aliases.json', [base, unlisted_suffix])
+        write(self.root/'intake/gemini/aliases.json', [corroborating, impostor_domain, unlisted_plain])
+        events = ingest(self.root)
+        # base + corroborating merge (1); impostor_domain stays separate (1); unlisted suffix/plain stay separate (2) -> 4 total
+        self.assertEqual(len(events), 4)
+        merged = next(x for x in events if x['organizer'] == 'Training Industry')
+        self.assertEqual(merged['discovered_by'], ['chatgpt', 'gemini'])
+        self.assertNotIn('organizer', merged['conflict_flags'])
+        self.assertIn('registration_url', merged['conflict_flags'])
+
+    def test_meaningful_description_differences_and_conflicting_evidence_preserved(self):
+        (self.root/'intake/chatgpt/sample.json').unlink()
+        (self.root/'intake/gemini/sample.json').unlink()
+        first = dict(
+            self.e,
+            title='L&D as a Conductor: Orchestrating People, AI, and Business Priorities',
+            organizer='iSpring',
+            event_url='https://www.ispringsolutions.com/webinars/l-d-as-a-conductor',
+            registration_url='https://www.ispringsolutions.com/webinars/l-d-as-a-conductor',
+            start_datetime='2026-12-02T10:00:00-05:00',
+            end_datetime=None,
+            timezone='America/New_York',
+            summary='Short description of training ROI and stakeholder alignment.',
+            source_urls=['https://www.ispringsolutions.com/webinars/l-d-as-a-conductor'],
+            discovered_at='2026-11-18T19:39:10+00:00',
+            discovered_by=['chatgpt'],
+            evidence=[dict(claim='datetime', source_url='https://www.ispringsolutions.com/webinars/l-d-as-a-conductor', excerpt='ChatGPT primary excerpt')],
+        )
+        second = dict(
+            first,
+            title='L&D As A Conductor: Orchestrating People, AI, And Business Priorities',
+            organizer='iSpring Solutions',
+            organizer_url='https://www.ispringsolutions.com',
+            registration_url='https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=partner',
+            end_datetime='2026-12-02T11:00:00-05:00',
+            summary='Detailed description covering iSpring 2026 ROI Playbook across 140+ professionals and four barriers.',
+            discovered_at='2026-11-18T14:21:32-06:00',
+            discovered_by=['gemini'],
+            evidence=[dict(claim='price', source_url='https://www.ispringsolutions.com/webinars/l-d-as-a-conductor', excerpt='Gemini primary excerpt')],
+        )
+        write(self.root/'intake/chatgpt/desc.json', [first])
+        write(self.root/'intake/gemini/desc.json', [second])
+        events = ingest(self.root)
+        self.assertEqual(len(events), 1)
+        merged = events[0]
+        self.assertEqual(merged['conflict_flags'], ['summary'])
+        self.assertEqual(len(merged['evidence']), 2)
+        self.assertEqual(len(merged['submissions']), 2)
+        # 14:21:32-06:00 is 20:21:32Z, which is chronologically after 19:39:10+00:00
+        self.assertEqual(merged['updated_at'], '2026-11-18T14:21:32-06:00')
+
+    def test_audited_approval_fingerprint_migration_preserves_unchanged_and_rejects_core_conflicts(self):
+        (self.root/'intake/gemini/sample.json').unlink()
+        first = dict(
+            self.e,
+            title='[Leader Talk] The 2027 Learning Experience',
+            organizer='Training Industry',
+            event_url='https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/',
+            registration_url='https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/',
+            start_datetime='2026-12-03T11:00:00-05:00',
+            end_datetime=None,
+            timezone='America/New_York',
+            source_urls=['https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/'],
+        )
+        write(self.root/'intake/chatgpt/sample.json', [first])
+        events = ingest(self.root)
+        e = events[0]
+        e['verification_status'] = 'verified'
+        e['editorial_status'] = 'selected'
+        e['updated_at'] = '2026-11-18T19:39:10+00:00'
+        write(self.root/'data/canonical-events.json', [e])
+        old_sha = fingerprint(e)
+        review = dict(
+            record_sha256=old_sha,
+            decision='verified',
+            editorial_decision='selected',
+            reviewer='Fixture reviewer',
+            verified_at='2026-11-18T19:39:10Z',
+            claims={k: dict(primary_url=e['event_url'], observation='Verified primary page') for k in CLAIMS - {'price'}},
+        )
+        write(self.root/'data/reviews.json', {e['event_id']: review})
+        self.assertTrue(eligible(e, read(self.root/'data/reviews.json'), self.root))
+
+        # Corroborating submission with different summary and proposed end_datetime enrichment preserves approval
+        corroborating = dict(
+            first,
+            organizer='Training Industry, Inc.',
+            end_datetime='2026-12-03T15:45:00-05:00',
+            summary='Expanded multi-session agenda description from second discovery agent.',
+            discovered_by=['gemini'],
+            discovered_at='2026-11-18T14:20:03-06:00',
+        )
+        write(self.root/'intake/gemini/corroborating.json', [corroborating])
+        migrated_events = ingest(self.root)
+        self.assertEqual(len(migrated_events), 1)
+        m = migrated_events[0]
+        migrated_reviews = read(self.root/'data/reviews.json')
+        self.assertTrue(eligible(m, migrated_reviews, self.root))
+        self.assertEqual(m['summary'], first['summary'])
+        self.assertIsNone(m['end_datetime'])
+        self.assertEqual(m['conflict_flags'], ['summary'])
+        mig = migrated_reviews[m['event_id']]['migration']
+        self.assertEqual(mig['from_record_sha256'], old_sha)
+        self.assertEqual(mig['to_record_sha256'], fingerprint(m))
+        self.assertEqual(mig['acknowledged_conflict_flags'], ['summary'])
+        self.assertTrue(any(p['field'] == 'summary' and not p['adopted'] for p in mig['unadopted_proposals']))
+
+        # Forged migration acknowledging a core conflict ('start_datetime') must be rejected
+        forged_reviews = copy.deepcopy(migrated_reviews)
+        forged_reviews[m['event_id']]['migration']['acknowledged_conflict_flags'] = ['start_datetime']
+        self.assertEqual(approval_problem(m, forged_reviews, self.root), 'invalid_approval_migration')
+
+        # Core conflict (different start_datetime) must invalidate approval and refuse migration
+        conflicting_time = dict(corroborating, start_datetime='2026-12-03T13:00:00-05:00', discovered_at='2026-11-18T15:00:00-06:00')
+        write(self.root/'intake/gemini/conflicting.json', [conflicting_time])
+        after_conflict = ingest(self.root)[0]
+        self.assertEqual(after_conflict['verification_status'], 'pending')
+        self.assertIn('start_datetime', after_conflict['conflict_flags'])
+        self.assertFalse(eligible(after_conflict, read(self.root/'data/reviews.json'), self.root))
+
+    def test_pilot_consolidation_eleven_candidates_and_editorial_package_migration(self):
+        events = read(ROOT/'data/canonical-events.json')
+        reviews = read(ROOT/'data/reviews.json')
+        future = read(ROOT/'data/future-events.json')
+        self.assertEqual(len(events), 11)
+        self.assertEqual(len(future), 5)
+        rw49 = [e for e in events if e['roundup_week'] == '2026/RW49_2026-11-29_to_2026-12-05']
+        rw50 = [e for e in events if e['roundup_week'] == '2026/RW50_2026-12-06_to_2026-12-12']
+        rw03 = [e for e in events if e['roundup_week'] == '2027/RW03_2027-01-17_to_2027-01-23']
+        rw04 = [e for e in events if e['roundup_week'] == '2027/RW04_2027-01-24_to_2027-01-30']
+        self.assertEqual((len(rw49), len(rw50), len(rw03), len(rw04)), (6, 3, 1, 1))
+        self.assertEqual(sum(eligible(e, reviews, ROOT) for e in rw49), 5)
+        self.assertEqual(sum(eligible(e, reviews, ROOT) for e in rw50), 2)
+        pending = [e for e in events if e['verification_status'] == 'pending']
+        self.assertEqual(len(pending), 4)
+        self.assertTrue(all(not eligible(e, reviews, ROOT) and e['editorial_status'] == 'pending' for e in pending))
+        overlaps = [e for e in events if e['discovered_by'] == ['chatgpt', 'gemini']]
+        self.assertEqual(len(overlaps), 3)
+        self.assertTrue(all('summary' in e['conflict_flags'] and len(e['evidence']) > 1 for e in overlaps))
+        self.assertTrue(all('migration' in reviews[e['event_id']] and eligible(e, reviews, ROOT) for e in overlaps))
+
+
+
 if __name__=='__main__': unittest.main()

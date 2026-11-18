@@ -3,7 +3,7 @@
     "compact_caption": 1312,
     "full_caption": 1580
   },
-  "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "editorial_input_sha256": "e2017047084dc5788577cefe99ab26620e8688442ef3642bc8b47271786b932f",
   "errors": [],
   "limitations": [
     "Exact event facts and coverage are checked. Prose truthfulness, interpretation, audience sensitivity and editorial quality require human review."
@@ -12,6 +12,6 @@
   "publication_approval_status": "awaiting_final_human_review",
   "result": "pass",
   "semantic_review_required": true,
-  "submission_sha256": "2f2a65ebba5f5c57ae7c81ef78d40f3710febe4d2a3f233770ecd276aeddaa0f",
-  "validated_at": "2026-11-18T20:06:41+00:00"
+  "submission_sha256": "95075c57bc0a8194ae6748f5103cb1d5fc0d26a21c9814b226d18e56367ac362",
+  "validated_at": "2026-11-18T23:54:57+00:00"
 }

@@ -228,8 +228,7 @@
       "Learning evaluation professionals"
     ],
     "conflict_flags": [
-      "organizer",
-      "title"
+      "summary"
     ],
     "discovered_at": "2026-11-18T12:50:33-06:00",
     "discovered_by": [
@@ -247,6 +246,31 @@
         "claim": "Official event listing and registration details",
         "excerpt": "Official iSpring webinar page: December 2, Wednesday, 10:00 AM EST; free; one hour; on-page registration form.",
         "source_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+      },
+      {
+        "claim": "datetime",
+        "excerpt": "Dates: 02 Dec 2026 10:00 am (UTC -5) - 02 Dec 2026 11:00 am (UTC -5). In L&D as a Conductor, a free one-hour webinar on December 2 at 10:00 AM EST, Maria Starling, Lead Program Manager at iSpring, walks through the findings and what they mean for your team.",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "organizer",
+        "excerpt": "iSpring's second annual ROI study surveyed more than 140 L&D professionals across five regions... Maria Starling, Lead Program Manager at iSpring, walks through the findings and what they mean for your team.",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "price",
+        "excerpt": "A free webinar on why only 11% of L&D teams can prove ROI, the four hidden barriers behind the gap, and how successful teams align people, AI, and stakeholders around measurable outcomes. Online | Free | 1 hour",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Visit Website / Save your spot. -> https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "Place: Online. Online | Free | 1 hour",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
       }
     ],
     "language": "English",
@@ -391,8 +415,7 @@
       "Learning technology leaders"
     ],
     "conflict_flags": [
-      "end_datetime",
-      "organizer"
+      "summary"
     ],
     "discovered_at": "2026-11-18T12:50:33-06:00",
     "discovered_by": [
@@ -409,6 +432,26 @@
         "claim": "Official event listing and registration details",
         "excerpt": "Official Training Industry webinar page: December 3, 2026 at 11:00 am ET; webinar and Reserve Your Spot link. Agenda shows presentations beginning 11:00 am ET.",
         "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      },
+      {
+        "claim": "datetime",
+        "excerpt": "[Leader Talk] The 2027 Learning Experience. Sponsored by Training Industry, Inc. 3 Dec 2026 11:00 am ET. AGENDA: 11:00 - 11:45 a.m. ET ... 3:00 - 3:45 p.m. ET.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "relevance",
+        "excerpt": "During this Training Industry Leader Talk, industry experts will share practical approaches for improving the learning experience. Explore how organizations are using AI, learning technology, content, personalization and learner support to design experiences that encourage engagement, support skill development and help employees apply what they learn on the job.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
       }
     ],
     "language": "English",
@@ -535,137 +578,6 @@
       "Learning experience",
       "Learning technology",
       "AI"
-    ],
-    "updated_at": "2026-11-18T14:20:03-06:00",
-    "verification_status": "pending"
-  },
-  {
-    "audience": [
-      "L&D professionals",
-      "Instructional designers",
-      "Learning leaders",
-      "Training managers"
-    ],
-    "conflict_flags": [],
-    "cost": 0,
-    "discovered_at": "2026-11-18T14:20:03-06:00",
-    "discovered_by": [
-      "gemini"
-    ],
-    "editorial_score": 0,
-    "editorial_status": "pending",
-    "end_datetime": null,
-    "event_format": "virtual",
-    "event_id": "evt_6e4a80967717733e",
-    "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
-    "evidence": [
-      {
-        "claim": "datetime",
-        "excerpt": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI. Sponsored by Training Industry, Inc. 8 Dec 2026 11:00 am ET.",
-        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
-      },
-      {
-        "claim": "virtual_availability",
-        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
-        "source_url": "https://trainingindustry.com/webinar/"
-      },
-      {
-        "claim": "price",
-        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
-        "source_url": "https://trainingindustry.com/webinar/"
-      },
-      {
-        "claim": "registration_url",
-        "excerpt": "Reserve Your Spot / Register Now -> https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
-        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
-      }
-    ],
-    "language": "en",
-    "last_verified_at": null,
-    "organizer": "Training Industry, Inc.",
-    "organizer_url": "https://trainingindustry.com",
-    "price_type": "free",
-    "registration_aliases": [
-      "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA"
-    ],
-    "registration_url": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
-    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
-    "source_urls": [
-      "https://trainingindustry.com/webinar/",
-      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
-    ],
-    "start_datetime": "2026-12-08T11:00:00-05:00",
-    "submissions": [
-      {
-        "file": "intake/gemini/gemini-2026-11-18.json",
-        "raw": {
-          "audience": [
-            "L&D professionals",
-            "Instructional designers",
-            "Learning leaders",
-            "Training managers"
-          ],
-          "cost": 0,
-          "discovered_at": "2026-11-18T14:20:03-06:00",
-          "discovered_by": [
-            "gemini"
-          ],
-          "end_datetime": null,
-          "event_format": "virtual",
-          "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
-          "evidence": [
-            {
-              "claim": "datetime",
-              "excerpt": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI. Sponsored by Training Industry, Inc. 8 Dec 2026 11:00 am ET.",
-              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
-            },
-            {
-              "claim": "virtual_availability",
-              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
-              "source_url": "https://trainingindustry.com/webinar/"
-            },
-            {
-              "claim": "price",
-              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
-              "source_url": "https://trainingindustry.com/webinar/"
-            },
-            {
-              "claim": "registration_url",
-              "excerpt": "Reserve Your Spot / Register Now -> https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
-              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
-            }
-          ],
-          "language": "en",
-          "organizer": "Training Industry, Inc.",
-          "organizer_url": "https://trainingindustry.com",
-          "price_type": "free",
-          "registration_url": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
-          "source_urls": [
-            "https://trainingindustry.com/webinar/",
-            "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
-          ],
-          "start_datetime": "2026-12-08T11:00:00-05:00",
-          "summary": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
-          "timezone": "America/New_York",
-          "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
-          "topics": [
-            "Artificial intelligence in L&D",
-            "Human-AI workflow collaboration",
-            "AI agents in workplace learning",
-            "L&D decision-making"
-          ]
-        },
-        "sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
-      }
-    ],
-    "summary": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
-    "timezone": "America/New_York",
-    "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
-    "topics": [
-      "Artificial intelligence in L&D",
-      "Human-AI workflow collaboration",
-      "AI agents in workplace learning",
-      "L&D decision-making"
     ],
     "updated_at": "2026-11-18T14:20:03-06:00",
     "verification_status": "pending"
@@ -1318,10 +1230,14 @@
       "Learning managers",
       "AI enablement professionals"
     ],
-    "conflict_flags": [],
+    "conflict_flags": [
+      "registration_url",
+      "summary"
+    ],
     "discovered_at": "2026-11-18T12:50:33-06:00",
     "discovered_by": [
-      "chatgpt"
+      "chatgpt",
+      "gemini"
     ],
     "editorial_score": 0,
     "editorial_status": "pending",
@@ -1333,6 +1249,26 @@
         "claim": "Official event listing and registration details",
         "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
         "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      },
+      {
+        "claim": "datetime",
+        "excerpt": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI. Sponsored by Training Industry, Inc. 8 Dec 2026 11:00 am ET.",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Reserve Your Spot / Register Now -> https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
       }
     ],
     "language": "English",
@@ -1340,15 +1276,78 @@
     "organizer": "Training Industry",
     "price_type": "free",
     "registration_aliases": [
+      "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
       "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai"
     ],
     "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai",
     "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
     "source_urls": [
+      "https://trainingindustry.com/webinar/",
       "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
     ],
     "start_datetime": "2026-12-08T11:00:00-05:00",
     "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "L&D professionals",
+            "Instructional designers",
+            "Learning leaders",
+            "Training managers"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:20:03-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": null,
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI. Sponsored by Training Industry, Inc. 8 Dec 2026 11:00 am ET.",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "price",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Reserve Your Spot / Register Now -> https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            }
+          ],
+          "language": "en",
+          "organizer": "Training Industry, Inc.",
+          "organizer_url": "https://trainingindustry.com",
+          "price_type": "free",
+          "registration_url": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/",
+            "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+          ],
+          "start_datetime": "2026-12-08T11:00:00-05:00",
+          "summary": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
+          "timezone": "America/New_York",
+          "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+          "topics": [
+            "Artificial intelligence in L&D",
+            "Human-AI workflow collaboration",
+            "AI agents in workplace learning",
+            "L&D decision-making"
+          ]
+        },
+        "sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+      },
       {
         "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
         "raw": {
@@ -1398,7 +1397,7 @@
       "Workplace learning",
       "Human-AI collaboration"
     ],
-    "updated_at": "2026-11-18T12:50:33-06:00",
+    "updated_at": "2026-11-18T14:20:03-06:00",
     "verification_status": "pending"
   }
 ]

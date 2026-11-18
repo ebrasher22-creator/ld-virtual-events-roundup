@@ -1,7 +1,3 @@
-$ python3 -m unittest discover -s tests -v
-PASS: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmpynq2tbkk/reports/work-editorial/test
-FAIL: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmpynq2tbkk/reports/work-editorial/test
-FAIL: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmp8pkrot1v/reports/work-editorial/test
 test_above_target_does_not_silently_cap_collection (test_editorial.EditorialTests) ... ok
 test_cdt_and_cst_display (test_editorial.EditorialTests) ... ok
 test_confirmed_free_and_paid_labels (test_editorial.EditorialTests) ... ok
@@ -18,14 +14,18 @@ test_stale_selected_record_causes_workflow_exception (test_editorial.EditorialTe
 test_unknown_pricing_stays_eligible_without_price_claim (test_editorial.EditorialTests) ... ok
 test_wednesday_seven_central_guard_handles_dst (test_editorial.EditorialTests) ... ok
 test_agent_cannot_self_verify (test_pipeline.PipelineTests) ... ok
+test_audited_approval_fingerprint_migration_preserves_unchanged_and_rejects_core_conflicts (test_pipeline.PipelineTests) ... ok
 test_dst (test_pipeline.PipelineTests) ... ok
 test_ingest_idempotence_provenance_conflict_future (test_pipeline.PipelineTests) ... ok
 test_invalid (test_pipeline.PipelineTests) ... ok
 test_length_limit (test_pipeline.PipelineTests) ... ok
 test_manual_cli_intake (test_pipeline.PipelineTests) ... ok
+test_meaningful_description_differences_and_conflicting_evidence_preserved (test_pipeline.PipelineTests) ... ok
+test_pilot_consolidation_eleven_candidates_and_editorial_package_migration (test_pipeline.PipelineTests) ... ok
 test_review_binds_exact_record (test_pipeline.PipelineTests) ... ok
 test_schema_contract_invalid_shapes (test_pipeline.PipelineTests) ... ok
 test_schema_required_fields_and_registry (test_pipeline.PipelineTests) ... ok
+test_scoped_organizer_aliases_and_domain_enforcement (test_pipeline.PipelineTests) ... ok
 test_transactional_invalid_batch (test_pipeline.PipelineTests) ... ok
 test_unverified_excluded_and_output_reproducible (test_pipeline.PipelineTests) ... ok
 test_utc_instant_with_iana_display_zone (test_pipeline.PipelineTests) ... ok
@@ -44,14 +44,9 @@ test_semantic_review_is_never_claimed_automated (test_work_editorial.WorkEditori
 test_valid_exchange_and_original_url_preservation (test_work_editorial.WorkEditorialTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 0.785s
+Ran 44 tests in 1.115s
 
 OK
-
-exit_code=0
-
-$ python3 scripts/smoke.py
-PASS: both agents, overlap, conflict, future retention, rerun stability, review gate and Markdown generation
-/Users/Eddie/Documents/Codex/2026-11-18/https-github-com-ebrasher22-creator-ld/work/repo/tests/smoke-output
-
-exit_code=0
+PASS: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmp9zxz82xv/reports/work-editorial/test
+FAIL: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmp9zxz82xv/reports/work-editorial/test
+FAIL: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmpbsjq23qz/reports/work-editorial/test

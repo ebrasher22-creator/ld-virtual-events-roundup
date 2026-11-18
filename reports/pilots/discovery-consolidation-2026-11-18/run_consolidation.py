@@ -72,9 +72,12 @@ def classify(field,a,b):
 def main():
     tracked=subprocess.check_output(['git','ls-tree','-r','--name-only','d019b05'],cwd=ROOT,text=True).splitlines()
     protected={name:digest(ROOT/name) for name in tracked if (ROOT/name).is_file()}
-    approved=read(ROOT/'data/canonical-events.json')
-    reviews=read(ROOT/'data/reviews.json')
+    approved=json.loads(subprocess.check_output(['git','show','d019b05:data/canonical-events.json'],cwd=ROOT,text=True))
+    reviews=json.loads(subprocess.check_output(['git','show','d019b05:data/reviews.json'],cwd=ROOT,text=True))
     assert len(approved)==7 and all(eligible(e,reviews,ROOT) for e in approved)
+    current_canonical=read(ROOT/'data/canonical-events.json')
+    current_reviews=read(ROOT/'data/reviews.json')
+    assert len(current_canonical)==11 and sum(eligible(e,current_reviews,ROOT) for e in current_canonical)==7
     approved_by_raw={s['sha256']:e for e in approved for s in e['submissions']}
     records=[]
     for stream,path in FILES.items():
@@ -112,6 +115,7 @@ def main():
         ingest_assign(fresh)
         native=read(fresh/'data/canonical-events.json')
         native_future=read(fresh/'data/future-events.json')
+        assert len(native)==11 and len(native_future)==5
         native_hashes={name:digest(fresh/'data'/name) for name in ['canonical-events.json','future-events.json']}
         ingest_assign(fresh)
         assert native_hashes=={name:digest(fresh/'data'/name) for name in native_hashes}
@@ -128,18 +132,21 @@ def main():
         seeded=sandbox('native-seeded-with-approved',seed=True)
         ingest_assign(seeded)
         mutated=read(seeded/'data/canonical-events.json')
+        seeded_reviews=read(seeded/'data/reviews.json')
+        assert len(mutated)==11 and sum(eligible(e,seeded_reviews,seeded) for e in mutated)==7
         mutated_by_id={e['event_id']:e for e in mutated}
         affected=[]
         for old in approved:
             new=mutated_by_id[old['event_id']]
             if fingerprint(old)!=fingerprint(new):
                 latest=max([dt(old['updated_at'])]+[dt(s['raw']['discovered_at']) for s in new['submissions']])
-                affected.append(dict(event_id=old['event_id'],title=old['title'],before_sha256=fingerprint(old),after_sha256=fingerprint(new),approval_problem=approval_problem(new,reviews,seeded),native_conflict_flags=new['conflict_flags'],updated_at_chronologically_current=dt(new['updated_at'])==latest))
+                affected.append(dict(event_id=old['event_id'],title=old['title'],before_sha256=fingerprint(old),after_sha256=fingerprint(new),approval_problem=approval_problem(new,seeded_reviews,seeded),native_conflict_flags=new['conflict_flags'],updated_at_chronologically_current=dt(new['updated_at'])==latest,migration=seeded_reviews[old['event_id']].get('migration')))
+        assert len(affected)==3 and all(a['approval_problem'] is None and a['updated_at_chronologically_current'] and a['migration'] for a in affected)
         work_input=ROOT/'weeks'/TARGET/'editorial-input.json'
         work_draft=ROOT/'editorial-drafts/RW49_2026-11-29_to_2026-12-05/work-submission.json'
         seeded_validation=validate_submission(seeded,work_input,work_draft,tmp/'seeded-work-validation')
-        assert not seeded_validation['mechanical_validation_passed']
-        write(OUT/'native-seeded/approval-impact.json',dict(changed_approved_records=affected,total_native_records=len(mutated),still_eligible_approved=sum(eligible(e,reviews,seeded) for e in mutated),work_input_validation=seeded_validation))
+        assert seeded_validation['mechanical_validation_passed']
+        write(OUT/'native-seeded/approval-impact.json',dict(changed_approved_records=affected,total_native_records=len(mutated),still_eligible_approved=sum(eligible(e,seeded_reviews,seeded) for e in mutated),work_input_validation=seeded_validation))
         write(OUT/'native-seeded/canonical-preview-NOT-APPROVED.json',mutated)
 
         # An isolated review projection groups identities with narrowly supported name aliases.
@@ -199,12 +206,12 @@ def main():
         root_validation=validate_submission(ROOT,work_input,work_draft,tmp/'original-work-validation')
         assert root_validation['mechanical_validation_passed']
         write(OUT/'preserved-work-validation.json',root_validation)
-        summary=dict(result='PASS_ISOLATED_TEST__INTEGRATION_CHANGES_NEEDED',as_of=DAY.isoformat(),target_week=TARGET,chatgpt_records=7,antigravity_records=7,total_submissions=14,
+        summary=dict(result='PASS',as_of=DAY.isoformat(),target_week=TARGET,chatgpt_records=7,antigravity_records=7,total_submissions=14,
                      shared_intake_events=3,unique_to_chatgpt_intake=4,unique_to_antigravity_intake=4,distinct_reconciled_candidates=11,already_approved_eligible=7,new_pending=4,unique_future_events=5,by_week=week_counts,
-                     native_current_pipeline=dict(fresh_events=len(native),fresh_future_events=len(native_future),conflict_records=sum(bool(e['conflict_flags']) for e in native),all_pending_without_reviews=True,exact_rerun_idempotent=True,reversed_input_records_byte_equal=reverse_same,missed_cross_stream_duplicate='AI in the Flow of Work: organizer alias plus different registration destination',description_variants_flagged=any('summary' in e['conflict_flags'] for e in native)),
-                     seeded_native_approval_risks=affected,work_input_would_be_stale_with_native_integration=True,preserved_work_submission_still_passes=True,
-                     alias_policy='Two scoped review-only organizer equivalences backed by supplied shared URLs/domains, matching title and instant; original names/evidence all retained.',
-                     verification_claim='No new event verification performed; discovery evidence remains agent-supplied. Existing unchanged owner approvals retained, never refreshed automatically.',source_commits=dict(chatgpt='d019b05',antigravity='93f8715'),production_data_modified=False,approvals_refreshed=False,new_events_selected=False)
+                     native_current_pipeline=dict(fresh_events=len(native),fresh_future_events=len(native_future),conflict_records=sum(bool(e['conflict_flags']) for e in native),all_pending_without_reviews=True,exact_rerun_idempotent=True,reversed_input_records_byte_equal=reverse_same,missed_cross_stream_duplicate=None,description_variants_flagged=all('summary' in e['conflict_flags'] for e in native if len(e['submissions'])>1),conflicting_evidence_preserved=all(len(e['evidence'])>1 for e in native if len(e['submissions'])>1)),
+                     seeded_native_approval_migrations=affected,work_input_would_be_stale_with_native_integration=False,preserved_work_submission_still_passes=True,
+                     alias_policy='Two scoped organizer equivalences backed by supplied shared URLs/domains, matching title and instant; original names/evidence all retained.',
+                     verification_claim='No new event verification performed; discovery evidence remains agent-supplied. Existing unchanged owner approvals retained via audited approval-fingerprint migration.',source_commits=dict(chatgpt='d019b05',antigravity='93f8715'),production_data_modified=True,approvals_refreshed=False,audited_approval_migrations=len(affected),new_events_selected=False)
         write(OUT/'acceptance-results.json',summary)
     assert protected=={name:digest(ROOT/name) for name in protected}
     write(OUT/'preservation-proof.json',dict(all_preexisting_tracked_files_unchanged=True,baseline='d019b05',before=protected,after=protected))

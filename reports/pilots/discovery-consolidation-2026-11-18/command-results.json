@@ -24,7 +24,7 @@
       "python3",
       "scripts/validate.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
@@ -37,7 +37,7 @@
       "python3",
       "scripts/ingest.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
@@ -50,7 +50,7 @@
       "python3",
       "scripts/assign_weeks.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
@@ -63,7 +63,7 @@
       "python3",
       "scripts/validate.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
@@ -76,7 +76,7 @@
       "python3",
       "scripts/ingest.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
@@ -89,7 +89,7 @@
       "python3",
       "scripts/assign_weeks.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
@@ -102,20 +102,20 @@
       "python3",
       "scripts/generate_post.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh",
       "--as-of",
       "2026-11-24"
     ],
     "exit_code": 0,
     "stderr": "",
-    "stdout": "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-fresh/weeks/2026/RW49_2026-11-29_to_2026-12-05\n"
+    "stdout": "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-fresh/weeks/2026/RW49_2026-11-29_to_2026-12-05\n"
   },
   {
     "command": [
       "python3",
       "scripts/validate.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-reversed",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-reversed",
       "--as-of",
       "2026-11-24"
     ],
@@ -128,7 +128,7 @@
       "python3",
       "scripts/ingest.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-reversed",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-reversed",
       "--as-of",
       "2026-11-24"
     ],
@@ -141,7 +141,7 @@
       "python3",
       "scripts/assign_weeks.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-reversed",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-reversed",
       "--as-of",
       "2026-11-24"
     ],
@@ -154,7 +154,7 @@
       "python3",
       "scripts/validate.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-seeded-with-approved",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-seeded-with-approved",
       "--as-of",
       "2026-11-24"
     ],
@@ -167,7 +167,7 @@
       "python3",
       "scripts/ingest.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-seeded-with-approved",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-seeded-with-approved",
       "--as-of",
       "2026-11-24"
     ],
@@ -180,7 +180,7 @@
       "python3",
       "scripts/assign_weeks.py",
       "--root",
-      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-n2j4qybw/native-seeded-with-approved",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-consolidation-hlqidr5b/native-seeded-with-approved",
       "--as-of",
       "2026-11-24"
     ],

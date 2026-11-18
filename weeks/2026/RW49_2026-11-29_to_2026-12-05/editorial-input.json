@@ -41,7 +41,7 @@
     "target_max": 12,
     "target_min": 8
   },
-  "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "editorial_input_sha256": "e2017047084dc5788577cefe99ab26620e8688442ef3642bc8b47271786b932f",
   "events": [
     {
       "audience": [
@@ -101,14 +101,17 @@
       "organizer": "iSpring",
       "organizer_url": null,
       "original_registration_urls": [
-        "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+        "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+        "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26"
       ],
       "price_label": null,
       "price_type_original": "free",
-      "record_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+      "record_sha256": "f2b5a5aae63afb5787c493625ba78570a57f5d2c91049b5a1eee1bcb2702b71c",
       "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
       "required_fact_block": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities\niSpring\nWed, Dec 2, 2026 | 9:00 AM CST\nhttps://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
       "source_urls": [
+        "https://elearningindustry.com/elearning-events",
+        "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026",
         "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
       ],
       "start_central": "2026-12-02T09:00:00-06:00",
@@ -225,10 +228,11 @@
       ],
       "price_label": null,
       "price_type_original": "free",
-      "record_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+      "record_sha256": "44b2bbb5a116165bd9c34f7f4ed8dd9dbfe09620b396174fa52f4c753b78eabe",
       "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
       "required_fact_block": "[Leader Talk] The 2027 Learning Experience\nTraining Industry\nThu, Dec 3, 2026 | 10:00 AM CST\nhttps://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
       "source_urls": [
+        "https://trainingindustry.com/webinar/",
         "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
       ],
       "start_central": "2026-12-03T10:00:00-06:00",
@@ -249,7 +253,7 @@
   "required_heading": "Next Week in L&D | 2026-11-29 to 2026-12-05",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
   "source_versions": {
-    "canonical_sha256": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
-    "reviews_sha256": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934"
+    "canonical_sha256": "b44094a56c407560ae34d82311f3d5f76250d1b097325dd5a776ec79294e23b2",
+    "reviews_sha256": "1fa239442924f8d513593143fa466df3b184713e520ea2a2aa68bb5522f355d7"
   }
 }

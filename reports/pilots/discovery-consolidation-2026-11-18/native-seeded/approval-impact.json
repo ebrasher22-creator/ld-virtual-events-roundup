@@ -1,56 +1,472 @@
 {
   "changed_approved_records": [
     {
-      "after_sha256": "6266b7b392cd4e2f1eb376cb16538e5900e941ad86ad2cbb0565d9c4571e5ae8",
-      "approval_problem": "missing_or_stale_approval",
+      "after_sha256": "f2b5a5aae63afb5787c493625ba78570a57f5d2c91049b5a1eee1bcb2702b71c",
+      "approval_problem": null,
       "before_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
       "event_id": "evt_3f2f090963c7e1d0",
+      "migration": {
+        "acknowledged_conflict_flags": [
+          "summary"
+        ],
+        "approved_facts_unchanged": true,
+        "from_record_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+        "migrated_at": "2026-11-18T14:21:32-06:00",
+        "reason": "corroborating_submission_provenance_only",
+        "to_record_sha256": "f2b5a5aae63afb5787c493625ba78570a57f5d2c91049b5a1eee1bcb2702b71c",
+        "type": "audited_approval_fingerprint_migration",
+        "unadopted_proposals": [
+          {
+            "adopted": false,
+            "classification": "capitalization_punctuation_only",
+            "field": "title",
+            "preserved_approved_value": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+            "proposed_value": "L&D As A Conductor: Orchestrating People, AI, And Business Priorities",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "scoped_organizer_alias",
+            "field": "organizer",
+            "preserved_approved_value": "iSpring",
+            "proposed_value": "iSpring Solutions",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "organizer_url",
+            "preserved_approved_value": null,
+            "proposed_value": "https://www.ispringsolutions.com",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "additional_source_location",
+            "field": "event_url",
+            "preserved_approved_value": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+            "proposed_value": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "tracking_slash_only",
+            "field": "registration_url",
+            "preserved_approved_value": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+            "proposed_value": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "language_label_only",
+            "field": "language",
+            "preserved_approved_value": "English",
+            "proposed_value": "en",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "cost",
+            "preserved_approved_value": null,
+            "proposed_value": 0,
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_description_variant",
+            "field": "summary",
+            "preserved_approved_value": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+            "proposed_value": "Live one-hour webinar led by Maria Starling (Lead Program Manager at iSpring) examining iSpring's 2026 ROI Playbook research across 140+ L&D professionals, the four hidden barriers to proving training ROI, and how L&D teams align people, AI, line managers, and finance stakeholders around measurable business outcomes.",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_editorial_context_variant",
+            "field": "audience",
+            "preserved_approved_value": [
+              "L&D leaders",
+              "Instructional designers",
+              "Learning evaluation professionals"
+            ],
+            "proposed_value": [
+              "L&D professionals",
+              "Learning leaders",
+              "Training managers",
+              "Instructional designers"
+            ],
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_editorial_context_variant",
+            "field": "topics",
+            "preserved_approved_value": [
+              "Learning ROI",
+              "AI in L&D",
+              "Stakeholder alignment"
+            ],
+            "proposed_value": [
+              "L&D ROI and measurement",
+              "AI in learning and development",
+              "Learning strategy and business alignment",
+              "Stakeholder partnership"
+            ],
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+          }
+        ],
+        "verified_unchanged_fields": [
+          "title",
+          "organizer",
+          "organizer_url",
+          "event_url",
+          "registration_url",
+          "start_datetime",
+          "end_datetime",
+          "timezone",
+          "event_format",
+          "language",
+          "price_type",
+          "cost",
+          "summary",
+          "audience",
+          "topics"
+        ]
+      },
       "native_conflict_flags": [
-        "organizer",
-        "title"
+        "summary"
       ],
       "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
-      "updated_at_chronologically_current": false
+      "updated_at_chronologically_current": true
     },
     {
-      "after_sha256": "b98a05fd157a23385e9197c0e066607259a82c3a75c02bb0f058f9b4e9bc6abb",
-      "approval_problem": "missing_or_stale_approval",
+      "after_sha256": "44b2bbb5a116165bd9c34f7f4ed8dd9dbfe09620b396174fa52f4c753b78eabe",
+      "approval_problem": null,
       "before_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
       "event_id": "evt_5b0c2b55e8407e36",
+      "migration": {
+        "acknowledged_conflict_flags": [
+          "summary"
+        ],
+        "approved_facts_unchanged": true,
+        "from_record_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+        "migrated_at": "2026-11-18T14:20:03-06:00",
+        "reason": "corroborating_submission_provenance_only",
+        "to_record_sha256": "44b2bbb5a116165bd9c34f7f4ed8dd9dbfe09620b396174fa52f4c753b78eabe",
+        "type": "audited_approval_fingerprint_migration",
+        "unadopted_proposals": [
+          {
+            "adopted": false,
+            "classification": "scoped_organizer_alias",
+            "field": "organizer",
+            "preserved_approved_value": "Training Industry",
+            "proposed_value": "Training Industry, Inc.",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "organizer_url",
+            "preserved_approved_value": null,
+            "proposed_value": "https://trainingindustry.com",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "tracking_slash_only",
+            "field": "registration_url",
+            "preserved_approved_value": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience",
+            "proposed_value": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "end_datetime",
+            "preserved_approved_value": null,
+            "proposed_value": "2026-12-03T15:45:00-05:00",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "language_label_only",
+            "field": "language",
+            "preserved_approved_value": "English",
+            "proposed_value": "en",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "cost",
+            "preserved_approved_value": null,
+            "proposed_value": 0,
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_description_variant",
+            "field": "summary",
+            "preserved_approved_value": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+            "proposed_value": "Multi-session Training Industry Leader Talk exploring how organizations are building 2027 learning experience blueprints using AI, learning technology, personalization, learner support, and a five-step pilot framework for testing learning design.",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_editorial_context_variant",
+            "field": "audience",
+            "preserved_approved_value": [
+              "L&D leaders",
+              "Learning experience designers",
+              "Learning technology leaders"
+            ],
+            "proposed_value": [
+              "Learning and development leaders",
+              "Instructional designers",
+              "Learning technology managers",
+              "Corporate training practitioners"
+            ],
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_editorial_context_variant",
+            "field": "topics",
+            "preserved_approved_value": [
+              "Learning experience",
+              "Learning technology",
+              "AI"
+            ],
+            "proposed_value": [
+              "Learning experience design",
+              "AI and learning technology",
+              "Learning strategy and planning",
+              "Instructional design testing"
+            ],
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+          }
+        ],
+        "verified_unchanged_fields": [
+          "title",
+          "organizer",
+          "organizer_url",
+          "event_url",
+          "registration_url",
+          "start_datetime",
+          "end_datetime",
+          "timezone",
+          "event_format",
+          "language",
+          "price_type",
+          "cost",
+          "summary",
+          "audience",
+          "topics"
+        ]
+      },
       "native_conflict_flags": [
-        "end_datetime",
-        "organizer"
+        "summary"
       ],
       "title": "[Leader Talk] The 2027 Learning Experience",
-      "updated_at_chronologically_current": false
+      "updated_at_chronologically_current": true
+    },
+    {
+      "after_sha256": "f7b343a7cf32100c121a231231f6ee3655bb9a54bf383ba988218cc153b7d670",
+      "approval_problem": null,
+      "before_sha256": "c881861a1f191c06dbbbe08e10aca85c1ce4d69f416ef47a73586d9de34e7cae",
+      "event_id": "evt_fb9c960a4c6a704d",
+      "migration": {
+        "acknowledged_conflict_flags": [
+          "registration_url",
+          "summary"
+        ],
+        "approved_facts_unchanged": true,
+        "from_record_sha256": "c881861a1f191c06dbbbe08e10aca85c1ce4d69f416ef47a73586d9de34e7cae",
+        "migrated_at": "2026-11-18T14:20:03-06:00",
+        "reason": "corroborating_submission_provenance_only",
+        "to_record_sha256": "f7b343a7cf32100c121a231231f6ee3655bb9a54bf383ba988218cc153b7d670",
+        "type": "audited_approval_fingerprint_migration",
+        "unadopted_proposals": [
+          {
+            "adopted": false,
+            "classification": "scoped_organizer_alias",
+            "field": "organizer",
+            "preserved_approved_value": "Training Industry",
+            "proposed_value": "Training Industry, Inc.",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "organizer_url",
+            "preserved_approved_value": null,
+            "proposed_value": "https://trainingindustry.com",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "registration_destination_proposal",
+            "field": "registration_url",
+            "preserved_approved_value": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai",
+            "proposed_value": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "language_label_only",
+            "field": "language",
+            "preserved_approved_value": "English",
+            "proposed_value": "en",
+            "review_needed_if_adopted": false,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "proposed_enrichment",
+            "field": "cost",
+            "preserved_approved_value": null,
+            "proposed_value": 0,
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_description_variant",
+            "field": "summary",
+            "preserved_approved_value": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+            "proposed_value": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_editorial_context_variant",
+            "field": "audience",
+            "preserved_approved_value": [
+              "L&D professionals",
+              "Learning managers",
+              "AI enablement professionals"
+            ],
+            "proposed_value": [
+              "L&D professionals",
+              "Instructional designers",
+              "Learning leaders",
+              "Training managers"
+            ],
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          },
+          {
+            "adopted": false,
+            "classification": "unreviewed_editorial_context_variant",
+            "field": "topics",
+            "preserved_approved_value": [
+              "AI in L&D",
+              "Workplace learning",
+              "Human-AI collaboration"
+            ],
+            "proposed_value": [
+              "Artificial intelligence in L&D",
+              "Human-AI workflow collaboration",
+              "AI agents in workplace learning",
+              "L&D decision-making"
+            ],
+            "review_needed_if_adopted": true,
+            "source_file": "intake/gemini/gemini-2026-11-18.json",
+            "submission_sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+          }
+        ],
+        "verified_unchanged_fields": [
+          "title",
+          "organizer",
+          "organizer_url",
+          "event_url",
+          "registration_url",
+          "start_datetime",
+          "end_datetime",
+          "timezone",
+          "event_format",
+          "language",
+          "price_type",
+          "cost",
+          "summary",
+          "audience",
+          "topics"
+        ]
+      },
+      "native_conflict_flags": [
+        "registration_url",
+        "summary"
+      ],
+      "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+      "updated_at_chronologically_current": true
     }
   ],
-  "still_eligible_approved": 5,
-  "total_native_records": 12,
+  "still_eligible_approved": 7,
+  "total_native_records": 11,
   "work_input_validation": {
     "character_counts": {
       "compact_caption": 1386,
       "full_caption": 1807
     },
-    "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
-    "errors": [
-      "Editorial input is stale, changed, or inconsistent with current approvals/configuration",
-      "Approved editorial input is not ready",
-      "full_caption: Extra/changed registration or other URL outside approved fact blocks",
-      "full_caption: Numeric/date/time claim outside immutable heading/fact blocks",
-      "full_caption: Date/timezone claim outside approved fact blocks",
-      "compact_caption: Extra/changed registration or other URL outside approved fact blocks",
-      "compact_caption: Numeric/date/time claim outside immutable heading/fact blocks",
-      "compact_caption: Date/timezone claim outside approved fact blocks"
-    ],
+    "editorial_input_sha256": "e2017047084dc5788577cefe99ab26620e8688442ef3642bc8b47271786b932f",
+    "errors": [],
     "limitations": [
       "Exact event facts and coverage are checked. Prose truthfulness, interpretation, audience sensitivity and editorial quality require human review."
     ],
-    "mechanical_validation_passed": false,
+    "mechanical_validation_passed": true,
     "publication_approval_status": "awaiting_final_human_review",
-    "result": "fail",
+    "result": "pass",
     "semantic_review_required": true,
-    "submission_sha256": "530d0ce7203bbb8a171474d2042e1af8706c12e73b91899637b89c9f9152ac5f",
-    "validated_at": "2026-11-18T21:42:28+00:00"
+    "submission_sha256": "6afd071854fb129c368ea9dab2f156fbc182adc66fc62facd22b281cc56175fd",
+    "validated_at": "2026-11-18T23:55:29+00:00"
   }
 }

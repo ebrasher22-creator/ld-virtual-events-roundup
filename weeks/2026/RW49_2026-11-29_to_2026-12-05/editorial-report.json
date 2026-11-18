@@ -7,7 +7,7 @@
   "artifact_relative_path": "weeks/2026/RW49_2026-11-29_to_2026-12-05",
   "as_of": "2026-11-24",
   "below_target": true,
-  "canonical_sha256": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+  "canonical_sha256": "b44094a56c407560ae34d82311f3d5f76250d1b097325dd5a776ec79294e23b2",
   "caption_strategy": "full",
   "character_counts": {
     "compact": 1246,
@@ -17,10 +17,34 @@
   "editorial_exceptions": [],
   "events_excluded": [
     {
+      "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "event_id": "evt_004e21d3ac8f32b8",
+      "reason": "missing_or_stale_approval",
+      "title": "How Collective Energy Shapes Performance"
+    },
+    {
+      "assigned_week": "2027/RW04_2027-01-24_to_2027-01-30",
+      "event_id": "evt_8f29d1a3deb28dec",
+      "reason": "outside_target_week",
+      "title": "[Leader Talk] L&D Strategy for Business Results in 2027"
+    },
+    {
       "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
       "event_id": "evt_a63bc389a99b233d",
       "reason": "outside_target_week",
       "title": "Intro to Facilitating Groups: The Basics"
+    },
+    {
+      "assigned_week": "2027/RW03_2027-01-17_to_2027-01-23",
+      "event_id": "evt_d3d3b702e3ac8d1b",
+      "reason": "outside_target_week",
+      "title": "[Learning Tech Showcase] Learning Management Systems"
+    },
+    {
+      "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
+      "event_id": "evt_ecb7edf25c5506f2",
+      "reason": "outside_target_week",
+      "title": "[Research Spotlight] Better Leaders by Design: Updating L&D’s Approach to Leadership Development"
     },
     {
       "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
@@ -37,7 +61,7 @@
     },
     {
       "event_id": "evt_3f2f090963c7e1d0",
-      "record_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+      "record_sha256": "f2b5a5aae63afb5787c493625ba78570a57f5d2c91049b5a1eee1bcb2702b71c",
       "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
     },
     {
@@ -52,7 +76,7 @@
     },
     {
       "event_id": "evt_5b0c2b55e8407e36",
-      "record_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+      "record_sha256": "44b2bbb5a116165bd9c34f7f4ed8dd9dbfe09620b396174fa52f4c753b78eabe",
       "title": "[Leader Talk] The 2027 Learning Experience"
     }
   ],
@@ -90,7 +114,7 @@
     }
   ],
   "publication_approval_status": "awaiting_final_human_review",
-  "reviews_sha256": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
+  "reviews_sha256": "1fa239442924f8d513593143fa466df3b184713e520ea2a2aa68bb5522f355d7",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
   "source_commit": "ce2a301c73365ce9c30d5ca50b566a69a4007ed3",
   "target_max": 12,
