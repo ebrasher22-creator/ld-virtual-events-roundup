@@ -1,0 +1,180 @@
+[
+  {
+    "audience": [
+      "Trainers",
+      "Facilitators",
+      "Learning and development professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_a63bc389a99b233d",
+    "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Leadership Strategies webinar page: December 10, 2026 at 1:00 PM ET; live online; free; registration link.",
+        "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Leadership Strategies",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.leadstrat.com/services/facilitation-webinars"
+    ],
+    "registration_url": "https://www.leadstrat.com/services/facilitation-webinars",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://www.leadstrat.com/services/facilitation-webinars/"
+    ],
+    "start_datetime": "2026-12-10T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Trainers",
+            "Facilitators",
+            "Learning and development professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Leadership Strategies webinar page: December 10, 2026 at 1:00 PM ET; live online; free; registration link.",
+              "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Leadership Strategies",
+          "price_type": "free",
+          "registration_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "source_urls": [
+            "https://www.leadstrat.com/services/facilitation-webinars/"
+          ],
+          "start_datetime": "2026-12-10T13:00:00-05:00",
+          "summary": "Live introduction to group facilitation, meeting preparation and participant engagement techniques.",
+          "timezone": "America/New_York",
+          "title": "Intro to Facilitating Groups: The Basics",
+          "topics": [
+            "Facilitation",
+            "Training delivery",
+            "Meeting design"
+          ]
+        },
+        "sha256": "36e5dbc7709194a6c12d5d88d0dec87656a9d241777fd6552d46e19d6b3fe871"
+      }
+    ],
+    "summary": "Live introduction to group facilitation, meeting preparation and participant engagement techniques.",
+    "timezone": "America/New_York",
+    "title": "Intro to Facilitating Groups: The Basics",
+    "topics": [
+      "Facilitation",
+      "Training delivery",
+      "Meeting design"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D professionals",
+      "Learning managers",
+      "AI enablement professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_fb9c960a4c6a704d",
+    "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Training Industry",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+    ],
+    "start_datetime": "2026-12-08T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D professionals",
+            "Learning managers",
+            "AI enablement professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Training Industry",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+          ],
+          "start_datetime": "2026-12-08T11:00:00-05:00",
+          "summary": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+          "timezone": "America/New_York",
+          "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+          "topics": [
+            "AI in L&D",
+            "Workplace learning",
+            "Human-AI collaboration"
+          ]
+        },
+        "sha256": "9b37046bee523eccad94a293e40e8576442ec0b8c5497012be8ecfae378a21e8"
+      }
+    ],
+    "summary": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+    "timezone": "America/New_York",
+    "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+    "topics": [
+      "AI in L&D",
+      "Workplace learning",
+      "Human-AI collaboration"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  }
+]

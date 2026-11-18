@@ -1,0 +1,633 @@
+[
+  {
+    "audience": [
+      "Instructional designers",
+      "Trainers",
+      "L&D professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-02T12:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_1b02f4289e55abe4",
+    "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Langevin webinar registration page: December 2, 2026, 11:00 am–12:00 pm ET; Adobe Connect; free; registration form available.",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Langevin Learning Services",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226"
+    ],
+    "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+    ],
+    "start_datetime": "2026-12-02T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Instructional designers",
+            "Trainers",
+            "L&D professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T12:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Langevin webinar registration page: December 2, 2026, 11:00 am–12:00 pm ET; Adobe Connect; free; registration form available.",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Langevin Learning Services",
+          "price_type": "free",
+          "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "source_urls": [
+            "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+          ],
+          "start_datetime": "2026-12-02T11:00:00-05:00",
+          "summary": "Marsha Weisleder reviews practical steps for planning instructional design, analyzing learners, categorizing content and designing assessments.",
+          "timezone": "America/New_York",
+          "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+          "topics": [
+            "Instructional design",
+            "Learner analysis",
+            "Assessment"
+          ]
+        },
+        "sha256": "d3a0b4af3702d2332ad401cf468fe4bf487d4b32eab93bc396ae6c66695c72b7"
+      }
+    ],
+    "summary": "Marsha Weisleder reviews practical steps for planning instructional design, analyzing learners, categorizing content and designing assessments.",
+    "timezone": "America/New_York",
+    "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+    "topics": [
+      "Instructional design",
+      "Learner analysis",
+      "Assessment"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D leaders",
+      "Instructional designers",
+      "Learning evaluation professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-02T11:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_3f2f090963c7e1d0",
+    "event_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official iSpring webinar page: December 2, Wednesday, 10:00 AM EST; free; one hour; on-page registration form.",
+        "source_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "iSpring",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+    ],
+    "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+    ],
+    "start_datetime": "2026-12-02T10:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D leaders",
+            "Instructional designers",
+            "Learning evaluation professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T11:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official iSpring webinar page: December 2, Wednesday, 10:00 AM EST; free; one hour; on-page registration form.",
+              "source_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+            }
+          ],
+          "language": "English",
+          "organizer": "iSpring",
+          "price_type": "free",
+          "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+          "source_urls": [
+            "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+          ],
+          "start_datetime": "2026-12-02T10:00:00-05:00",
+          "summary": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+          "timezone": "America/New_York",
+          "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+          "topics": [
+            "Learning ROI",
+            "AI in L&D",
+            "Stakeholder alignment"
+          ]
+        },
+        "sha256": "b0aa986363f5cce0275f91ed7b0a80e8b8eeca29054b99bf6e7b7b49f01a2670"
+      }
+    ],
+    "summary": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+    "timezone": "America/New_York",
+    "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+    "topics": [
+      "Learning ROI",
+      "AI in L&D",
+      "Stakeholder alignment"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D leaders",
+      "Learning experience designers",
+      "Learning technology leaders"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_5b0c2b55e8407e36",
+    "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Training Industry webinar page: December 3, 2026 at 11:00 am ET; webinar and Reserve Your Spot link. Agenda shows presentations beginning 11:00 am ET.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Training Industry",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+    ],
+    "start_datetime": "2026-12-03T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D leaders",
+            "Learning experience designers",
+            "Learning technology leaders"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Training Industry webinar page: December 3, 2026 at 11:00 am ET; webinar and Reserve Your Spot link. Agenda shows presentations beginning 11:00 am ET.",
+              "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Training Industry",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+          ],
+          "start_datetime": "2026-12-03T11:00:00-05:00",
+          "summary": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+          "timezone": "America/New_York",
+          "title": "[Leader Talk] The 2027 Learning Experience",
+          "topics": [
+            "Learning experience",
+            "Learning technology",
+            "AI"
+          ]
+        },
+        "sha256": "210fa158a348372050898d750097aafedc6deae1c4204f845c03d544ecb5bacd"
+      }
+    ],
+    "summary": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+    "timezone": "America/New_York",
+    "title": "[Leader Talk] The 2027 Learning Experience",
+    "topics": [
+      "Learning experience",
+      "Learning technology",
+      "AI"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Leadership development professionals",
+      "People managers",
+      "Organizational development professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-02T13:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_7c9ea52644b1eb38",
+    "event_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official GRQC event page: Dec 02, 2026, 12:00–1:00 PM EST; webinar via Zoom; free to members and nonmembers; on-page Register button.",
+        "source_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Greater Rochester Quality Council",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+    ],
+    "registration_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+    ],
+    "start_datetime": "2026-12-02T12:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Leadership development professionals",
+            "People managers",
+            "Organizational development professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T13:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official GRQC event page: Dec 02, 2026, 12:00–1:00 PM EST; webinar via Zoom; free to members and nonmembers; on-page Register button.",
+              "source_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+            }
+          ],
+          "language": "English",
+          "organizer": "Greater Rochester Quality Council",
+          "price_type": "free",
+          "registration_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+          "source_urls": [
+            "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+          ],
+          "start_datetime": "2026-12-02T12:00:00-05:00",
+          "summary": "Samantha Koury introduces trauma-informed approaches to difficult performance conversations, including sample dialogue and practical support tools.",
+          "timezone": "America/New_York",
+          "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+          "topics": [
+            "Trauma-informed leadership",
+            "Coaching",
+            "Accountability"
+          ]
+        },
+        "sha256": "d6390226b5d506f08667c6f2d54d1d94f5deaf808cffadbd37b0f03750fc90fb"
+      }
+    ],
+    "summary": "Samantha Koury introduces trauma-informed approaches to difficult performance conversations, including sample dialogue and practical support tools.",
+    "timezone": "America/New_York",
+    "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+    "topics": [
+      "Trauma-informed leadership",
+      "Coaching",
+      "Accountability"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Trainers",
+      "Facilitators",
+      "Learning and development professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_a63bc389a99b233d",
+    "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Leadership Strategies webinar page: December 10, 2026 at 1:00 PM ET; live online; free; registration link.",
+        "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Leadership Strategies",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.leadstrat.com/services/facilitation-webinars"
+    ],
+    "registration_url": "https://www.leadstrat.com/services/facilitation-webinars",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://www.leadstrat.com/services/facilitation-webinars/"
+    ],
+    "start_datetime": "2026-12-10T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Trainers",
+            "Facilitators",
+            "Learning and development professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Leadership Strategies webinar page: December 10, 2026 at 1:00 PM ET; live online; free; registration link.",
+              "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Leadership Strategies",
+          "price_type": "free",
+          "registration_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "source_urls": [
+            "https://www.leadstrat.com/services/facilitation-webinars/"
+          ],
+          "start_datetime": "2026-12-10T13:00:00-05:00",
+          "summary": "Live introduction to group facilitation, meeting preparation and participant engagement techniques.",
+          "timezone": "America/New_York",
+          "title": "Intro to Facilitating Groups: The Basics",
+          "topics": [
+            "Facilitation",
+            "Training delivery",
+            "Meeting design"
+          ]
+        },
+        "sha256": "36e5dbc7709194a6c12d5d88d0dec87656a9d241777fd6552d46e19d6b3fe871"
+      }
+    ],
+    "summary": "Live introduction to group facilitation, meeting preparation and participant engagement techniques.",
+    "timezone": "America/New_York",
+    "title": "Intro to Facilitating Groups: The Basics",
+    "topics": [
+      "Facilitation",
+      "Training delivery",
+      "Meeting design"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Facilitators",
+      "Leadership development professionals",
+      "Organizational development consultants"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-01T14:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_f1f0bd8d082f4b90",
+    "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Leadership Strategies webinar page: Tuesday, December 1, 2026, 1:00–2:00 PM ET; live online; free; registration link listed.",
+        "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Leadership Strategies",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint"
+    ],
+    "registration_url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://www.leadstrat.com/services/facilitation-webinars/"
+    ],
+    "start_datetime": "2026-12-01T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Facilitators",
+            "Leadership development professionals",
+            "Organizational development consultants"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-01T14:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Leadership Strategies webinar page: Tuesday, December 1, 2026, 1:00–2:00 PM ET; live online; free; registration link listed.",
+              "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Leadership Strategies",
+          "price_type": "free",
+          "registration_url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+          "source_urls": [
+            "https://www.leadstrat.com/services/facilitation-webinars/"
+          ],
+          "start_datetime": "2026-12-01T13:00:00-05:00",
+          "summary": "Live strategy-planning workshop with Michael Wilkinson focused on prioritization and using the Drivers Model to move from strategy to implementation.",
+          "timezone": "America/New_York",
+          "title": "2027 Planning Sprint",
+          "topics": [
+            "Strategic planning",
+            "Facilitation",
+            "Leadership"
+          ]
+        },
+        "sha256": "a53fbe39e1cd639409f0846d65cbf02440a6650d5fc05ba8b787019151d77889"
+      }
+    ],
+    "summary": "Live strategy-planning workshop with Michael Wilkinson focused on prioritization and using the Drivers Model to move from strategy to implementation.",
+    "timezone": "America/New_York",
+    "title": "2027 Planning Sprint",
+    "topics": [
+      "Strategic planning",
+      "Facilitation",
+      "Leadership"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D professionals",
+      "Learning managers",
+      "AI enablement professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_fb9c960a4c6a704d",
+    "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Training Industry",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+    ],
+    "start_datetime": "2026-12-08T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D professionals",
+            "Learning managers",
+            "AI enablement professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Training Industry",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+          ],
+          "start_datetime": "2026-12-08T11:00:00-05:00",
+          "summary": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+          "timezone": "America/New_York",
+          "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+          "topics": [
+            "AI in L&D",
+            "Workplace learning",
+            "Human-AI collaboration"
+          ]
+        },
+        "sha256": "9b37046bee523eccad94a293e40e8576442ec0b8c5497012be8ecfae378a21e8"
+      }
+    ],
+    "summary": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+    "timezone": "America/New_York",
+    "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+    "topics": [
+      "AI in L&D",
+      "Workplace learning",
+      "Human-AI collaboration"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  }
+]

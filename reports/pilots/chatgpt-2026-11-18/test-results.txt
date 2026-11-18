@@ -1,0 +1,28 @@
+$ python3 -m unittest discover -s tests -v
+test_agent_cannot_self_verify (test_pipeline.PipelineTests) ... ok
+test_dst (test_pipeline.PipelineTests) ... ok
+test_ingest_idempotence_provenance_conflict_future (test_pipeline.PipelineTests) ... ok
+test_invalid (test_pipeline.PipelineTests) ... ok
+test_length_limit (test_pipeline.PipelineTests) ... ok
+test_manual_cli_intake (test_pipeline.PipelineTests) ... ok
+test_review_binds_exact_record (test_pipeline.PipelineTests) ... ok
+test_schema_contract_invalid_shapes (test_pipeline.PipelineTests) ... ok
+test_schema_required_fields_and_registry (test_pipeline.PipelineTests) ... ok
+test_transactional_invalid_batch (test_pipeline.PipelineTests) ... ok
+test_unverified_excluded_and_output_reproducible (test_pipeline.PipelineTests) ... ok
+test_utc_instant_with_iana_display_zone (test_pipeline.PipelineTests) ... ok
+test_valid (test_pipeline.PipelineTests) ... ok
+test_week_boundaries (test_pipeline.PipelineTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.310s
+
+OK
+
+exit_code=0
+
+$ python3 scripts/smoke.py
+PASS: both agents, overlap, conflict, future retention, rerun stability, review gate and Markdown generation
+/Users/Eddie/Documents/Codex/2026-11-18/https-github-com-ebrasher22-creator-ld/work/repo/tests/smoke-output
+
+exit_code=0

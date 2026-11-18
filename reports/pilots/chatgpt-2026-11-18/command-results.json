@@ -1,0 +1,145 @@
+[
+  {
+    "command": [
+      "python3",
+      "scripts/validate.py",
+      "intake/chatgpt/chatgpt-2026-11-18-pilot.json"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/ingest.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/assign_weeks.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq",
+      "--as-of",
+      "2026-11-24"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/generate_post.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq",
+      "--as-of",
+      "2026-11-24"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq/weeks/2026/RW49_2026-11-29_to_2026-12-05\n"
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/ingest.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/assign_weeks.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq",
+      "--as-of",
+      "2026-11-24"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/generate_post.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq",
+      "--as-of",
+      "2026-11-24"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq/weeks/2026/RW49_2026-11-29_to_2026-12-05\n"
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/ingest.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/assign_weeks.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq",
+      "--as-of",
+      "2026-11-24"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/ingest.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/assign_weeks.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq",
+      "--as-of",
+      "2026-11-24"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/ingest.py",
+      "--root",
+      "/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/ld-pilot-84v_niaq"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  }
+]

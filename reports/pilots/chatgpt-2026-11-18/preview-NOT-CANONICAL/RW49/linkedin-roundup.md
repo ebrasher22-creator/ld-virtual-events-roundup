@@ -1,0 +1,4 @@
+Next Week in L&D | RW49_2026-11-29_to_2026-12-05
+Make room for learning: here are next week’s reviewed live sessions for L&D professionals.
+
+Which session will you attend? Share a recommendation for the next roundup.

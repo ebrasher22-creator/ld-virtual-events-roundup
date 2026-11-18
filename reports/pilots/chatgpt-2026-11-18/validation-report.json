@@ -1,0 +1,69 @@
+{
+  "format_checkers": [
+    "date-time",
+    "uri"
+  ],
+  "input": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+  "input_sha256": "588eaa70407285a0fa760143ac63bf4ef35c3df71541b9c35dad627009ebcefc",
+  "live_verification_performed": false,
+  "official_validator": {
+    "command": [
+      "python3",
+      "scripts/validate.py",
+      "intake/chatgpt/chatgpt-2026-11-18-pilot.json"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "record_count": 7,
+  "records": [
+    {
+      "index": 1,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "2027 Planning Sprint"
+    },
+    {
+      "index": 2,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "index": 3,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success"
+    },
+    {
+      "index": 4,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
+    },
+    {
+      "index": 5,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "[Leader Talk] The 2027 Learning Experience"
+    },
+    {
+      "index": 6,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI"
+    },
+    {
+      "index": 7,
+      "repository_errors": [],
+      "schema_errors": [],
+      "title": "Intro to Facilitating Groups: The Basics"
+    }
+  ],
+  "schema_dialect": "2020-12",
+  "schema_errors": [],
+  "schema_sha256": "5b3cf4bbf53c3ffbf3efb25560c4b167098c7499ae39a494a1d2d87e207170b0",
+  "schema_validator": "jsonschema 4.25.1",
+  "source_byte_identical": true
+}

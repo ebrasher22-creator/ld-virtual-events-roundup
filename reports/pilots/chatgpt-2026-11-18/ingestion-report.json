@@ -1,0 +1,107 @@
+{
+  "as_of": "2026-11-24",
+  "canonical_preview_count": 7,
+  "canonical_records_modified": false,
+  "conflicting_pilot_records": 0,
+  "events": [
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "start_central": "2026-12-01T12:00:00-06:00",
+      "title": "2027 Planning Sprint",
+      "verification_status": "pending"
+    },
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_3f2f090963c7e1d0",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "start_central": "2026-12-02T09:00:00-06:00",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+      "verification_status": "pending"
+    },
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_1b02f4289e55abe4",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "start_central": "2026-12-02T10:00:00-06:00",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+      "verification_status": "pending"
+    },
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_7c9ea52644b1eb38",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "start_central": "2026-12-02T11:00:00-06:00",
+      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+      "verification_status": "pending"
+    },
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_5b0c2b55e8407e36",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "start_central": "2026-12-03T10:00:00-06:00",
+      "title": "[Leader Talk] The 2027 Learning Experience",
+      "verification_status": "pending"
+    },
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_fb9c960a4c6a704d",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+      "start_central": "2026-12-08T10:00:00-06:00",
+      "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+      "verification_status": "pending"
+    },
+    {
+      "conflict_flags": [],
+      "editorial_status": "pending",
+      "event_id": "evt_a63bc389a99b233d",
+      "last_verified_at": null,
+      "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+      "start_central": "2026-12-10T12:00:00-06:00",
+      "title": "Intro to Facilitating Groups: The Basics",
+      "verification_status": "pending"
+    }
+  ],
+  "exact_duplicate_file_idempotent": true,
+  "existing_canonical_count": 0,
+  "future_count": 2,
+  "input_duplicate_count": 0,
+  "new_events": 7,
+  "pending_count": 7,
+  "rerun_byte_identical": true,
+  "selected_for_publication": 0,
+  "source_provenance_preserved": true,
+  "submitted": 7,
+  "target_week": "2026/RW49_2026-11-29_to_2026-12-05",
+  "target_week_count": 5,
+  "test_only_changed_time": {
+    "canonical_count": 7,
+    "conflict_flags": [
+      "end_datetime",
+      "start_datetime"
+    ],
+    "verification_status": "pending"
+  },
+  "test_only_cross_agent_overlap": {
+    "canonical_count": 7,
+    "merged_agents": [
+      "chatgpt",
+      "gemini"
+    ],
+    "source_url_union_preserved": true,
+    "submission_count": 2
+  }
+}
