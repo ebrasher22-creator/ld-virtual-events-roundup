@@ -56,7 +56,7 @@
       "title": "[Leader Talk] The 2027 Learning Experience"
     }
   ],
-  "generated_at": "2026-11-18T19:45:59+00:00",
+  "generated_at": "2026-11-18T19:46:22+00:00",
   "missing_optional_pricing": [
     {
       "event_id": "evt_f1f0bd8d082f4b90",
@@ -92,7 +92,7 @@
   "publication_approval_status": "awaiting_final_human_review",
   "reviews_sha256": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
-  "source_commit": "bf8e89d2c15e8d9f3b47e9cb99feb456c0cdb538",
+  "source_commit": "8faeb81d65c413223336521ab99731083d6f0d37",
   "target_max": 12,
   "target_min": 8,
   "total_approved_events_for_target_week": 5,
