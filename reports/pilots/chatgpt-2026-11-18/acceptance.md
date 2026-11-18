@@ -78,3 +78,12 @@ python3 scripts/generate_post.py --root work/live-pilot-replay --as-of 2026-11-2
 ```
 
 Run the replay initializer only with a fresh directory. Inspect results under `work/live-pilot-replay`; do not copy previews into `data/` without authorization.
+
+## GitHub Actions confirmation
+
+Both manual runs on pilot import commit `c7be67c` succeeded:
+
+- [Validation and regression/smoke tests: 44375192862](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44375192862).
+- [Ingestion and artifact preparation, as_of=2026-11-24: 44375198740](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44375198740).
+
+The downloaded preparation artifact was inspected: its seven canonical pending records and two future records match the local isolated preview exactly, five records are assigned to RW49, and the RW49 review selects zero events. These are ephemeral workflow outputs, not committed canonical changes.
