@@ -1,0 +1,120 @@
+{
+  "result": "pass",
+  "source": "User-supplied completed supervised ChatGPT Work pilot",
+  "branch": "review/chatgpt-2026-11-18-pilot",
+  "validator": "scripts/validate_work_caption.py",
+  "base_commit": "922fd13",
+  "original_submission_preserved_byte_for_byte": true,
+  "submission_file_sha256": "518c9fe5587572c23fd09c978ebeeebc475ba836abb1adb521073dcd585807bc",
+  "input_checksum_matches": true,
+  "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "checks": {
+    "full_caption": {
+      "event_count": 5,
+      "required_fact_blocks_exactly_once": true,
+      "event_order_correct": true,
+      "urls_exact_and_in_order": true,
+      "titles_organizers_dates_times_zones_exact": true,
+      "character_count": 1807,
+      "character_limit": 3000,
+      "within_limit": true,
+      "events": [
+        {
+          "event_id": "evt_f1f0bd8d082f4b90",
+          "title": "2027 Planning Sprint",
+          "start_central": "2026-12-01T12:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_3f2f090963c7e1d0",
+          "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+          "start_central": "2026-12-02T09:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_1b02f4289e55abe4",
+          "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+          "start_central": "2026-12-02T10:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_7c9ea52644b1eb38",
+          "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+          "start_central": "2026-12-02T11:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_5b0c2b55e8407e36",
+          "title": "[Leader Talk] The 2027 Learning Experience",
+          "start_central": "2026-12-03T10:00:00-06:00",
+          "exact_fact_block_count": 1
+        }
+      ]
+    },
+    "compact_caption": {
+      "event_count": 5,
+      "required_fact_blocks_exactly_once": true,
+      "event_order_correct": true,
+      "urls_exact_and_in_order": true,
+      "titles_organizers_dates_times_zones_exact": true,
+      "character_count": 1386,
+      "character_limit": 3000,
+      "within_limit": true,
+      "events": [
+        {
+          "event_id": "evt_f1f0bd8d082f4b90",
+          "title": "2027 Planning Sprint",
+          "start_central": "2026-12-01T12:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_3f2f090963c7e1d0",
+          "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+          "start_central": "2026-12-02T09:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_1b02f4289e55abe4",
+          "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+          "start_central": "2026-12-02T10:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_7c9ea52644b1eb38",
+          "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+          "start_central": "2026-12-02T11:00:00-06:00",
+          "exact_fact_block_count": 1
+        },
+        {
+          "event_id": "evt_5b0c2b55e8407e36",
+          "title": "[Leader Talk] The 2027 Learning Experience",
+          "start_central": "2026-12-03T10:00:00-06:00",
+          "exact_fact_block_count": 1
+        }
+      ]
+    }
+  },
+  "approved_data_reviews_attestations_and_input_unchanged": true,
+  "protected_hashes_before": {
+    "data/reviews.json": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
+    "data/canonical-events.json": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+    "data/future-events.json": "c65c01caafc19315f2f1029463d4224f67ef019b3cd941ee90a7869880c5e183",
+    "approvals/2026-11-18-owner-wednesday-authorization.md": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+    "weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-input.json": "9f29a9c112fc2a0d11a6941925d1e8dafc529305f629d3f3211e99d79771a22d"
+  },
+  "protected_hashes_after": {
+    "data/reviews.json": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
+    "data/canonical-events.json": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+    "data/future-events.json": "c65c01caafc19315f2f1029463d4224f67ef019b3cd941ee90a7869880c5e183",
+    "approvals/2026-11-18-owner-wednesday-authorization.md": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+    "weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-input.json": "9f29a9c112fc2a0d11a6941925d1e8dafc529305f629d3f3211e99d79771a22d"
+  },
+  "tests_passed": 40,
+  "tests_failed": 0,
+  "synthetic_smoke": "pass",
+  "editorial_revisions_required_by_validator": [],
+  "semantic_review_required": true,
+  "publication_approval_status": "awaiting_final_human_review",
+  "publication_performed": false,
+  "merge_performed": false
+}
