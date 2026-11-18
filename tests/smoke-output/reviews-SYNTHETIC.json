@@ -1,0 +1,39 @@
+{
+  "evt_7385f7e1798f26e0": {
+    "claims": {
+      "datetime": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      },
+      "organizer": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      },
+      "price": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      },
+      "registration_url": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      },
+      "relevance": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      },
+      "status": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      },
+      "virtual_availability": {
+        "observation": "SIMULATED primary-source check for smoke test only",
+        "primary_url": "https://example.org/events/transfer"
+      }
+    },
+    "decision": "verified",
+    "editorial_decision": "selected",
+    "record_sha256": "9579f10bd2f06ebf2bbf3a7846aec10700b9da7ef072190895e950ce23d03b1c",
+    "reviewer": "SYNTHETIC TEST REVIEW",
+    "verified_at": "2026-11-24T20:00:00Z"
+  }
+}

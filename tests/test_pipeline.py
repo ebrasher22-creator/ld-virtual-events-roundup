@@ -4,6 +4,7 @@ from pathlib import Path
 import shutil
 import sys
 import tempfile
+import subprocess
 import unittest
 from datetime import date, datetime
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
@@ -14,16 +15,48 @@ class PipelineTests(unittest.TestCase):
         self.temp=tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name)
-        for directory in ['config','data','intake','tests/fixtures']:
+        for directory in ['config','tests/fixtures']:
             shutil.copytree(ROOT/directory,self.root/directory)
         for agent in ['chatgpt','gemini']:
+            (self.root/f'intake/{agent}').mkdir(parents=True)
             shutil.copy(ROOT/f'tests/fixtures/{agent}.json', self.root/f'intake/{agent}/sample.json')
+        write(self.root/'data/canonical-events.json',[])
+        write(self.root/'data/reviews.json',{})
         self.e=read(ROOT/'tests/fixtures/chatgpt.json')[0]
     def test_valid(self): validate(self.e)
     def test_invalid(self):
         for field,value in [('registration_url','javascript:alert(1)'),('event_url','https://bad host.org'),('start_datetime','2026-12-01T12:00:00'),('timezone',''),('topics','learning'),('discovered_by',['unknown']),('price_type','maybe'),('cost',-1),('unsupported','value')]:
             with self.subTest(field=field),self.assertRaises((ValueError,KeyError,TypeError)):
                 validate(dict(self.e,**{field:value}))
+    def test_schema_contract_invalid_shapes(self):
+        for field,value in [('event_url',None),('registration_url',None),('start_datetime',None),('discovered_by',[{}]),('evidence',[dict(claim=7,source_url='https://example.org',excerpt='x')]),('cost',float('nan')),('editorial_score','high'),('topics',[]),('source_urls',[]),('evidence',[])]:
+            with self.subTest(field=field),self.assertRaises(ValueError): validate(dict(self.e,**{field:value}))
+    def test_utc_instant_with_iana_display_zone(self):
+        validate(dict(self.e,start_datetime='2026-12-01T18:00:00Z'))
+        (self.root/'intake/gemini/sample.json').unlink()
+        ingest(self.root)
+        write(self.root/'intake/gemini/utc.json',[dict(self.e,start_datetime='2026-12-01T18:00:00Z',discovered_by=['gemini'])])
+        events=ingest(self.root)
+        self.assertEqual(events[0]['conflict_flags'],[])
+    def test_schema_required_fields_and_registry(self):
+        self.assertEqual(REQUIRED,set(SCHEMA['items']['required']))
+        registry=read(ROOT/'config/sources.yml')
+        self.assertTrue(registry['allow_beyond_list'])
+        names=set()
+        for lead in registry['leads']:
+            self.assertNotIn(lead['name'],names)
+            names.add(lead['name'])
+            self.assertEqual(lead['status'],'discovery_lead_only')
+            if lead['url']: url(lead['url'])
+        self.assertEqual(len(names),76)
+    def test_manual_cli_intake(self):
+        for script in ['validate','ingest','assign_weeks','generate_post']:
+            result=subprocess.run([sys.executable,str(ROOT/f'scripts/{script}.py'),'--root',str(self.root),'--as-of','2026-11-24'],capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(len(read(self.root/'data/canonical-events.json')),2)
+        folder=self.root/'weeks/2026/RW49_2026-11-29_to_2026-12-05'
+        self.assertTrue((folder/'linkedin-roundup.md').is_file())
+        self.assertEqual(read(folder/'review.json')['selected_ids'],[])
     def test_week_boundaries(self):
         self.assertEqual(week(date(2026,11,29)),'2026/RW49_2026-11-29_to_2026-12-05')
         self.assertEqual(week(date(2026,12,5)),week(date(2026,11,29)))

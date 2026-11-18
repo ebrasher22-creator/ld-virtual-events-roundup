@@ -29,29 +29,37 @@
         ]
       },
       "title": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
       },
       "organizer": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
       },
       "organizer_url": {
         "type": [
           "string",
           "null"
         ],
-        "format": "uri"
+        "format": "uri",
+        "pattern": "^https?://"
       },
       "event_url": {
         "type": "string",
-        "format": "uri"
+        "format": "uri",
+        "pattern": "^https?://"
       },
       "registration_url": {
         "type": "string",
-        "format": "uri"
+        "format": "uri",
+        "pattern": "^https?://"
       },
       "start_datetime": {
         "type": "string",
-        "format": "date-time"
+        "format": "date-time",
+        "description": "RFC3339 timestamp with explicit numeric offset or Z. Local offsets must match the IANA timezone; UTC Z is accepted."
       },
       "end_datetime": {
         "type": [
@@ -61,7 +69,10 @@
         "format": "date-time"
       },
       "timezone": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S",
+        "description": "IANA timezone name, e.g. America/Chicago. Never CST or Central Time."
       },
       "event_format": {
         "enum": [
@@ -72,7 +83,9 @@
         ]
       },
       "language": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
       },
       "price_type": {
         "enum": [
@@ -89,31 +102,45 @@
         "minimum": 0
       },
       "summary": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
       },
       "audience": {
         "type": "array",
         "items": {
           "type": "string"
-        }
+        },
+        "minItems": 1,
+        "uniqueItems": true
       },
       "topics": {
         "type": "array",
         "items": {
           "type": "string"
-        }
+        },
+        "minItems": 1,
+        "uniqueItems": true
       },
       "discovered_by": {
         "type": "array",
         "items": {
-          "type": "string"
-        }
+          "enum": [
+            "chatgpt",
+            "gemini"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
       },
       "source_urls": {
         "type": "array",
         "items": {
-          "type": "string"
-        }
+          "type": "string",
+          "format": "uri"
+        },
+        "minItems": 1,
+        "uniqueItems": true
       },
       "discovered_at": {
         "type": "string",
@@ -130,16 +157,24 @@
           ],
           "properties": {
             "claim": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
             },
             "source_url": {
-              "type": "string"
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https?://"
             },
             "excerpt": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
             }
-          }
-        }
+          },
+          "additionalProperties": false
+        },
+        "minItems": 1
       },
       "verification_status": {
         "type": [
@@ -161,7 +196,10 @@
         ]
       },
       "editorial_score": {
-        "type": "number"
+        "type": [
+          "number",
+          "null"
+        ]
       },
       "roundup_week": {
         "type": [
@@ -173,7 +211,8 @@
         "type": "array",
         "items": {
           "type": "string"
-        }
+        },
+        "uniqueItems": true
       },
       "updated_at": {
         "type": [

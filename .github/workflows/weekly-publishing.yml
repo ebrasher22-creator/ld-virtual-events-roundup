@@ -1,9 +1,15 @@
 name: Prepare reviewed roundup artifacts
 on:
   workflow_dispatch:
+    inputs:
+      as_of:
+        description: 'Discovery date YYYY-MM-DD (2026-11-24 targets Nov 29–Dec 5); blank uses current Chicago date'
+        required: false
+        default: ''
+        type: string
   push:
-    branches: [main]
-    paths: ['intake/**', 'data/reviews.json']
+    branches: [main, feature/github-event-pipeline]
+    paths: ['intake/**', 'data/**', 'config/**']
 permissions:
   contents: read
 concurrency:
@@ -22,11 +28,20 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python scripts/validate.py
       - run: python scripts/ingest.py
-      - run: python scripts/assign_weeks.py
-      - run: python scripts/generate_post.py
+      - name: Assign weeks and generate review draft
+        env:
+          AS_OF: ${{ inputs.as_of }}
+        shell: bash
+        run: |
+          args=()
+          if [[ -n "$AS_OF" ]]; then args=(--as-of "$AS_OF"); fi
+          python scripts/assign_weeks.py "${args[@]}"
+          python scripts/generate_post.py "${args[@]}"
+      - run: python scripts/smoke.py
       - uses: actions/upload-artifact@v4
         with:
           name: review-roundup-and-canonical-changes
           path: |
             weeks/
             data/
+            tests/smoke-output/

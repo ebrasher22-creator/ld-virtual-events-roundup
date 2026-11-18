@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -10,8 +11,8 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 CENTRAL = ZoneInfo('America/Chicago')
-TOPICS = {'learning','instructional design','leadership','coaching','talent','hr technology','organizational development','performance improvement','knowledge management','evaluation','workforce enablement'}
-REQUIRED = {'title','organizer','event_url','registration_url','start_datetime','timezone','event_format','language','price_type','summary','audience','topics','discovered_by','source_urls','discovered_at','evidence'}
+SCHEMA = json.loads((ROOT/'schemas/event-discovery.schema.json').read_text())
+REQUIRED = set(SCHEMA['items']['required'])
 
 def read(path):
     return json.loads(Path(path).read_text())
@@ -33,45 +34,63 @@ def url(value):
     return urlunsplit((p.scheme.lower(),p.netloc.lower(),p.path.rstrip('/') or '/',urlencode(query),''))
 
 def dt(value):
+    if not isinstance(value,str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})',value):
+        raise ValueError('RFC3339 timestamp with explicit offset required')
     result = datetime.fromisoformat(value.replace('Z','+00:00'))
     if result.tzinfo is None or result.utcoffset() is None:
         raise ValueError('timezone-aware timestamp required')
     return result
 
+def schema_validate(value, spec, location='intake'):
+    """Validate the documented subset used by our schema, not arbitrary JSON Schema."""
+    types = spec.get('type', [])
+    if isinstance(types,str): types=[types]
+    matches = {
+        'null': value is None,
+        'string': isinstance(value,str),
+        'number': isinstance(value,(int,float)) and not isinstance(value,bool) and math.isfinite(value),
+        'object': isinstance(value,dict),
+        'array': isinstance(value,list),
+    }
+    if types and not any(matches.get(kind,False) for kind in types):
+        raise ValueError(f'{location}: expected {types}')
+    if 'enum' in spec and value not in spec['enum']:
+        raise ValueError(f'{location}: expected one of {spec["enum"]}')
+    if value is None: return
+    if isinstance(value,dict):
+        if set(spec.get('required',[]))-value.keys():
+            raise ValueError(f'{location}: missing {sorted(set(spec["required"])-value.keys())}')
+        properties=spec.get('properties',{})
+        if spec.get('additionalProperties') is False and value.keys()-properties.keys():
+            raise ValueError(f'{location}: unknown fields {sorted(value.keys()-properties.keys())}')
+        for key,item in value.items():
+            if key in properties: schema_validate(item,properties[key],f'{location}.{key}')
+    if isinstance(value,list):
+        if len(value)<spec.get('minItems',0): raise ValueError(f'{location}: array is empty')
+        if spec.get('uniqueItems') and len({json.dumps(x,sort_keys=True) for x in value})!=len(value):
+            raise ValueError(f'{location}: duplicate array members')
+        for index,item in enumerate(value): schema_validate(item,spec.get('items',{}),f'{location}[{index}]')
+    if isinstance(value,str):
+        if len(value)<spec.get('minLength',0) or ('pattern' in spec and not re.search(spec['pattern'],value)):
+            raise ValueError(f'{location}: empty text or invalid pattern')
+        if spec.get('format')=='uri': url(value)
+        if spec.get('format')=='date-time': dt(value)
+    if isinstance(value,(float,int)) and not isinstance(value,bool) and 'minimum' in spec and value<spec['minimum']:
+        raise ValueError(f'{location}: below minimum')
+
+
 def validate(e):
-    if not isinstance(e, dict) or REQUIRED - e.keys():
-        raise ValueError('missing required fields: ' + str(REQUIRED - e.keys() if isinstance(e,dict) else REQUIRED))
-    allowed = set(read(ROOT/'schemas/event-discovery.schema.json')['items']['properties'])
-    if e.keys() - allowed: raise ValueError('unknown discovery fields')
-    if e.get('cost') is not None and (isinstance(e['cost'],bool) or not isinstance(e['cost'],(int,float)) or e['cost'] < 0):
-        raise ValueError('cost must be a nonnegative number or null')
-    for field in ('title','organizer','summary','language'):
-        if not isinstance(e[field],str) or not e[field].strip():
-            raise ValueError(field + ' must be nonempty text')
-    for field in ('audience','topics','discovered_by','source_urls','evidence'):
-        if not isinstance(e[field],list):
-            raise ValueError(field + ' must be an array')
-    if not e['source_urls'] or not e['discovered_by'] or not set(e['discovered_by']) <= {'chatgpt','gemini'}:
-        raise ValueError('source URLs and known discovery agents required')
-    for field in ('event_url','registration_url','organizer_url'):
-        if e.get(field) is not None: url(e[field])
-    for value in e['source_urls']: url(value)
-    start = dt(e['start_datetime'])
-    zone = ZoneInfo(e['timezone'])
-    if start.astimezone(zone).utcoffset() != start.utcoffset():
-        raise ValueError('timestamp offset disagrees with timezone (including DST)')
-    dt(e['discovered_at'])
-    if e.get('end_datetime') and dt(e['end_datetime']) <= start:
+    schema_validate(e,SCHEMA['items'])
+    start=dt(e['start_datetime'])
+    zone=ZoneInfo(e['timezone'])
+    # UTC is a portable instant. Explicit non-UTC local offsets must agree with the zone.
+    for field in ('start_datetime','end_datetime'):
+        if e.get(field):
+            timestamp=dt(e[field])
+            if timestamp.utcoffset()!=timedelta(0) and timestamp.astimezone(zone).utcoffset()!=timestamp.utcoffset():
+                raise ValueError(field + ': local offset disagrees with timezone (including DST)')
+    if e.get('end_datetime') and dt(e['end_datetime'])<=start:
         raise ValueError('end must follow start')
-    if e['event_format'] not in {'virtual','hybrid','in_person','on_demand'} or e['price_type'] not in {'free','paid','unknown'}:
-        raise ValueError('invalid format or price type')
-    if not all(isinstance(x,str) for x in e['topics'] + e['audience']):
-        raise ValueError('topics and audience must contain strings')
-    for ev in e['evidence']:
-        if not isinstance(ev,dict) or not {'claim','source_url','excerpt'} <= ev.keys():
-            raise ValueError('evidence needs claim, source_url, excerpt')
-        url(ev['source_url'])
-        if not ev['claim'] or not ev['excerpt']: raise ValueError('empty evidence')
     return e
 
 def normalized(value):
@@ -108,7 +127,7 @@ def ingest(root=ROOT):
                 events.append(match)
             if any(x['sha256']==digest for x in match['submissions']): continue
             for field in ('title','organizer','start_datetime','end_datetime','timezone','event_format','price_type','registration_url'):
-                if match.get(field) != e.get(field):
+                if (dt(match[field]) if field in {'start_datetime','end_datetime'} and match.get(field) else match.get(field)) != (dt(e[field]) if field in {'start_datetime','end_datetime'} and e.get(field) else e.get(field)):
                     match['conflict_flags'] = sorted(set(match['conflict_flags']+[field]))
             for field in ('discovered_by','source_urls'):
                 match[field] = sorted(set(match[field]+e[field]))
@@ -176,14 +195,15 @@ def generate(root=ROOT, day=None):
 
 def main(command):
     parser=argparse.ArgumentParser()
-    parser.add_argument('--as-of',type=date.fromisoformat)
+    parser.add_argument('--as-of',type=date.fromisoformat,help='Discovery date; Tuesday 2026-11-24 targets Nov 29–Dec 5')
+    parser.add_argument('--root',type=Path,default=ROOT,help='Repository-shaped data root for isolated manual demonstrations')
     parser.add_argument('files',nargs='*')
     args=parser.parse_args()
     if command=='validate':
-        for path in args.files or sorted((ROOT/'intake').glob('*/*.json')):
+        for path in args.files or sorted((args.root/'intake').glob('*/*.json')):
             batch=read(path)
             if not isinstance(batch,list): raise ValueError('expected array')
             for e in batch: validate(e)
-    elif command=='ingest': ingest()
-    elif command=='assign_weeks': assign(day=args.as_of)
-    elif command=='generate_post': print(generate(day=args.as_of))
+    elif command=='ingest': ingest(args.root)
+    elif command=='assign_weeks': assign(args.root,day=args.as_of)
+    elif command=='generate_post': print(generate(args.root,day=args.as_of))

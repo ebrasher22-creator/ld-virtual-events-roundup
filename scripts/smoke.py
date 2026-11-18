@@ -8,8 +8,10 @@ from pipeline import ROOT, read, write, ingest, assign, generate, fingerprint, C
 def run():
     with tempfile.TemporaryDirectory() as temp:
         root=Path(temp)
-        for directory in ['config','data','intake']:
-            shutil.copytree(ROOT/directory,root/directory)
+        shutil.copytree(ROOT/'config',root/'config')
+        for agent in ['chatgpt','gemini']: (root/'intake'/agent).mkdir(parents=True)
+        write(root/'data/canonical-events.json',[])
+        write(root/'data/reviews.json',{})
         for agent in ['chatgpt','gemini']:
             shutil.copy(ROOT/f'tests/fixtures/{agent}.json',root/f'intake/{agent}/sample.json')
         # A separate nonconflicting synthetic record exercises reviewed draft rendering.
@@ -17,6 +19,9 @@ def run():
         sample.update(title='Fixture: Reviewed learning session',registration_url='https://example.org/register/reviewed')
         write(root/'intake/chatgpt/reviewed.json',[sample])
         ingest(root);events=assign(root,date(2026,11,24))
+        empty_folder=generate(root,date(2026,11,24))
+        assert read(empty_folder/'review.json')['selected_ids']==[]
+        unverified=read(empty_folder/'review.json')
         before=(root/'data/canonical-events.json').read_bytes()
         ingest(root);assign(root,date(2026,11,24))
         assert before==(root/'data/canonical-events.json').read_bytes()
@@ -28,6 +33,10 @@ def run():
         assert len(read(folder/'review.json')['selected_ids'])==1
         output=ROOT/'tests/smoke-output'
         shutil.copytree(folder,output,dirs_exist_ok=True)
+        write(output/'canonical-events.json',events)
+        write(output/'future-events.json',read(root/'data/future-events.json'))
+        write(output/'unverified-review.json',unverified)
+        write(output/'reviews-SYNTHETIC.json',{chosen['event_id']:review})
         print('PASS: both agents, overlap, conflict, future retention, rerun stability, review gate and Markdown generation')
         print(output)
 
