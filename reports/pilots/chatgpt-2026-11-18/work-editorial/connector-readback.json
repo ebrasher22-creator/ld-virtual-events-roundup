@@ -1,0 +1,15 @@
+{
+  "ref": "0340c91",
+  "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "event_count": 5,
+  "event_ids": [
+    "evt_f1f0bd8d082f4b90",
+    "evt_3f2f090963c7e1d0",
+    "evt_1b02f4289e55abe4",
+    "evt_7c9ea52644b1eb38",
+    "evt_5b0c2b55e8407e36"
+  ],
+  "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
+  "export_status": "ready",
+  "scope": "Connected GitHub fetch_file in this Codex session; scheduled Work access not tested"
+}

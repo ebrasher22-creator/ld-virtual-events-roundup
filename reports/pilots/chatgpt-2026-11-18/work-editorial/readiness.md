@@ -17,7 +17,7 @@
 
 Input exports are stable across generation timestamps. Tests prove unknown pricing and pending/future records do not bypass the existing authority; stale approved content cannot be accepted by changing the submitted checksum. A test also demonstrates the limit: arbitrary unsupported prose outside structured event facts is not semantically verified by string checks. Every PASS explicitly retains `semantic_review_required=true` and final publication approval pending.
 
-The connected GitHub `fetch_file` tool in this Codex session successfully retrieved the approved canonical file from explicit ref `ce2a301`. Final input readback and manual Actions evidence will be appended after the implementation push.
+The connected GitHub `fetch_file` tool in this Codex session successfully retrieved the approved canonical file from explicit ref `ce2a301`. The final explicit-ref editorial-input readback and manual Actions roundtrip also succeeded; evidence follows below.
 
 ## Supported handoff and remaining preflight
 
@@ -28,3 +28,11 @@ Before scheduling, perform one ordinary Work-chat preflight in the actual intend
 The standard ChatGPT [GitHub documentation](https://help.openai.com/en/articles/11145903-connecting-github-to-chatgpt) describes read-only access and surface-dependent availability. [Task documentation](https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt) makes connected-app access permission-dependent and warns about project-upload access in scheduled tasks. Do not assume Codex write tools, local paths, chat attachments or task completion notifications provide an unattended Work validation/Jarvis bridge.
 
 **Recommendation:** keep schedules inactive. The architecture supports a supervised Work editing pilot now. Complete the surface-specific preflight and agree how fresh prepared snapshots and returned drafts cross the manual boundaries before requesting activation. Mechanical validation is not semantic review or publication consent.
+
+## Final handoff evidence at 0340c91
+
+- Connected GitHub `fetch_file` retrieved `weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-input.json` at explicit ref `0340c91`: five events, ready status and checksum matching local/Actions input. Scope remains this Codex session, not a scheduled Work execution; see connector-readback.json.
+- [Manual preparation + returned-file validation, as_of=2026-11-24 and draft_path=editorial-drafts/RW49/supervised-example.json](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44387765160): success. Both preparation and `work-editorial-validation` artifacts downloaded/inspected. The exact input matches the connected read/local file; validated caption bytes match the submitted example, with 1,580/1,312 characters and final approval pending.
+- [Full regression, smoke and dedicated draft-intake validation](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44387772100): success.
+
+`handoff-test-results.json` records these checks. The example is explicitly marked Codex-authored, not a claimed scheduled Work result. The source commit was pushed only on the existing review branch. This evidence-only follow-up does not change approved data, schedule anything or authorize publication.

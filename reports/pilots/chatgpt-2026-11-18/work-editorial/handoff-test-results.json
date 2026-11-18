@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "input_snapshot_identical_between_local_actions_connector": true,
+  "input_checksum": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "approved_rw49_event_count": 5,
+  "full_characters": 1580,
+  "compact_characters": 1312,
+  "owner_mediated_submission_actions": "44387765160",
+  "full_regression_actions": "44387772100",
+  "code_commit": "0340c91",
+  "canonical_intake_approvals_schedule_unchanged": true,
+  "scheduled_work_test_performed": false,
+  "jarvis_delivery_test_performed": false,
+  "unattended_write_assumed": false,
+  "semantic_review_required": true,
+  "publication_approval_status": "awaiting_final_human_review"
+}
