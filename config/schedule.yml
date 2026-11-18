@@ -1,0 +1,6 @@
+{
+  "timezone": "America/Chicago",
+  "discovery_day": "Tuesday",
+  "period": "following Sunday through Saturday",
+  "week_number": "ISO week of Monday within period"
+}

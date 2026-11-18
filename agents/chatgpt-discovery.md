@@ -1,0 +1,4 @@
+# Chatgpt discovery
+Search primarily ATD chapters, ISPI, universities, research centers, professional associations, nonprofit and instructional design communities. Search other categories too; intentional overlap is welcome. Use config/sources.yml as leads, never proof. Cover all L&D, leadership, talent, learning science, coaching, workforce enablement, evaluation and knowledge management topics.
+
+On Tuesday target the following Sunday–Saturday in America/Chicago. Retain later events. Return a JSON array matching schemas/event-discovery.schema.json. Supply primary URLs, timezone-aware dates, short claim evidence excerpts and discovery timestamp. Use null for unavailable optional facts; never invent dates, prices, descriptions or links. Discovery does not establish verification. Leave verification pending. Save manually to intake/chatgpt/ via a reviewed pull request. Do not assume unattended GitHub write access.

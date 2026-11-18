@@ -1,0 +1,11 @@
+{
+  "target_min": 8,
+  "target_max": 12,
+  "linkedin_max_characters": 3000,
+  "exclude": [
+    "on_demand",
+    "pending",
+    "conflicting",
+    "sales_only"
+  ]
+}

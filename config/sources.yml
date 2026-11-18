@@ -1,0 +1,461 @@
+{
+  "allow_beyond_list": true,
+  "leads": [
+    {
+      "name": "Training Industry",
+      "category": "learning",
+      "url": "https://trainingindustry.com/webinar/",
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "eLearning Industry",
+      "category": "learning",
+      "url": "https://elearningindustry.com/webinars",
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "CCL",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "SHRM",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "iSpring",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Articulate",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "World Economic Forum",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Stanford GSB",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Strategyzer",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "ATD",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "McKinsey",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "MindGym",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Similarweb",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Adobe",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "FP&A Trends",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Arbinger",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "DDI",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "LearnUpon",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "HBR",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "ROI Institute",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Arist",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Chief Learning Officer",
+      "category": "learning",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "FranklinCovey",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Korn Ferry",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Gallup",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "U.S. OPM",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Blanchard",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Maxwell Leadership",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "BetterUp",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "ICF",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Heidrick & Struggles",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Kevin Eikenberry Group",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Human Synergistics",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "BTS",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Eagle\u2019s Flight",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "NeuroLeadership Institute",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "The Table Group",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "The Culture Works",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Culture Partners",
+      "category": "leadership",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Harvard Business School",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Harvard Kennedy School",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "MIT Sloan",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Yale SOM",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Wharton",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "London Business School",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "INSEAD",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "CEBMa",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Academy of Management",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "SIOP",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "CIPD",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Deloitte Human Capital",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "PwC Workforce Transformation",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Accenture Research",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "IBM Institute for Business Value",
+      "category": "research",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Josh Bersin",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Brandon Carson",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Keith Keating",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "JD Dillon",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "David Kelly",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Kevin M. Yates",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Peter Senge",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Amy Edmondson",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Jennifer Garvey Berger",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Michael Bungay Stanier",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Julie Dirksen",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Karl Kapp",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Clark Quinn",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Connie Malamed",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Philippa Hardman",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Marc Effron",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "John Boudreau",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Dave Ulrich",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Bren\u00e9 Brown",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Simon Sinek",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Frances Frei",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    },
+    {
+      "name": "Adam Grant",
+      "category": "thought_leader",
+      "url": null,
+      "status": "discovery_lead_only"
+    }
+  ]
+}

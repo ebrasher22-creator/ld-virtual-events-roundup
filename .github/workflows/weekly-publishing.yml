@@ -1,0 +1,32 @@
+name: Prepare reviewed roundup artifacts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['intake/**', 'data/reviews.json']
+permissions:
+  contents: read
+concurrency:
+  group: prepare-roundup-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/validate.py
+      - run: python scripts/ingest.py
+      - run: python scripts/assign_weeks.py
+      - run: python scripts/generate_post.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-roundup-and-canonical-changes
+          path: |
+            weeks/
+            data/

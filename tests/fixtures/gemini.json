@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Fixture: Learning transfer workshop",
+    "organizer": "Example Association",
+    "organizer_url": "https://example.org",
+    "event_url": "https://example.org/events/transfer",
+    "registration_url": "https://example.org/register/transfer?utm_source=gemini",
+    "start_datetime": "2026-12-01T12:00:00-06:00",
+    "end_datetime": null,
+    "timezone": "America/Chicago",
+    "event_format": "virtual",
+    "language": "en",
+    "price_type": "free",
+    "cost": 0,
+    "summary": "Practice planning support for learning transfer.",
+    "audience": [
+      "L&D professionals"
+    ],
+    "topics": [
+      "learning"
+    ],
+    "discovered_by": [
+      "gemini"
+    ],
+    "source_urls": [
+      "https://example.org/events/transfer"
+    ],
+    "discovered_at": "2026-11-24T18:00:00Z",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "source_url": "https://example.org/events/transfer",
+        "excerpt": "SYNTHETIC TEST DATA. Not a real event."
+      }
+    ]
+  },
+  {
+    "title": "Fixture: Learning transfer workshop",
+    "organizer": "Example Association",
+    "organizer_url": "https://example.org",
+    "event_url": "https://example.org/events/transfer",
+    "registration_url": "https://example.org/register/transfer?utm_source=gemini",
+    "start_datetime": "2026-12-01T13:00:00-06:00",
+    "end_datetime": null,
+    "timezone": "America/Chicago",
+    "event_format": "virtual",
+    "language": "en",
+    "price_type": "free",
+    "cost": 0,
+    "summary": "Practice planning support for learning transfer.",
+    "audience": [
+      "L&D professionals"
+    ],
+    "topics": [
+      "learning"
+    ],
+    "discovered_by": [
+      "gemini"
+    ],
+    "source_urls": [
+      "https://example.org/events/transfer"
+    ],
+    "discovered_at": "2026-11-24T18:00:00Z",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "source_url": "https://example.org/events/transfer",
+        "excerpt": "SYNTHETIC TEST DATA. Not a real event."
+      }
+    ]
+  },
+  {
+    "title": "Fixture: Future event",
+    "organizer": "Example Association",
+    "organizer_url": "https://example.org",
+    "event_url": "https://example.org/events/transfer",
+    "registration_url": "https://example.org/register/future",
+    "start_datetime": "2027-01-05T12:00:00-06:00",
+    "end_datetime": null,
+    "timezone": "America/Chicago",
+    "event_format": "virtual",
+    "language": "en",
+    "price_type": "free",
+    "cost": 0,
+    "summary": "Practice planning support for learning transfer.",
+    "audience": [
+      "L&D professionals"
+    ],
+    "topics": [
+      "learning"
+    ],
+    "discovered_by": [
+      "gemini"
+    ],
+    "source_urls": [
+      "https://example.org/events/transfer"
+    ],
+    "discovered_at": "2026-11-24T18:00:00Z",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "source_url": "https://example.org/events/transfer",
+        "excerpt": "SYNTHETIC TEST DATA. Not a real event."
+      }
+    ]
+  }
+]

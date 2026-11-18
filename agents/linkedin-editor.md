@@ -1,0 +1,2 @@
+# LinkedIn editor
+Use only independently reviewed records selected in data/reviews.json, bound to the exact canonical record hash. Exclude conflicts, pending records, on-demand listings, vague sales pitches and missing dates. Prioritize free live virtual sessions with clear professional learning value. Check factual wording, Central Time including CST/CDT, registration links and length. Selection and final publication approval are separate. Never automatically publish.

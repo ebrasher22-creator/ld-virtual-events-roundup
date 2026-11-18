@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "audience",
+      "discovered_at",
+      "discovered_by",
+      "event_format",
+      "event_url",
+      "evidence",
+      "language",
+      "organizer",
+      "price_type",
+      "registration_url",
+      "source_urls",
+      "start_datetime",
+      "summary",
+      "timezone",
+      "title",
+      "topics"
+    ],
+    "properties": {
+      "event_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "title": {
+        "type": "string"
+      },
+      "organizer": {
+        "type": "string"
+      },
+      "organizer_url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "uri"
+      },
+      "event_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "registration_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "start_datetime": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "end_datetime": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "timezone": {
+        "type": "string"
+      },
+      "event_format": {
+        "enum": [
+          "virtual",
+          "hybrid",
+          "in_person",
+          "on_demand"
+        ]
+      },
+      "language": {
+        "type": "string"
+      },
+      "price_type": {
+        "enum": [
+          "free",
+          "paid",
+          "unknown"
+        ]
+      },
+      "cost": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "summary": {
+        "type": "string"
+      },
+      "audience": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "topics": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "discovered_by": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "source_urls": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "discovered_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "claim",
+            "source_url",
+            "excerpt"
+          ],
+          "properties": {
+            "claim": {
+              "type": "string"
+            },
+            "source_url": {
+              "type": "string"
+            },
+            "excerpt": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "verification_status": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "last_verified_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "editorial_status": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "editorial_score": {
+        "type": "number"
+      },
+      "roundup_week": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "conflict_flags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "updated_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      }
+    },
+    "additionalProperties": false
+  }
+}
