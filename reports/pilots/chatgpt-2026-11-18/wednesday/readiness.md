@@ -39,3 +39,13 @@ Use `jarvis-handoff.md` for the intended Wednesday 8 AM briefing. Download/attac
 Keep recurring preparation disabled until the owner approves activation and the intended Jarvis delivery path is agreed. The target is Wednesday 07:00 America/Chicago with an 08:00 briefing; dual UTC cron planning plus a Chicago/DST guard is implemented but inactive. Hosted execution times may queue. Schedule activation also needs a separately approved default-branch promotion; this review branch is not merged. Branch protections and final-caption approval remain owner integration steps.
 
 Final publication status: **awaiting_final_human_review**. Event approval does not approve the caption. Review formatting, event order, links and Central times, choose a caption, then manually publish only after final approval.
+
+## Supervised GitHub Actions proof
+
+At commit `17dcb35`:
+
+- [Manual Wednesday preparation, as_of=2026-11-24](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44383833790): success.
+- [Complete regression/smoke validation](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44383838727): success.
+- [Downloaded review artifact](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44383833790/artifacts/14465355096): full and compact caption bytes exactly match local drafts; report confirms five approved/included RW49 events, two outside-week exclusions, matching canonical/review hashes, no approval/length exceptions and final approval still pending. Jarvis handoff contains the run link.
+
+Implementation commit: `8faeb81`; generated version-bound pilot artifacts: `17dcb35`. This report-only follow-up records successful remote execution without changing the code or approved records. The remote workflow list may display the earlier default-branch workflow name; the downloaded artifact confirms the pilot-branch Wednesday implementation actually executed.
