@@ -1,10 +1,10 @@
 # Repository readiness — November 18, 2026
 
-**Verdict:** ready for a supervised manual discovery pilot for November 29–December 5, 2026, subject to successful final workflow checks below. No real events or independent event verifications have been imported. No automatic publication, paid AI calls, merge or deployment is enabled.
+**Verdict:** ready for a supervised manual discovery pilot for November 29–December 5, 2026, with successful final workflow and artifact checks. No real events or independent event verifications have been imported. No automatic publication, paid AI calls, merge or deployment is enabled.
 
 - **Branch:** keep `feature/github-event-pipeline` as temporary default/integration branch. Workflows now support it and future `main`. No history was discarded and no merge occurred. Main promotion requires approval. See branch-strategy.md.
 - **Local checks:** original 10 tests passed; expanded suite 14/14 passed, zero failures. Smoke and exact manual CLI demo passed. `validate.py` and `git diff --check` passed. Local Python 3.9.6 and Actions Python 3.12 are the exercised environments; the documented deployment requirement is Python 3.11+ and Python 3.11 was not separately executed in this review.
-- **Baseline Actions at fb2dee2:** manual [validation 44370700886](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44370700886) and [preparation 44370708145](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44370708145) both succeeded. Final updated-workflow run evidence will be appended after dispatch.
+- **Baseline Actions at fb2dee2:** manual [validation 44370700886](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44370700886) and [preparation 44370708145](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44370708145) both succeeded. Updated workflow results are recorded below.
 - **Contracts:** schema now drives runtime shape checks instead of separate handwritten required/type rules. Enums, nonempty lists, evidence structure, optional nulls, URL format and timezone-aware date checks are aligned. UTC instants with an IANA display zone are accepted; equivalent instants no longer create false time conflicts. Both agent guides spell out JSON arrays, lowercase agent names and exact enums. The source registry contains 76 classified leads; only the two supplied URLs are populated, while 74 intentional null URLs require agent discovery. The registry is never an intake allowlist.
 - **Manual demonstration:** see manual-intake.md for the exact commands executed. Four submissions → two canonical events; overlap preserves ChatGPT + Gemini and three submissions; changed time quarantined; one January event retained; correct RW49 assignment; zero unverified selections; identical rerun. Isolated smoke adds a third synthetic event and simulated human review to demonstrate one-event Markdown generation. Production data remains empty.
 
@@ -29,3 +29,17 @@ Diagnosed findings fixed during readiness:
 - **T2 — Smoke isolation (Warning, resolved).** Symptom: smoke/tests copied production intake and canonical data into fixed-count synthetic scenarios. Source: xUnit Test Patterns — Erratic Test. Consequence: future real intake would break acceptance tests. Remedy: initialize empty isolated data roots and use only test fixtures.
 
 The focused module structure is adequate for V1; no new abstractions or dependencies were introduced. The local tests are behavior-based and do not mock the subject under test. This review sampled a large initial feature; it is not an exhaustive security audit.
+
+## Final GitHub Actions evidence at 6fa8cce
+
+| Trigger | Workflow | Result | Evidence |
+| --- | --- | --- | --- |
+| push to temporary default | Validate intake and tests | success | [44371398991](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44371398991) |
+| workflow_dispatch | Validate intake and tests | success | [44371423172](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44371423172) |
+| workflow_dispatch, as_of=2026-11-24 | Prepare reviewed roundup artifacts | success | [44371428157](https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44371428157) |
+
+Downloaded and inspected both `synthetic-smoke-evidence` and `review-roundup-and-canonical-changes`. Each contains synthetic acceptance snapshots showing three canonical events, one future event, zero selected before review and one after a simulated review, plus the expected fixture Markdown. The preparation artifact also contains the correct production RW49 folder, empty production canonical/future arrays and zero production selected events. Synthetic approvals were not copied to production. The read-only token permissions were confirmed in the runner log. The preparation artifact upload contains 14 files; upload and download both succeeded. No Actions failures occurred in the five readiness-triggered/manual-and-push runs listed across the baseline and updated evidence.
+
+Observed upstream warnings: the pinned-major action versions target Node 20 and the runner forced Node 24; Node deprecation notices appeared but did not fail jobs. Action runtime modernization and immutable SHA pinning remain hardening follow-ups, not observed pilot blockers. Artifact checks establish packaging and pipeline behavior, not real event accuracy.
+
+Readiness code fixes were committed and pushed on `feature/github-event-pipeline` at `6fa8cce`. This evidence/report update is a documentation-only follow-up commit. The remote default remains the same feature branch. No merge, main promotion, deployment, external agent setup, or LinkedIn publication occurred.
