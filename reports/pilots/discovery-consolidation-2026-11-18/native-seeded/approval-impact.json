@@ -1,0 +1,56 @@
+{
+  "changed_approved_records": [
+    {
+      "after_sha256": "6266b7b392cd4e2f1eb376cb16538e5900e941ad86ad2cbb0565d9c4571e5ae8",
+      "approval_problem": "missing_or_stale_approval",
+      "before_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+      "event_id": "evt_3f2f090963c7e1d0",
+      "native_conflict_flags": [
+        "organizer",
+        "title"
+      ],
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+      "updated_at_chronologically_current": false
+    },
+    {
+      "after_sha256": "b98a05fd157a23385e9197c0e066607259a82c3a75c02bb0f058f9b4e9bc6abb",
+      "approval_problem": "missing_or_stale_approval",
+      "before_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+      "event_id": "evt_5b0c2b55e8407e36",
+      "native_conflict_flags": [
+        "end_datetime",
+        "organizer"
+      ],
+      "title": "[Leader Talk] The 2027 Learning Experience",
+      "updated_at_chronologically_current": false
+    }
+  ],
+  "still_eligible_approved": 5,
+  "total_native_records": 12,
+  "work_input_validation": {
+    "character_counts": {
+      "compact_caption": 1386,
+      "full_caption": 1807
+    },
+    "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+    "errors": [
+      "Editorial input is stale, changed, or inconsistent with current approvals/configuration",
+      "Approved editorial input is not ready",
+      "full_caption: Extra/changed registration or other URL outside approved fact blocks",
+      "full_caption: Numeric/date/time claim outside immutable heading/fact blocks",
+      "full_caption: Date/timezone claim outside approved fact blocks",
+      "compact_caption: Extra/changed registration or other URL outside approved fact blocks",
+      "compact_caption: Numeric/date/time claim outside immutable heading/fact blocks",
+      "compact_caption: Date/timezone claim outside approved fact blocks"
+    ],
+    "limitations": [
+      "Exact event facts and coverage are checked. Prose truthfulness, interpretation, audience sensitivity and editorial quality require human review."
+    ],
+    "mechanical_validation_passed": false,
+    "publication_approval_status": "awaiting_final_human_review",
+    "result": "fail",
+    "semantic_review_required": true,
+    "submission_sha256": "530d0ce7203bbb8a171474d2042e1af8706c12e73b91899637b89c9f9152ac5f",
+    "validated_at": "2026-11-18T21:42:28+00:00"
+  }
+}

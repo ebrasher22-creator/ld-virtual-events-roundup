@@ -1,0 +1,682 @@
+[
+  {
+    "audience": [
+      "L&D professionals",
+      "Instructional designers",
+      "Learning leaders",
+      "Training managers"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-18T14:20:03-06:00",
+    "discovered_by": [
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": null,
+    "event_format": "virtual",
+    "event_id": "evt_6e4a80967717733e",
+    "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "excerpt": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI. Sponsored by Training Industry, Inc. 8 Dec 2026 11:00 am ET.",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Reserve Your Spot / Register Now -> https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      }
+    ],
+    "language": "en",
+    "last_verified_at": null,
+    "organizer": "Training Industry, Inc.",
+    "organizer_url": "https://trainingindustry.com",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA"
+    ],
+    "registration_url": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/",
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+    ],
+    "start_datetime": "2026-12-08T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "L&D professionals",
+            "Instructional designers",
+            "Learning leaders",
+            "Training managers"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:20:03-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": null,
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI. Sponsored by Training Industry, Inc. 8 Dec 2026 11:00 am ET.",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "price",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Reserve Your Spot / Register Now -> https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            }
+          ],
+          "language": "en",
+          "organizer": "Training Industry, Inc.",
+          "organizer_url": "https://trainingindustry.com",
+          "price_type": "free",
+          "registration_url": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/",
+            "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+          ],
+          "start_datetime": "2026-12-08T11:00:00-05:00",
+          "summary": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
+          "timezone": "America/New_York",
+          "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+          "topics": [
+            "Artificial intelligence in L&D",
+            "Human-AI workflow collaboration",
+            "AI agents in workplace learning",
+            "L&D decision-making"
+          ]
+        },
+        "sha256": "444a0ebc7b7e02ffe307ab4f5035d196185cecf1859eafbd758f41e07b415084"
+      }
+    ],
+    "summary": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
+    "timezone": "America/New_York",
+    "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+    "topics": [
+      "Artificial intelligence in L&D",
+      "Human-AI workflow collaboration",
+      "AI agents in workplace learning",
+      "L&D decision-making"
+    ],
+    "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D executives and directors",
+      "Learning strategy leaders",
+      "Talent development managers"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-18T14:20:03-06:00",
+    "discovered_by": [
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2027-01-28T15:45:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_8f29d1a3deb28dec",
+    "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "excerpt": "[Leader Talk] L&D Strategy for Business Results in 2027. Sponsored by Training Industry, Inc. 28 Jan 2027 11:00 am ET. AGENDA: 11:00 - 11:45 a.m. ET ... 3:00 - 3:45 p.m. ET.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      }
+    ],
+    "language": "en",
+    "last_verified_at": null,
+    "organizer": "Training Industry, Inc.",
+    "organizer_url": "https://trainingindustry.com",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027",
+    "roundup_week": "2027/RW04_2027-01-24_to_2027-01-30",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/",
+      "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/"
+    ],
+    "start_datetime": "2027-01-28T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "L&D executives and directors",
+            "Learning strategy leaders",
+            "Talent development managers"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:20:03-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": "2027-01-28T15:45:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "[Leader Talk] L&D Strategy for Business Results in 2027. Sponsored by Training Industry, Inc. 28 Jan 2027 11:00 am ET. AGENDA: 11:00 - 11:45 a.m. ET ... 3:00 - 3:45 p.m. ET.",
+              "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "price",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            }
+          ],
+          "language": "en",
+          "organizer": "Training Industry, Inc.",
+          "organizer_url": "https://trainingindustry.com",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/",
+            "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-ld-strategy-for-business-results-in-2027/"
+          ],
+          "start_datetime": "2027-01-28T11:00:00-05:00",
+          "summary": "Training Industry Leader Talk focused on aligning 2027 L&D strategies with organizational priorities, defining measures of business impact, engaging stakeholders, and positioning learning teams to drive measurable performance.",
+          "timezone": "America/New_York",
+          "title": "[Leader Talk] L&D Strategy for Business Results in 2027",
+          "topics": [
+            "L&D strategy and business alignment",
+            "Measuring learning impact",
+            "Stakeholder engagement",
+            "2027 workforce planning"
+          ]
+        },
+        "sha256": "922bbe72b71ecdc479827751cf40e806cd69bb827443b3d75827c73b73e767a9"
+      }
+    ],
+    "summary": "Training Industry Leader Talk focused on aligning 2027 L&D strategies with organizational priorities, defining measures of business impact, engaging stakeholders, and positioning learning teams to drive measurable performance.",
+    "timezone": "America/New_York",
+    "title": "[Leader Talk] L&D Strategy for Business Results in 2027",
+    "topics": [
+      "L&D strategy and business alignment",
+      "Measuring learning impact",
+      "Stakeholder engagement",
+      "2027 workforce planning"
+    ],
+    "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Trainers",
+      "Facilitators",
+      "Learning and development professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_a63bc389a99b233d",
+    "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Leadership Strategies webinar page: December 10, 2026 at 1:00 PM ET; live online; free; registration link.",
+        "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Leadership Strategies",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.leadstrat.com/services/facilitation-webinars"
+    ],
+    "registration_url": "https://www.leadstrat.com/services/facilitation-webinars",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://www.leadstrat.com/services/facilitation-webinars/"
+    ],
+    "start_datetime": "2026-12-10T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Trainers",
+            "Facilitators",
+            "Learning and development professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Leadership Strategies webinar page: December 10, 2026 at 1:00 PM ET; live online; free; registration link.",
+              "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Leadership Strategies",
+          "price_type": "free",
+          "registration_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "source_urls": [
+            "https://www.leadstrat.com/services/facilitation-webinars/"
+          ],
+          "start_datetime": "2026-12-10T13:00:00-05:00",
+          "summary": "Live introduction to group facilitation, meeting preparation and participant engagement techniques.",
+          "timezone": "America/New_York",
+          "title": "Intro to Facilitating Groups: The Basics",
+          "topics": [
+            "Facilitation",
+            "Training delivery",
+            "Meeting design"
+          ]
+        },
+        "sha256": "36e5dbc7709194a6c12d5d88d0dec87656a9d241777fd6552d46e19d6b3fe871"
+      }
+    ],
+    "summary": "Live introduction to group facilitation, meeting preparation and participant engagement techniques.",
+    "timezone": "America/New_York",
+    "title": "Intro to Facilitating Groups: The Basics",
+    "topics": [
+      "Facilitation",
+      "Training delivery",
+      "Meeting design"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Learning technology leaders",
+      "LMS administrators",
+      "L&D managers",
+      "Corporate training professionals"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-18T14:20:03-06:00",
+    "discovered_by": [
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2027-01-18T14:30:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_d3d3b702e3ac8d1b",
+    "event_url": "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "excerpt": "[Learning Tech Showcase] Learning Management Systems. Sponsored by Training Industry, Inc. 18 Jan 2027 11:00 am ET. AGENDA: 11:00 - 11:30 a.m. ET ... 2:00 - 2:30 p.m. ET.",
+        "source_url": "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      }
+    ],
+    "language": "en",
+    "last_verified_at": null,
+    "organizer": "Training Industry, Inc.",
+    "organizer_url": "https://trainingindustry.com",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9",
+    "roundup_week": "2027/RW03_2027-01-17_to_2027-01-23",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/",
+      "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/"
+    ],
+    "start_datetime": "2027-01-18T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "Learning technology leaders",
+            "LMS administrators",
+            "L&D managers",
+            "Corporate training professionals"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:20:03-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": "2027-01-18T14:30:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "[Learning Tech Showcase] Learning Management Systems. Sponsored by Training Industry, Inc. 18 Jan 2027 11:00 am ET. AGENDA: 11:00 - 11:30 a.m. ET ... 2:00 - 2:30 p.m. ET.",
+              "source_url": "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "price",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            }
+          ],
+          "language": "en",
+          "organizer": "Training Industry, Inc.",
+          "organizer_url": "https://trainingindustry.com",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/",
+            "https://trainingindustry.com/webinar/learning-technologies/learning-tech-showcase-learning-management-systems-9/"
+          ],
+          "start_datetime": "2027-01-18T11:00:00-05:00",
+          "summary": "Live Learning Tech Showcase spotlighting modern Learning Management System (LMS) innovations, integrations, and product demonstrations with Q&A discussions to help L&D leaders evaluate and implement LMS platforms.",
+          "timezone": "America/New_York",
+          "title": "[Learning Tech Showcase] Learning Management Systems",
+          "topics": [
+            "Learning management systems",
+            "Learning technology evaluation",
+            "LMS integration and implementation",
+            "Corporate training delivery"
+          ]
+        },
+        "sha256": "0b4804922c8d954b5c69801a92af605b381d19596eff3c65902264cb236da487"
+      }
+    ],
+    "summary": "Live Learning Tech Showcase spotlighting modern Learning Management System (LMS) innovations, integrations, and product demonstrations with Q&A discussions to help L&D leaders evaluate and implement LMS platforms.",
+    "timezone": "America/New_York",
+    "title": "[Learning Tech Showcase] Learning Management Systems",
+    "topics": [
+      "Learning management systems",
+      "Learning technology evaluation",
+      "LMS integration and implementation",
+      "Corporate training delivery"
+    ],
+    "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D leaders",
+      "Leadership development practitioners",
+      "Talent management professionals",
+      "HR leaders"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-18T14:20:03-06:00",
+    "discovered_by": [
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": null,
+    "event_format": "virtual",
+    "event_id": "evt_ecb7edf25c5506f2",
+    "event_url": "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "excerpt": "[Research Spotlight] Better Leaders by Design: Updating L&D’s Approach to Leadership Development. Sponsored by Training Industry, Inc. 10 Dec 2026 1:00 pm ET.",
+        "source_url": "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Reserve Your Spot -> https://trainingindustry.zoom.us/webinar/register/WN_ZopshkhsSXmT192BzgngVw",
+        "source_url": "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/"
+      }
+    ],
+    "language": "en",
+    "last_verified_at": null,
+    "organizer": "Training Industry, Inc.",
+    "organizer_url": "https://trainingindustry.com",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.zoom.us/webinar/register/WN_ZopshkhsSXmT192BzgngVw"
+    ],
+    "registration_url": "https://trainingindustry.zoom.us/webinar/register/WN_ZopshkhsSXmT192BzgngVw",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/",
+      "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/"
+    ],
+    "start_datetime": "2026-12-10T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "L&D leaders",
+            "Leadership development practitioners",
+            "Talent management professionals",
+            "HR leaders"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:20:03-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": null,
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "[Research Spotlight] Better Leaders by Design: Updating L&D’s Approach to Leadership Development. Sponsored by Training Industry, Inc. 10 Dec 2026 1:00 pm ET.",
+              "source_url": "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "price",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Reserve Your Spot -> https://trainingindustry.zoom.us/webinar/register/WN_ZopshkhsSXmT192BzgngVw",
+              "source_url": "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/"
+            }
+          ],
+          "language": "en",
+          "organizer": "Training Industry, Inc.",
+          "organizer_url": "https://trainingindustry.com",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.zoom.us/webinar/register/WN_ZopshkhsSXmT192BzgngVw",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/",
+            "https://trainingindustry.com/webinar/leadership/research-spotlight-better-leaders-by-design-updating-lds-approach-to-leadership-development/"
+          ],
+          "start_datetime": "2026-12-10T13:00:00-05:00",
+          "summary": "Training Industry Research Spotlight sharing exclusive findings on how shifting workforce dynamics and business priorities are reshaping leadership needs across roles and organizational levels, and how L&D teams can design role- and context-specific leadership pipelines.",
+          "timezone": "America/New_York",
+          "title": "[Research Spotlight] Better Leaders by Design: Updating L&D’s Approach to Leadership Development",
+          "topics": [
+            "Leadership development research",
+            "Leadership pipeline design",
+            "Role-based capability building",
+            "L&D alignment with business context"
+          ]
+        },
+        "sha256": "4c36dc494a6248bcd08768079fd4af5c07e8e1fdd3e89e81998c6ac1dcc018ac"
+      }
+    ],
+    "summary": "Training Industry Research Spotlight sharing exclusive findings on how shifting workforce dynamics and business priorities are reshaping leadership needs across roles and organizational levels, and how L&D teams can design role- and context-specific leadership pipelines.",
+    "timezone": "America/New_York",
+    "title": "[Research Spotlight] Better Leaders by Design: Updating L&D’s Approach to Leadership Development",
+    "topics": [
+      "Leadership development research",
+      "Leadership pipeline design",
+      "Role-based capability building",
+      "L&D alignment with business context"
+    ],
+    "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D professionals",
+      "Learning managers",
+      "AI enablement professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "event_format": "virtual",
+    "event_id": "evt_fb9c960a4c6a704d",
+    "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
+        "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Training Industry",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+    ],
+    "start_datetime": "2026-12-08T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D professionals",
+            "Learning managers",
+            "AI enablement professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Training Industry webinar page: December 8, 2026 at 11:00 am ET; Reserve Your Spot link to Zoom Events.",
+              "source_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Training Industry",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/"
+          ],
+          "start_datetime": "2026-12-08T11:00:00-05:00",
+          "summary": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+          "timezone": "America/New_York",
+          "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+          "topics": [
+            "AI in L&D",
+            "Workplace learning",
+            "Human-AI collaboration"
+          ]
+        },
+        "sha256": "9b37046bee523eccad94a293e40e8576442ec0b8c5497012be8ecfae378a21e8"
+      }
+    ],
+    "summary": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+    "timezone": "America/New_York",
+    "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI",
+    "topics": [
+      "AI in L&D",
+      "Workplace learning",
+      "Human-AI collaboration"
+    ],
+    "updated_at": "2026-11-18T12:50:33-06:00",
+    "verification_status": "pending"
+  }
+]

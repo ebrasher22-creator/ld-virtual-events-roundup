@@ -1,0 +1,267 @@
+{
+  "numbered_lead_entries": 16,
+  "additional_unnumbered_entries": 1,
+  "entries_already_covered_by_existing_approval": 1,
+  "remaining_lead_entries": 16,
+  "unique_event_count": "Not established; HR.com row bundles multiple sessions and some entries describe multi-day series.",
+  "leads": [
+    {
+      "number": 1,
+      "reported_date_time": "Dec 1–4, 2026, 11:00 AM – 12:30 PM ET daily",
+      "title": "FranklinCovey Impact Conference 2026 (featuring Stephen M. R. Covey, Amy Edmondson, Chris McChesney, Reid Wiseman, Patrick Leddin, Jennifer Colosimo, Zack Kass)",
+      "organizer": "FranklinCovey",
+      "candidate_urls": [
+        "https://www.franklincovey.com/events/",
+        "https://impact.franklincovey.com/"
+      ],
+      "reported_gap": "Banner directly confirmed (`DEC. 1-4, 2026 \\| Complimentary \\| Virtual`); dedicated `impact.franklincovey.com` daily session timestamps were confirmed via web search rather than direct sub-domain browser inspection.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 2,
+      "reported_date_time": "Tue, Dec 1, 2026, 11:00 AM – 12:00 PM EST",
+      "title": "Using AI as a Second Brain for Storyline Designers: Featuring Phil Mayor",
+      "organizer": "Articulate (E-Learning Heroes)",
+      "candidate_urls": [
+        "https://community.articulate.com/discussions/e-learning-challenges/using-ai-as-a-second-brain-for-storyline-designers-featuring-phil-mayor"
+      ],
+      "reported_gap": "High-priority AI + instructional design session identified via targeted search; direct registration URL on E-Learning Heroes requires primary-page click-through verification.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 3,
+      "reported_date_time": "Tue, Dec 1, 2026, 1:00 PM ET",
+      "title": "Beyond Adoption: How AI-Ready L&D Organizations Tie Learning to Business Results",
+      "organizer": "Brandon Hall Group",
+      "candidate_urls": [
+        "https://brandonhall.com"
+      ],
+      "reported_gap": "Exact direct webinar registration slug and explicit timezone text need primary-page confirmation.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 4,
+      "reported_date_time": "Tue, Dec 1, 2026, 1:00 PM – 2:00 PM ET",
+      "title": "2027 Planning Sprint: Year-End Strategy for Leaders & Facilitators (featuring Michael Wilkinson)",
+      "organizer": "Leadership Strategies",
+      "candidate_urls": [
+        "https://www.leadstrat.com/"
+      ],
+      "reported_gap": "Direct registration form URL beyond the main webinars landing page requires primary-page verification.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "already_covered_by_approved_record": "evt_f1f0bd8d082f4b90",
+      "action": "Reuse the existing approved Planning Sprint record. Do not ask for another review of unchanged facts; this is not a new candidate."
+    },
+    {
+      "number": 5,
+      "reported_date_time": "Tue, Dec 1 – Thu, Dec 3, 2026",
+      "title": "ATD Core4 Virtual Conference (Instructional Design, Training Delivery & Facilitation, Evaluating Impact, Emerging Trends)",
+      "organizer": "Association for Talent Development (ATD)",
+      "candidate_urls": [
+        "https://www.td.org"
+      ],
+      "reported_gap": "Multi-day virtual conference; `td.org` returned HTTP 429 Vercel Security Checkpoint during live browser inspection, preventing direct start-time and registration-page verification.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 6,
+      "reported_date_time": "Wed, Dec 2, 2026, 12:00 PM – 1:00 PM EST",
+      "title": "Closing the Agility Gap: Four Priorities for an AI-Ready Workforce (Marsh/Mercer & Guild research)",
+      "organizer": "Human Capital Institute (HCI)",
+      "candidate_urls": [
+        "https://www.hci.org/webcast/closing-agility-gap-four-priorities-ai-ready-workforce"
+      ],
+      "reported_gap": "High-relevance AI workforce reskilling webcast identified in Stage A/B search; preserved for direct page inspection of registration form.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 7,
+      "reported_date_time": "Wed, Dec 2, 2026",
+      "title": "2027 Priorities & Predictions: C-Suite Perspectives from i4cp's Boards",
+      "organizer": "Institute for Corporate Productivity (i4cp)",
+      "candidate_urls": [
+        "https://www.i4cp.com/meetings/2027-priorities-predictions-c-suite-perspectives-from-i4cp-s-boards-webinar"
+      ],
+      "reported_gap": "Confirmed date and registration URL via PR Newswire/i4cp search, but exact start time and IANA timezone require direct page verification.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 8,
+      "reported_date_time": "Wed, Dec 2, 2026, 11:00 AM – 11:55 AM ET & 12:00 PM – 12:55 PM ET",
+      "title": "Future of Human Experience Virtual Event / Getting HR Ready for AI / Stop Being Handed Decisions: Giving HR the Data to Shape Strategy",
+      "organizer": "HR.com",
+      "candidate_urls": [
+        "https://www.hr.com"
+      ],
+      "reported_gap": "Individual webcast registration URLs on HR.com require direct event-page lookup.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 9,
+      "reported_date_time": "Thu, Dec 3, 2026, 2:00 PM – 3:00 PM EST",
+      "title": "Coaching That Works for More Brains: Three Practices for Better Conversations and Stronger Programs (Jenn Labin)",
+      "organizer": "Association for Talent Development (ATD)",
+      "candidate_urls": [
+        "https://www.td.org/webinars"
+      ],
+      "reported_gap": "Blocked by `td.org` HTTP 429 Vercel Security Checkpoint during browser inspection; direct registration URL could not be inspected without bypassing access controls.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 10,
+      "reported_date_time": "Thu, Dec 3, 2026 (3-week workshop kickoff)",
+      "title": "Brain-Based Design & Facilitation Workshop (Session 1: Neuroscience Foundations of Learning)",
+      "organizer": "NeuroLeadership Institute",
+      "candidate_urls": [
+        "https://individuals.neuroleadership.com/brain-based-design-facilitation"
+      ],
+      "reported_gap": "Confirmed kickoff date (`Dec 3, 2026`) and URL via search; exact daily start time and timezone require primary-page verification.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 11,
+      "reported_date_time": "Fri, Dec 4, 2026, 12:00 PM – 1:00 PM EST",
+      "title": "What's Worth Your Attention in 2027? (Conversation)",
+      "organizer": "Association for Talent Development (ATD)",
+      "candidate_urls": [
+        "https://www.td.org/webinars"
+      ],
+      "reported_gap": "Blocked by `td.org` HTTP 429 Vercel Security Checkpoint during browser inspection.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 12,
+      "reported_date_time": "Tue, Dec 8, 2026, 11:00 AM – 12:00 PM EST",
+      "title": "Learn. Build. Share: How to Put Your Development to Work — Featuring Bethany Tito",
+      "organizer": "Articulate (E-Learning Heroes)",
+      "candidate_urls": [
+        "https://community.articulate.com/t5/e-learning-challenges/learn-build-share-how-to-put-your-development-to-work-featuring/ba-p/73078"
+      ],
+      "reported_gap": "Deferred to future-week (`RW50`) primary-page inspection to prioritize `RW49` budget.",
+      "proposed_week": "RW50",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 13,
+      "reported_date_time": "Tue, Dec 8, 2026",
+      "title": "Communities of Practice Webinar: AI as an Ethical Ally in Times of Change",
+      "organizer": "International Coaching Federation (ICF)",
+      "candidate_urls": [
+        "https://coachingfederation.org/events/ai-as-an-ethical-ally-in-times-of-change"
+      ],
+      "reported_gap": "Exact start time and IANA timezone not yet confirmed from primary registration portal.",
+      "proposed_week": "RW50",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 14,
+      "reported_date_time": "Wed, Dec 9, 2026, 11:00 AM – 12:00 PM CT",
+      "title": "TDRp Webinar Series Session 3: Focus on Effectiveness and Outcome Measures",
+      "organizer": "ROI Institute",
+      "candidate_urls": [
+        "https://roiinstitute.net/event/tdrp-webinar-series-3/"
+      ],
+      "reported_gap": "Deferred to `RW50` primary-page inspection to verify direct Zoom/registration link and pricing.",
+      "proposed_week": "RW50",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 15,
+      "reported_date_time": "Wed–Thu, Dec 9–10, 2026, 11:25 AM – 3:30 PM EST",
+      "title": "Everyday Tools in Learning Development Online Conference",
+      "organizer": "The Learning Guild",
+      "candidate_urls": [
+        "https://www.learningguild.com/online-conferences"
+      ],
+      "reported_gap": "Paid two-day online conference (\\$395); deferred to `RW50` primary-page inspection for exact registration URL.",
+      "proposed_week": "RW50",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 16,
+      "reported_date_time": "Tue, Dec 15, 2026, 11:00 AM – 12:00 PM EST",
+      "title": "Branching Fundamentals in Storyline: Featuring Garima Gupta",
+      "organizer": "Articulate (E-Learning Heroes)",
+      "candidate_urls": [
+        "https://community.articulate.com"
+      ],
+      "reported_gap": "Deferred to `RW51` discovery cycle.",
+      "proposed_week": "RW51",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md",
+      "action": "Follow up only this incomplete new lead if prioritized; do not place in canonical/editorial selection without required data and human approval."
+    },
+    {
+      "number": 17,
+      "title": "First Friday with a Thought Leader",
+      "organizer": "Blanchard Teams Community",
+      "reported_date_time": "Dec 4, 2026, 9:00–10:00 AM PST",
+      "candidate_urls": [
+        "https://www.blanchard.com/resources/webinars-events"
+      ],
+      "reported_additional_domain": "blanchardcommunity.com",
+      "reported_gap": "Additional unnumbered note: report describes blocked organizer page and search-only community lead.",
+      "proposed_week": "RW49",
+      "intake_accepted": false,
+      "independently_verified_here": false,
+      "source": "originals/antigravity/research-report.md (unnumbered note)",
+      "action": "Unconfirmed lead, not an eighteenth accepted event or independently verified discovery."
+    }
+  ]
+}

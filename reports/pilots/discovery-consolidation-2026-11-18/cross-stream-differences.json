@@ -1,0 +1,302 @@
+{
+  "groups": [
+    {
+      "differences": [
+        {
+          "adopted": false,
+          "antigravity_value": [
+            "L&D professionals",
+            "Learning leaders",
+            "Training managers",
+            "Instructional designers"
+          ],
+          "chatgpt_value": [
+            "L&D leaders",
+            "Instructional designers",
+            "Learning evaluation professionals"
+          ],
+          "classification": "unreviewed_editorial_context_variant",
+          "field": "audience",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": 0,
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "cost",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026",
+          "chatgpt_value": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+          "classification": "additional_source_location",
+          "field": "event_url",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "en",
+          "chatgpt_value": "English",
+          "classification": "language_label_only",
+          "field": "language",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "iSpring Solutions",
+          "chatgpt_value": "iSpring",
+          "classification": "scoped_organizer_alias",
+          "field": "organizer",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "https://www.ispringsolutions.com",
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "organizer_url",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26",
+          "chatgpt_value": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+          "classification": "tracking_slash_only",
+          "field": "registration_url",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "Live one-hour webinar led by Maria Starling (Lead Program Manager at iSpring) examining iSpring's 2026 ROI Playbook research across 140+ L&D professionals, the four hidden barriers to proving training ROI, and how L&D teams align people, AI, line managers, and finance stakeholders around measurable business outcomes.",
+          "chatgpt_value": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+          "classification": "unreviewed_description_variant",
+          "field": "summary",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "L&D As A Conductor: Orchestrating People, AI, And Business Priorities",
+          "chatgpt_value": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+          "classification": "capitalization_punctuation_only",
+          "field": "title",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": [
+            "L&D ROI and measurement",
+            "AI in learning and development",
+            "Learning strategy and business alignment",
+            "Stakeholder partnership"
+          ],
+          "chatgpt_value": [
+            "Learning ROI",
+            "AI in L&D",
+            "Stakeholder alignment"
+          ],
+          "classification": "unreviewed_editorial_context_variant",
+          "field": "topics",
+          "review_needed_if_adopted": true
+        }
+      ],
+      "event_id": "evt_3f2f090963c7e1d0",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "differences": [
+        {
+          "adopted": false,
+          "antigravity_value": [
+            "Learning and development leaders",
+            "Instructional designers",
+            "Learning technology managers",
+            "Corporate training practitioners"
+          ],
+          "chatgpt_value": [
+            "L&D leaders",
+            "Learning experience designers",
+            "Learning technology leaders"
+          ],
+          "classification": "unreviewed_editorial_context_variant",
+          "field": "audience",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": 0,
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "cost",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "2026-12-03T15:45:00-05:00",
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "end_datetime",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "en",
+          "chatgpt_value": "English",
+          "classification": "language_label_only",
+          "field": "language",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "Training Industry, Inc.",
+          "chatgpt_value": "Training Industry",
+          "classification": "scoped_organizer_alias",
+          "field": "organizer",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "https://trainingindustry.com",
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "organizer_url",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "Multi-session Training Industry Leader Talk exploring how organizations are building 2027 learning experience blueprints using AI, learning technology, personalization, learner support, and a five-step pilot framework for testing learning design.",
+          "chatgpt_value": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+          "classification": "unreviewed_description_variant",
+          "field": "summary",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": [
+            "Learning experience design",
+            "AI and learning technology",
+            "Learning strategy and planning",
+            "Instructional design testing"
+          ],
+          "chatgpt_value": [
+            "Learning experience",
+            "Learning technology",
+            "AI"
+          ],
+          "classification": "unreviewed_editorial_context_variant",
+          "field": "topics",
+          "review_needed_if_adopted": true
+        }
+      ],
+      "event_id": "evt_5b0c2b55e8407e36",
+      "title": "[Leader Talk] The 2027 Learning Experience"
+    },
+    {
+      "differences": [
+        {
+          "adopted": false,
+          "antigravity_value": [
+            "L&D professionals",
+            "Instructional designers",
+            "Learning leaders",
+            "Training managers"
+          ],
+          "chatgpt_value": [
+            "L&D professionals",
+            "Learning managers",
+            "AI enablement professionals"
+          ],
+          "classification": "unreviewed_editorial_context_variant",
+          "field": "audience",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": 0,
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "cost",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "en",
+          "chatgpt_value": "English",
+          "classification": "language_label_only",
+          "field": "language",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "Training Industry, Inc.",
+          "chatgpt_value": "Training Industry",
+          "classification": "scoped_organizer_alias",
+          "field": "organizer",
+          "review_needed_if_adopted": false
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "https://trainingindustry.com",
+          "chatgpt_value": null,
+          "classification": "proposed_enrichment",
+          "field": "organizer_url",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "https://events.zoom.us/ev/AndQ68MIyHT4Ce2VYC2NvGZtgQgMM0rujOxq7WmqQ7bptPp7wGUG~Ao3TbfP7o_PNJZPdIQSdRJCLnbTtbinpr6M7_M9ZaDYOIIbe6L_uKSfoPA",
+          "chatgpt_value": "https://trainingindustry.com/webinar/artificial-intelligence/ai-in-the-flow-of-work-how-ld-professionals-are-working-alongside-ai/",
+          "classification": "registration_destination_proposal",
+          "field": "registration_url",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": "Panel conversation with L&D practitioners examining day-to-day human-AI collaboration in L&D workflows, how professionals use AI to research, plan, problem-solve, and make decisions, and where human judgment remains essential.",
+          "chatgpt_value": "Panel discussion on practical human-AI collaboration in L&D research, planning, problem solving and decision-making.",
+          "classification": "unreviewed_description_variant",
+          "field": "summary",
+          "review_needed_if_adopted": true
+        },
+        {
+          "adopted": false,
+          "antigravity_value": [
+            "Artificial intelligence in L&D",
+            "Human-AI workflow collaboration",
+            "AI agents in workplace learning",
+            "L&D decision-making"
+          ],
+          "chatgpt_value": [
+            "AI in L&D",
+            "Workplace learning",
+            "Human-AI collaboration"
+          ],
+          "classification": "unreviewed_editorial_context_variant",
+          "field": "topics",
+          "review_needed_if_adopted": true
+        }
+      ],
+      "event_id": "evt_fb9c960a4c6a704d",
+      "title": "AI in the Flow of Work: How L&D Professionals Are Working Alongside AI"
+    }
+  ],
+  "match_reasons": [
+    {
+      "left": "intake/chatgpt/chatgpt-2026-11-18-pilot.json:2",
+      "reason": "normalized_registration_url",
+      "right": "intake/gemini/gemini-2026-11-18.json:1"
+    },
+    {
+      "left": "intake/chatgpt/chatgpt-2026-11-18-pilot.json:5",
+      "reason": "normalized_registration_url",
+      "right": "intake/gemini/gemini-2026-11-18.json:2"
+    },
+    {
+      "left": "intake/chatgpt/chatgpt-2026-11-18-pilot.json:6",
+      "reason": "normalized_title_scoped_organizer_alias_same_UTC_start",
+      "right": "intake/gemini/gemini-2026-11-18.json:4"
+    }
+  ],
+  "policy": "Frozen approved versions retained; all other proposed facts remain unreviewed. No production alias/config/data mutation."
+}

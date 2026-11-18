@@ -1,0 +1,30 @@
+[
+  {
+    "ref": "d019b05680a5ae3d3cdcc96a802fe19f47c3f7c1",
+    "repository_path": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+    "preserved_path": "chatgpt/chatgpt-2026-11-18-pilot.json",
+    "bytes": 10681,
+    "sha256": "588eaa70407285a0fa760143ac63bf4ef35c3df71541b9c35dad627009ebcefc"
+  },
+  {
+    "ref": "93f8715d726a2ee4e8c99678ec1edfe939d9d52f",
+    "repository_path": "intake/gemini/gemini-2026-11-18.json",
+    "preserved_path": "antigravity/gemini-2026-11-18.json",
+    "bytes": 21579,
+    "sha256": "5768f5927bbbc0d8b54786c39b7b3a67a16098a39c04d3035cd26a32086cce14"
+  },
+  {
+    "ref": "93f8715d726a2ee4e8c99678ec1edfe939d9d52f",
+    "repository_path": "reports/pilots/gemini-2026-11-18/gemini-2026-11-18-research-report.md",
+    "preserved_path": "antigravity/research-report.md",
+    "bytes": 21755,
+    "sha256": "a6bed8b1c7b87558b6f1ba5762f40df33b3d6240d83e956059413abbe28301bc"
+  },
+  {
+    "ref": "93f8715d726a2ee4e8c99678ec1edfe939d9d52f",
+    "repository_path": "reports/pilots/gemini-2026-11-18/gemini-2026-11-18-validation-report.md",
+    "preserved_path": "antigravity/original-validation-report.md",
+    "bytes": 5206,
+    "sha256": "469688477f0dfb598f093d4790e3c0d4bc5514daf08329cc5b9899db5a926636"
+  }
+]

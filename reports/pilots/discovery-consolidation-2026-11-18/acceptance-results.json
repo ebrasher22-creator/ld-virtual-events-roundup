@@ -1,0 +1,100 @@
+{
+  "alias_policy": "Two scoped review-only organizer equivalences backed by supplied shared URLs/domains, matching title and instant; original names/evidence all retained.",
+  "already_approved_eligible": 7,
+  "antigravity_records": 7,
+  "approvals_refreshed": false,
+  "as_of": "2026-11-24",
+  "by_week": [
+    {
+      "already_approved_eligible": 5,
+      "antigravity": 3,
+      "both": 2,
+      "chatgpt": 5,
+      "distinct_discovery_candidates": 6,
+      "new_pending": 1,
+      "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05"
+    },
+    {
+      "already_approved_eligible": 2,
+      "antigravity": 2,
+      "both": 1,
+      "chatgpt": 2,
+      "distinct_discovery_candidates": 3,
+      "new_pending": 1,
+      "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12"
+    },
+    {
+      "already_approved_eligible": 0,
+      "antigravity": 1,
+      "both": 0,
+      "chatgpt": 0,
+      "distinct_discovery_candidates": 1,
+      "new_pending": 1,
+      "roundup_week": "2027/RW03_2027-01-17_to_2027-01-23"
+    },
+    {
+      "already_approved_eligible": 0,
+      "antigravity": 1,
+      "both": 0,
+      "chatgpt": 0,
+      "distinct_discovery_candidates": 1,
+      "new_pending": 1,
+      "roundup_week": "2027/RW04_2027-01-24_to_2027-01-30"
+    }
+  ],
+  "chatgpt_records": 7,
+  "distinct_reconciled_candidates": 11,
+  "native_current_pipeline": {
+    "all_pending_without_reviews": true,
+    "conflict_records": 2,
+    "description_variants_flagged": false,
+    "exact_rerun_idempotent": true,
+    "fresh_events": 12,
+    "fresh_future_events": 6,
+    "missed_cross_stream_duplicate": "AI in the Flow of Work: organizer alias plus different registration destination",
+    "reversed_input_records_byte_equal": true
+  },
+  "new_events_selected": false,
+  "new_pending": 4,
+  "preserved_work_submission_still_passes": true,
+  "production_data_modified": false,
+  "result": "PASS_ISOLATED_TEST__INTEGRATION_CHANGES_NEEDED",
+  "seeded_native_approval_risks": [
+    {
+      "after_sha256": "6266b7b392cd4e2f1eb376cb16538e5900e941ad86ad2cbb0565d9c4571e5ae8",
+      "approval_problem": "missing_or_stale_approval",
+      "before_sha256": "ae08953855169ac27b866c4cf5bfe604cc7cc0f7fb6d8af95d9e15e24baed0f6",
+      "event_id": "evt_3f2f090963c7e1d0",
+      "native_conflict_flags": [
+        "organizer",
+        "title"
+      ],
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+      "updated_at_chronologically_current": false
+    },
+    {
+      "after_sha256": "b98a05fd157a23385e9197c0e066607259a82c3a75c02bb0f058f9b4e9bc6abb",
+      "approval_problem": "missing_or_stale_approval",
+      "before_sha256": "88792aa3619b0e781f688f44295488662daeb9105cb5c0e659730b96c6bfc259",
+      "event_id": "evt_5b0c2b55e8407e36",
+      "native_conflict_flags": [
+        "end_datetime",
+        "organizer"
+      ],
+      "title": "[Leader Talk] The 2027 Learning Experience",
+      "updated_at_chronologically_current": false
+    }
+  ],
+  "shared_intake_events": 3,
+  "source_commits": {
+    "antigravity": "93f8715",
+    "chatgpt": "d019b05"
+  },
+  "target_week": "2026/RW49_2026-11-29_to_2026-12-05",
+  "total_submissions": 14,
+  "unique_future_events": 5,
+  "unique_to_antigravity_intake": 4,
+  "unique_to_chatgpt_intake": 4,
+  "verification_claim": "No new event verification performed; discovery evidence remains agent-supplied. Existing unchanged owner approvals retained, never refreshed automatically.",
+  "work_input_would_be_stale_with_native_integration": true
+}
