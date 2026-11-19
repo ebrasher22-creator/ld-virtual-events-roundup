@@ -10,7 +10,7 @@
 - LinkedIn post: https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post.md
 - Compact alternative: https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post-compact.md
 - Editorial report: https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-report.json
-- Workflow run: https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44461503189
+- Workflow run: https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44462389931
 
 ## Advisories and exceptions
 - BELOW_TARGET: 2 eligible events (target 8–12); no events were added from other weeks.
