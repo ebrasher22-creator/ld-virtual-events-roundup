@@ -2,7 +2,7 @@
 import argparse
 from datetime import date, datetime
 from pathlib import Path
-from pipeline import ROOT, CENTRAL, read, target
+from pipeline import ROOT, CENTRAL, read, target, dt
 from validate_post import validate_output
 
 
@@ -19,6 +19,8 @@ def inspect(root=ROOT, today=None):
     try:
         folder = validate_output(root, today)
         report = read(folder / 'editorial-report.json')
+        if dt(report['generated_at']).astimezone(CENTRAL).date() != today:
+            raise ValueError('report_not_generated_today_chicago')
         text = (folder / 'linkedin-post.md').read_text()
         if handoff['event_count'] != len(report['events_included']) or handoff['character_counts'] != report['character_counts']:
             raise ValueError('handoff_report_count_mismatch')

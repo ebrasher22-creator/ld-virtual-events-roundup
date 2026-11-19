@@ -1,3 +1,5 @@
+> Legacy pilot editor contract. Production uses `scripts/editorial.py`, `weeks/current-handoff.json` and `agents/jarvis-editorial-handoff.md`; do not use the manual `jarvis-handoff.md` listed below as current output.
+
 # Wednesday LinkedIn editor
 
 Read approved canonical records and the separately persisted current review ledger. Support detailed human claim observations or a source-preserved, hash-bound explicit owner attestation; never invent observations or research that a reviewer did not report. Any record/source fingerprint mismatch requires renewed approval. Editorial selection is distinct from final caption approval.
