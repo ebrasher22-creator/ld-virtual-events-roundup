@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "generated_at": "2026-11-19T04:36:55+00:00",
+  "generated_at": "2026-11-19T04:54:46+00:00",
   "generated_on_local_date": "2026-11-18",
   "notice": "Mechanical validation is not publication approval. Eddie reviews and publishes manually.",
   "post_raw_url": "https://raw.githubusercontent.com/ebrasher22-creator/ld-virtual-events-roundup/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post.md",
@@ -37,7 +37,7 @@
   },
   "report_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-report.json",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
-  "source_commit": "35b941ad5670837c42ffd2bdbef65e4e91fe01f6",
+  "source_commit": "61a713ef2d5063dbd6a1a5fe974acab23ea62df1",
   "unresolved_events": [
     {
       "event_id": "evt_004e21d3ac8f32b8",
@@ -82,5 +82,5 @@
     }
   ],
   "within_character_limit": true,
-  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44459512006"
+  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44461503189"
 }
