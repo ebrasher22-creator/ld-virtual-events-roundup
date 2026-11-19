@@ -79,10 +79,16 @@ def relevance_ok(e, config):
     return any(k in text for k in keywords)
 
 
+def explicit_free(text):
+    if re.search(r'\b(?:not|never)\s+free\b', text, re.I):
+        return False
+    return bool(re.search(r'\b(free (?:webinar|event|registration|session)|(?:registration|admission|cost|price|webinar)[^.!?\n]{0,40}\bfree|complimentary|no (?:cost|charge))\b', text, re.I))
+
+
 def pricing_label(e):
     """Never infer free. Free/Paid only with explicit primary-source evidence; otherwise 'Pricing not listed'."""
     excerpts = ' '.join(item.get('excerpt', '') for item in primary_evidence(e))
-    if e.get('price_type') == 'free' and FREE_PATTERN.search(excerpts):
+    if e.get('price_type') == 'free' and explicit_free(excerpts):
         return 'Free'
     if e.get('price_type') == 'paid':
         match = PRICE_PATTERN.search(excerpts)
@@ -285,7 +291,7 @@ def qualification(e, root=ROOT, reference=None, checks=None, config=None):
     if check and check.get('classification') == 'confirmed':
         live_text = ' '.join(p.get('observed_text', '') for p in check.get('pages', []))
         label = pricing_label(e)
-        if label == 'Free' and not FREE_PATTERN.search(live_text):
+        if label == 'Free' and not explicit_free(live_text):
             problems.append('free_price_not_confirmed_on_current_page')
         if label.startswith('Paid:'):
             original = PRICE_PATTERN.search(' '.join(i.get('excerpt', '') for i in primary_evidence(e)))

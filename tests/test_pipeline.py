@@ -305,9 +305,9 @@ class PipelineTests(unittest.TestCase):
         self.assertFalse(eligible(after_conflict, read(self.root/'data/reviews.json'), self.root))
 
     def test_pilot_consolidation_eleven_candidates_and_editorial_package_migration(self):
-        events = read(ROOT/'data/canonical-events.json')
-        reviews = read(ROOT/'data/reviews.json')
-        future = read(ROOT/'data/future-events.json')
+        events = read(ROOT/'tests/fixtures/historical-pilot/canonical-events.json')
+        reviews = read(ROOT/'tests/fixtures/historical-pilot/reviews.json')
+        future = read(ROOT/'tests/fixtures/historical-pilot/future-events.json')
         self.assertEqual(len(events), 11)
         self.assertEqual(len(future), 5)
         rw49 = [e for e in events if e['roundup_week'] == '2026/RW49_2026-11-29_to_2026-12-05']
