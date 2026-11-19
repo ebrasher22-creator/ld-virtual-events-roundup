@@ -4,7 +4,9 @@ Existing automation handle: `next-week-in-ld-antigravity-discovery`. Preserve Tu
 
 Observed blocker: the existing Antigravity session displays **Individual quota reached**. During follow-up task inspection the native window became unavailable. No quota workaround, model-provider purchase, new credential or service was introduced. A real Antigravity run, task grants, and a saved prompt change are therefore not verified by this takeover.
 
-When the account can execute again:
+The quota message was observed in the implementation conversation; the scheduled model’s separate availability was not verified. Native task inspection became unavailable, so do not treat this as proof that every Antigravity model or schedule is disabled.
+
+When native task access and execution are available:
 
 1. Open Antigravity → Automations → the existing L&D discovery task.
 2. Retain its existing Chicago Tuesday 07:00 schedule and supported existing model/connection.
