@@ -136,13 +136,15 @@
       "Trainers",
       "L&D professionals"
     ],
-    "conflict_flags": [],
+    "conflict_flags": [
+      "summary"
+    ],
     "discovered_at": "2026-11-18T12:50:33-06:00",
     "discovered_by": [
       "chatgpt"
     ],
     "editorial_score": 0,
-    "editorial_status": "selected",
+    "editorial_status": "pending",
     "end_datetime": "2026-12-02T12:00:00-05:00",
     "event_format": "virtual",
     "event_id": "evt_1b02f4289e55abe4",
@@ -151,6 +153,21 @@
       {
         "claim": "Official event listing and registration details",
         "excerpt": "Official Langevin webinar registration page: December 2, 2026, 11:00 am–12:00 pm ET; Adobe Connect; free; registration form available.",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Location: Adobe Connect",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Save your spot in this FREE exclusive 1-hour webinar!",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      },
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 2, 2026: 11:00 am - 12:00 pm ET",
         "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
       }
     ],
@@ -168,6 +185,58 @@
     ],
     "start_datetime": "2026-12-02T11:00:00-05:00",
     "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "Instructional designers",
+            "Training developers"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-19T04:17:06Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T12:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "evidence": [
+            {
+              "claim": "start_datetime",
+              "excerpt": "December 2, 2026: 11:00 am - 12:00 pm ET",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Location: Adobe Connect",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Save your spot in this FREE exclusive 1-hour webinar!",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Langevin Learning Services",
+          "organizer_url": "https://langevin.com/",
+          "price_type": "free",
+          "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "source_urls": [
+            "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+          ],
+          "start_datetime": "2026-12-02T11:00:00-05:00",
+          "summary": "Marsha Weisleder presents an instructional design planning approach covering learner analysis, activities and testing for training programs.",
+          "timezone": "America/New_York",
+          "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+          "topics": [
+            "Instructional design",
+            "Learner analysis",
+            "Training assessment"
+          ]
+        },
+        "sha256": "bcd25bf0e73a626d195580cf30f343d1d8662d45612db1c6ecb5122e49e73980"
+      },
       {
         "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
         "raw": {
@@ -218,8 +287,8 @@
       "Learner analysis",
       "Assessment"
     ],
-    "updated_at": "2026-11-18T19:39:10+00:00",
-    "verification_status": "verified"
+    "updated_at": "2026-11-19T04:17:06Z",
+    "verification_status": "pending"
   },
   {
     "audience": [
@@ -790,6 +859,133 @@
       "2027 workforce planning"
     ],
     "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Professional learning directors",
+      "Instructional designers",
+      "Learning and development professionals"
+    ],
+    "conflict_flags": [],
+    "cost": null,
+    "discovered_at": "2026-11-19T04:17:06Z",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-01T16:30:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_97f33fc975aae3f7",
+    "event_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/",
+    "evidence": [
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 01, 2026 | 3:30 PM EST | 1 Hour",
+        "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Upcoming Live Webinar",
+        "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Register Now",
+        "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+      },
+      {
+        "claim": "registration_form",
+        "excerpt": "Work Email",
+        "source_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "D2L",
+    "organizer_url": "https://www.d2l.com/",
+    "price_type": "unknown",
+    "registration_aliases": [
+      "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+    ],
+    "registration_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green",
+      "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+    ],
+    "start_datetime": "2026-12-01T15:30:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "Professional learning directors",
+            "Instructional designers",
+            "Learning and development professionals"
+          ],
+          "cost": null,
+          "discovered_at": "2026-11-19T04:17:06Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-01T16:30:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/",
+          "evidence": [
+            {
+              "claim": "start_datetime",
+              "excerpt": "December 01, 2026 | 3:30 PM EST | 1 Hour",
+              "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Upcoming Live Webinar",
+              "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Register Now",
+              "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+            },
+            {
+              "claim": "registration_form",
+              "excerpt": "Work Email",
+              "source_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+            }
+          ],
+          "language": "English",
+          "organizer": "D2L",
+          "organizer_url": "https://www.d2l.com/",
+          "price_type": "unknown",
+          "registration_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green",
+          "source_urls": [
+            "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/",
+            "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+          ],
+          "start_datetime": "2026-12-01T15:30:00-05:00",
+          "summary": "D2L and ISTE+ASCD discuss scaling educator professional learning through personalized pathways, interactive learning design and progress tracking.",
+          "timezone": "America/New_York",
+          "title": "How ISTE+ASCD transformed educator professional learning",
+          "topics": [
+            "Educator professional learning",
+            "Learning design",
+            "Personalized learning pathways"
+          ]
+        },
+        "sha256": "25e11996461fade9d772e4d0933a972fc68d884e0dafd87506c99bfc526bda95"
+      }
+    ],
+    "summary": "D2L and ISTE+ASCD discuss scaling educator professional learning through personalized pathways, interactive learning design and progress tracking.",
+    "timezone": "America/New_York",
+    "title": "How ISTE+ASCD transformed educator professional learning",
+    "topics": [
+      "Educator professional learning",
+      "Learning design",
+      "Personalized learning pathways"
+    ],
+    "updated_at": "2026-11-19T04:17:06Z",
     "verification_status": "pending"
   },
   {
