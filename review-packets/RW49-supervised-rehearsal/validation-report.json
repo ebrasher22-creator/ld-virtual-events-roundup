@@ -1,0 +1,17 @@
+{
+  "character_counts": {
+    "compact_caption": 1386,
+    "full_caption": 1807
+  },
+  "editorial_input_sha256": "faad3f55b17ec14eb538c42157860e370b73d6b348ac75563f66eb3a1bdd1e5f",
+  "errors": [],
+  "limitations": [
+    "Exact event facts and coverage are checked. Prose truthfulness, interpretation, audience sensitivity and editorial quality require human review."
+  ],
+  "mechanical_validation_passed": true,
+  "publication_approval_status": "awaiting_final_human_review",
+  "result": "pass",
+  "semantic_review_required": true,
+  "submission_sha256": "530d0ce7203bbb8a171474d2042e1af8706c12e73b91899637b89c9f9152ac5f",
+  "validated_at": "2026-11-18T23:58:10+00:00"
+}

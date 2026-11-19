@@ -1,0 +1,54 @@
+test_above_target_does_not_silently_cap_collection (test_editorial.EditorialTests) ... ok
+test_cdt_and_cst_display (test_editorial.EditorialTests) ... ok
+test_confirmed_free_and_paid_labels (test_editorial.EditorialTests) ... ok
+test_explicit_owner_attestation_has_no_invented_observations_or_check_time (test_editorial.EditorialTests) ... ok
+test_future_week_is_excluded_and_remains_available (test_editorial.EditorialTests) ... ok
+test_incomplete_or_fake_attestation_cannot_approve (test_editorial.EditorialTests) ... ok
+test_known_but_unconfirmed_price_is_not_advertised_or_changed (test_editorial.EditorialTests) ... ok
+test_legacy_observations_without_optional_price_claim (test_editorial.EditorialTests) ... ok
+test_overflow_writes_explicit_exception_and_preserves_all_events (test_editorial.EditorialTests) ... ok
+test_record_or_source_change_invalidates_approval (test_editorial.EditorialTests) ... ok
+test_repeat_execution_stable_except_declared_timestamp (test_editorial.EditorialTests) ... ok
+test_shorten_optional_text_before_dropping_essential_details (test_editorial.EditorialTests) ... ok
+test_stale_selected_record_causes_workflow_exception (test_editorial.EditorialTests) ... ok
+test_unknown_pricing_stays_eligible_without_price_claim (test_editorial.EditorialTests) ... ok
+test_wednesday_seven_central_guard_handles_dst (test_editorial.EditorialTests) ... ok
+test_cannot_write_to_approved_data_or_replace_prior_packet (test_editorial_handoff.HandoffTests) ... ok
+test_failed_return_has_diagnostics_and_no_publishable_caption (test_editorial_handoff.HandoffTests) ... ok
+test_stale_current_approval_fails_without_modifying_ledger (test_editorial_handoff.HandoffTests) ... ok
+test_symlink_escape_is_rejected (test_editorial_handoff.HandoffTests) ... ok
+test_valid_work_return_assembles_complete_packet_without_changing_data (test_editorial_handoff.HandoffTests) ... ok
+test_wrong_week_or_malformed_json_fails_safely (test_editorial_handoff.HandoffTests) ... ok
+test_agent_cannot_self_verify (test_pipeline.PipelineTests) ... ok
+test_dst (test_pipeline.PipelineTests) ... ok
+test_ingest_idempotence_provenance_conflict_future (test_pipeline.PipelineTests) ... ok
+test_invalid (test_pipeline.PipelineTests) ... ok
+test_length_limit (test_pipeline.PipelineTests) ... ok
+test_manual_cli_intake (test_pipeline.PipelineTests) ... ok
+test_review_binds_exact_record (test_pipeline.PipelineTests) ... ok
+test_schema_contract_invalid_shapes (test_pipeline.PipelineTests) ... ok
+test_schema_required_fields_and_registry (test_pipeline.PipelineTests) ... ok
+test_transactional_invalid_batch (test_pipeline.PipelineTests) ... ok
+test_unverified_excluded_and_output_reproducible (test_pipeline.PipelineTests) ... ok
+test_utc_instant_with_iana_display_zone (test_pipeline.PipelineTests) ... ok
+test_valid (test_pipeline.PipelineTests) ... ok
+test_week_boundaries (test_pipeline.PipelineTests) ... ok
+test_failed_resubmission_removes_old_passing_caption (test_work_editorial.WorkEditorialTests) ... ok
+test_invalid_json_and_wrong_shapes_report_fail_without_execution (test_work_editorial.WorkEditorialTests) ... ok
+test_no_generation_timestamp_churn_in_editorial_input (test_work_editorial.WorkEditorialTests) ... ok
+test_only_approved_target_week_members_are_exported (test_work_editorial.WorkEditorialTests) ... ok
+test_owner_mediated_file_return_scan (test_work_editorial.WorkEditorialTests) ... ok
+test_reject_changed_event_facts_links_and_length (test_work_editorial.WorkEditorialTests) ... ok
+test_reject_missing_duplicate_and_extra_event_assertions (test_work_editorial.WorkEditorialTests) ... ok
+test_reject_week_hash_input_tampering_and_stale_approval (test_work_editorial.WorkEditorialTests) ... ok
+test_reordered_blocks_and_wrong_preparation_week_fail (test_work_editorial.WorkEditorialTests) ... ok
+test_semantic_review_is_never_claimed_automated (test_work_editorial.WorkEditorialTests) ... ok
+test_valid_exchange_and_original_url_preservation (test_work_editorial.WorkEditorialTests) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 1.299s
+
+OK
+PASS: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmpyemuf0wh/reports/work-editorial/test
+FAIL: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmpyemuf0wh/reports/work-editorial/test
+FAIL: /private/var/folders/nw/4xrs3j354hbcrcv_rfw5zsj80000gp/T/tmpo0zejqal/reports/work-editorial/test

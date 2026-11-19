@@ -1,0 +1,17 @@
+{
+  "after": {
+    "approvals/2026-11-18-owner-wednesday-authorization.md": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+    "data/canonical-events.json": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+    "data/future-events.json": "c65c01caafc19315f2f1029463d4224f67ef019b3cd941ee90a7869880c5e183",
+    "data/reviews.json": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
+    "weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-input.json": "9f29a9c112fc2a0d11a6941925d1e8dafc529305f629d3f3211e99d79771a22d"
+  },
+  "before": {
+    "approvals/2026-11-18-owner-wednesday-authorization.md": "c4973b15d0d93633ff040a5d64229a31dd7140cd496ba4bc1e01ae2b701bf7f9",
+    "data/canonical-events.json": "a1e4fd6f966ff4b6c5d7977dba4ce998645d382cc259da616028f50cda8ec8a6",
+    "data/future-events.json": "c65c01caafc19315f2f1029463d4224f67ef019b3cd941ee90a7869880c5e183",
+    "data/reviews.json": "83b3f719352a5628ba14ecc4e8a829d0e03815d763ef0761e733289b2551d934",
+    "weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-input.json": "9f29a9c112fc2a0d11a6941925d1e8dafc529305f629d3f3211e99d79771a22d"
+  },
+  "unchanged": true
+}

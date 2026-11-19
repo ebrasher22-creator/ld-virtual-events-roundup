@@ -1,0 +1,33 @@
+{
+  "date_local": "2026-11-18",
+  "branch": "review/wednesday-operational-handoff-2026-11-18",
+  "base": "d019b05",
+  "read_exact_ref": "passed",
+  "work_github_write": {
+    "result": "denied",
+    "http_status": 403,
+    "message": "Resource not accessible by integration",
+    "probe_path": "handoff-probes/rw49-work-capability.json",
+    "independent_lookup_status": 404
+  },
+  "scheduled_execution": "not_tested_or_modified",
+  "task_editor_time": "08:00 America/Chicago",
+  "prior_chat_claim_time": "07:00 America/Chicago",
+  "default_branch": "feature/github-event-pipeline",
+  "task_ref_pinned": false,
+  "plan_observed": "Pro",
+  "work_chat": "https://chatgpt.com/g/g-p-697fbe18feb48191afaf7e60211edab4-veridian-performance-group/c/6afe0821-f758-83ea-96fe-c68bf98587f6",
+  "jarvis_delivery": {
+    "mode": "supervised self-contained plain text",
+    "status": "acknowledged",
+    "conversation": "https://chatgpt.com/dots/1a6d1dcb-8ba0-475a-96d0-44c5648cd7ba~6ae6f52e7eb0819a9b6844d2cc95d1d0",
+    "receipt": "Received the supervised Next Week in L&D RW49 packet for Nov 29\u2013Dec 5, with five approved events. The validation report shows a mechanical pass; editorial review and final publication approval are still pending. Nothing was published or changed, and this handoff does not establish automatic delivery.",
+    "repository_access_required": false
+  },
+  "publication_status": "awaiting_final_human_review",
+  "tests_passed": 46,
+  "smoke": "passed",
+  "repository_validator": "passed",
+  "existing_editorial_draft_scan": "passed",
+  "new_paid_ai_api_calls": false
+}
