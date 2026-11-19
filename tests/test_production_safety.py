@@ -75,3 +75,12 @@ class ProductionSafetyTests(unittest.TestCase):
         self.assertTrue(explicit_free('A complimentary webinar.'))
         self.assertFalse(explicit_free('This event is not free.'))
         self.assertFalse(explicit_free('Download our free resources.'))
+
+    def test_audit_record_keeps_facts_and_hash_not_entire_source_page(self):
+        page=self.event['title']+' Example Association free webinar December 1, 2026 12:00 PM CST '+('Long site navigation '*10000)
+        result=check_event(self.event,self.page(page))
+        self.assertEqual(result['classification'],'confirmed')
+        for item in result['pages']:
+            self.assertNotIn('observed_text',item)
+            self.assertTrue(item['free_confirmed'])
+            self.assertEqual(len(item['page_sha256']),64)

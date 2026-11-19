@@ -202,7 +202,8 @@ def classify_page(result, e):
         else:
             page['classification'] = 'confirmed' if page['title_match'] and all(page['claims'].values()) else 'reachable_unconfirmed'
             page['page_sha256'] = hashlib.sha256(body.encode()).hexdigest()
-            page['observed_text'] = ' '.join(text.split())[:100000]
+            page['free_confirmed'] = explicit_free(text)
+            page['published_prices'] = list(dict.fromkeys(m.group(0) for m in PRICE_PATTERN.finditer(text)))[:20]
     return page
 
 
@@ -289,13 +290,14 @@ def qualification(e, root=ROOT, reference=None, checks=None, config=None):
         if not check.get('date_confirmed_on_page'):
             problems.append('date_not_confirmed_on_current_page')
     if check and check.get('classification') == 'confirmed':
-        live_text = ' '.join(p.get('observed_text', '') for p in check.get('pages', []))
+        live_free = any(p.get('free_confirmed', False) for p in check.get('pages', []))
+        live_prices = [value.casefold() for p in check.get('pages', []) for value in p.get('published_prices', [])]
         label = pricing_label(e)
-        if label == 'Free' and not explicit_free(live_text):
+        if label == 'Free' and not live_free:
             problems.append('free_price_not_confirmed_on_current_page')
         if label.startswith('Paid:'):
             original = PRICE_PATTERN.search(' '.join(i.get('excerpt', '') for i in primary_evidence(e)))
-            if original and original.group(0).casefold() not in live_text.casefold():
+            if original and original.group(0).casefold() not in live_prices:
                 problems.append('published_price_not_confirmed_on_current_page')
     if pricing_label(e) == 'Pricing not listed':
         warnings.append('pricing_not_listed')
