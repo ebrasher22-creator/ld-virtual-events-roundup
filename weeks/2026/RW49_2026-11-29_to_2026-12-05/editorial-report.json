@@ -6,7 +6,7 @@
   "artifact_relative_path": "weeks/2026/RW49_2026-11-29_to_2026-12-05",
   "as_of": "2026-11-24",
   "below_target": true,
-  "canonical_sha256": "f5c1ad243a75fd6eabfdbf3c93b9cbeb0fcfc9aaec74e6f2742d40f955cff6a9",
+  "canonical_sha256": "799deb234c7474251c3221a8cf9c6e7f1d305ba6608c2dca0c1bd7b2d3c7694e",
   "caption_strategy": "full",
   "character_counts": {
     "compact": 913,
@@ -77,6 +77,12 @@
       "title": "Intro to Facilitating Groups: The Basics"
     },
     {
+      "assigned_week": "2026/RW51_2026-12-13_to_2026-12-19",
+      "event_id": "evt_c5638f453ff6b598",
+      "reason": "outside_target_week",
+      "title": "Microlearning + Mobile: A Winning Combination"
+    },
+    {
       "assigned_week": "2027/RW03_2027-01-17_to_2027-01-23",
       "event_id": "evt_d3d3b702e3ac8d1b",
       "reason": "outside_target_week",
@@ -118,7 +124,7 @@
       "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
     }
   ],
-  "generated_at": "2026-11-19T04:36:55+00:00",
+  "generated_at": "2026-11-19T04:54:46+00:00",
   "missing_optional_pricing": [
     {
       "event_id": "evt_1b02f4289e55abe4",
@@ -141,7 +147,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:36:51+00:00",
+      "registration_checked_at": "2026-11-19T04:54:41+00:00",
       "title": "How Collective Energy Shapes Performance",
       "warnings": [
         "pricing_not_listed"
@@ -156,7 +162,7 @@
       "pricing_label": "Pricing not listed",
       "problems": [],
       "registration_check": "confirmed",
-      "registration_checked_at": "2026-11-19T04:36:52+00:00",
+      "registration_checked_at": "2026-11-19T04:54:42+00:00",
       "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
       "warnings": [
         "description_variants_between_agents (canonical description used)",
@@ -175,7 +181,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:36:53+00:00",
+      "registration_checked_at": "2026-11-19T04:54:42+00:00",
       "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
       "warnings": [
         "description_variants_between_agents (canonical description used)",
@@ -194,7 +200,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:36:53+00:00",
+      "registration_checked_at": "2026-11-19T04:54:42+00:00",
       "title": "[Leader Talk] The 2027 Learning Experience",
       "warnings": [
         "description_variants_between_agents (canonical description used)",
@@ -210,7 +216,7 @@
       "pricing_label": "Free",
       "problems": [],
       "registration_check": "confirmed",
-      "registration_checked_at": "2026-11-19T04:36:53+00:00",
+      "registration_checked_at": "2026-11-19T04:54:42+00:00",
       "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
       "warnings": []
     },
@@ -225,7 +231,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:36:54+00:00",
+      "registration_checked_at": "2026-11-19T04:54:43+00:00",
       "title": "How ISTE+ASCD transformed educator professional learning",
       "warnings": [
         "pricing_not_listed"
@@ -242,7 +248,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:36:55+00:00",
+      "registration_checked_at": "2026-11-19T04:54:44+00:00",
       "title": "2027 Planning Sprint",
       "warnings": [
         "pricing_not_listed"
@@ -250,9 +256,9 @@
     }
   ],
   "readiness_status": "ready_with_warnings",
-  "registration_checks_sha256": "346d696fc3dbe9a2ba1483c935e55f8277d395dce7fa393331a120477a5c23c4",
+  "registration_checks_sha256": "011557fd5dac048def512561f64492ac3afa56568e695f5fa2adea77c9e5c682",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
-  "source_commit": "35b941ad5670837c42ffd2bdbef65e4e91fe01f6",
+  "source_commit": "61a713ef2d5063dbd6a1a5fe974acab23ea62df1",
   "target_max": 12,
   "target_min": 8,
   "total_eligible_events_for_target_week": 2,
@@ -301,5 +307,5 @@
     }
   ],
   "within_character_limit": true,
-  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44459512006"
+  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44461503189"
 }
