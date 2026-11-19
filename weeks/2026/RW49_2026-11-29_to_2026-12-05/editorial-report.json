@@ -124,7 +124,7 @@
       "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
     }
   ],
-  "generated_at": "2026-11-19T04:54:46+00:00",
+  "generated_at": "2026-11-19T05:02:46+00:00",
   "missing_optional_pricing": [
     {
       "event_id": "evt_1b02f4289e55abe4",
@@ -147,7 +147,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:54:41+00:00",
+      "registration_checked_at": "2026-11-19T05:02:42+00:00",
       "title": "How Collective Energy Shapes Performance",
       "warnings": [
         "pricing_not_listed"
@@ -162,7 +162,7 @@
       "pricing_label": "Pricing not listed",
       "problems": [],
       "registration_check": "confirmed",
-      "registration_checked_at": "2026-11-19T04:54:42+00:00",
+      "registration_checked_at": "2026-11-19T05:02:42+00:00",
       "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
       "warnings": [
         "description_variants_between_agents (canonical description used)",
@@ -181,7 +181,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:54:42+00:00",
+      "registration_checked_at": "2026-11-19T05:02:43+00:00",
       "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
       "warnings": [
         "description_variants_between_agents (canonical description used)",
@@ -200,7 +200,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:54:42+00:00",
+      "registration_checked_at": "2026-11-19T05:02:43+00:00",
       "title": "[Leader Talk] The 2027 Learning Experience",
       "warnings": [
         "description_variants_between_agents (canonical description used)",
@@ -216,7 +216,7 @@
       "pricing_label": "Free",
       "problems": [],
       "registration_check": "confirmed",
-      "registration_checked_at": "2026-11-19T04:54:42+00:00",
+      "registration_checked_at": "2026-11-19T05:02:43+00:00",
       "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
       "warnings": []
     },
@@ -231,7 +231,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:54:43+00:00",
+      "registration_checked_at": "2026-11-19T05:02:44+00:00",
       "title": "How ISTE+ASCD transformed educator professional learning",
       "warnings": [
         "pricing_not_listed"
@@ -248,7 +248,7 @@
         "registration_check:event_details_unconfirmed"
       ],
       "registration_check": "event_details_unconfirmed",
-      "registration_checked_at": "2026-11-19T04:54:44+00:00",
+      "registration_checked_at": "2026-11-19T05:02:45+00:00",
       "title": "2027 Planning Sprint",
       "warnings": [
         "pricing_not_listed"
@@ -256,9 +256,9 @@
     }
   ],
   "readiness_status": "ready_with_warnings",
-  "registration_checks_sha256": "011557fd5dac048def512561f64492ac3afa56568e695f5fa2adea77c9e5c682",
+  "registration_checks_sha256": "ef8fcd341968f182b823604b9ba7346b2aaf62bb4839713f1556f501cfb1ce66",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
-  "source_commit": "61a713ef2d5063dbd6a1a5fe974acab23ea62df1",
+  "source_commit": "98a1b3dbc942bf2fb8dc062497f5feaf505e3734",
   "target_max": 12,
   "target_min": 8,
   "total_eligible_events_for_target_week": 2,
@@ -307,5 +307,5 @@
     }
   ],
   "within_character_limit": true,
-  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44461503189"
+  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44462389931"
 }
