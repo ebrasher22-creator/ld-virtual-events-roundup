@@ -229,6 +229,18 @@ class EditorialTests(unittest.TestCase):
         write(empty / 'weeks/current-handoff.json', dict(generated_on_local_date='2026-11-25', roundup_identifier='2026/RW49_2026-11-29_to_2026-12-05'))
         self.assertFalse(should_run_scheduled(datetime.fromisoformat('2026-11-25T14:00:00+00:00'), empty))  # already ran today
 
+    def test_jarvis_rejects_stale_or_tampered_packet_without_editing_it(self):
+        from jarvis_handoff import inspect
+        self.gen()
+        before=(self.root/'weeks/current-handoff.json').read_bytes()
+        result=inspect(self.root, date(2026,11,25))
+        self.assertEqual(result['readiness_status'],'ready_with_warnings')
+        self.assertEqual(before,(self.root/'weeks/current-handoff.json').read_bytes())
+        self.assertEqual(inspect(self.root,date(2026,11,26))['reason'],'stale_or_wrong_week_handoff')
+        path=self.root/'weeks/current-handoff.json'
+        marker=read(path);marker['event_count']+=1;write(path,marker)
+        self.assertEqual(inspect(self.root,date(2026,11,25))['readiness_status'],'not_ready_action_required')
+
     def test_cdt_and_cst_display(self):
         for timestamp, as_of, expected in [('2026-12-01T12:00:00-06:00', AS_OF, '12:00 PM CST'), ('2026-07-01T12:00:00-05:00', date(2026, 6, 24), '12:00 PM CDT')]:
             events = read(self.root / 'data/canonical-events.json')
