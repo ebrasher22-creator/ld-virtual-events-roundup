@@ -59,7 +59,7 @@ def persist(kind, repo):
             ready_deadline = time.monotonic() + 60
             while time.monotonic() < ready_deadline:
                 state = command('gh', 'pr', 'view', pr, '--repo', repo, '--json', 'mergeStateStatus', '--jq', '.mergeStateStatus')
-                if state == 'CLEAN':
+                if state in {'CLEAN', 'UNSTABLE'}:
                     break
                 time.sleep(3)
             else:
