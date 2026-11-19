@@ -8,6 +8,7 @@
     "events_by_week": {
       "2026/RW49_2026-11-29_to_2026-12-05": 7,
       "2026/RW50_2026-12-06_to_2026-12-12": 3,
+      "2026/RW51_2026-12-13_to_2026-12-19": 1,
       "2027/RW03_2027-01-17_to_2027-01-23": 1,
       "2027/RW04_2027-01-24_to_2027-01-30": 1
     },
@@ -26,29 +27,29 @@
         "summary"
       ]
     },
-    "future_events": 12,
+    "future_events": 13,
     "new_canonical_events": [
-      "evt_97f33fc975aae3f7"
+      "evt_c5638f453ff6b598"
     ],
     "target_week": "2026/RW48_2026-11-22_to_2026-11-28",
-    "total_canonical_events": 12
+    "total_canonical_events": 13
   },
   "ingestion_run": true,
-  "processed_at": "2026-11-19T04:35:34+00:00",
+  "processed_at": "2026-11-19T04:50:27+00:00",
   "pull_requests": [
     {
       "agent": "chatgpt",
-      "branch": "intake/chatgpt-2026-11-18-221802-1e93a978",
+      "branch": "intake/chatgpt-2026-11-18-224822-356de3ee",
       "files": [
         {
-          "file": "intake/chatgpt/chatgpt-2026-11-18.json",
+          "file": "intake/chatgpt/chatgpt-2026-11-18-224822-356de3ee.json",
           "outcome": "accepted",
-          "records": 2,
-          "sha256": "dd66db36725d0f974700869f48acba1979efcebeee8249287061ee11b43b7652"
+          "records": 1,
+          "sha256": "5df4290c9ebafac1d75c74eac8273581d007b4461267639f6154a171e9dd897f"
         }
       ],
-      "head_sha": "c87e596271407955e275c0e0ad9012957e8bc224",
-      "number": 6,
+      "head_sha": "17d06065ca164ac88cf3d8409314783e5beb2396",
+      "number": 13,
       "outcome": "accepted"
     }
   ],

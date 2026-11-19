@@ -1,6 +1,749 @@
 [
   {
     "audience": [
+      "HR, Talent, and L&D Professionals",
+      "Leaders & Managers",
+      "Leadership development practitioners"
+    ],
+    "conflict_flags": [],
+    "cost": null,
+    "discovered_at": "2026-11-18T14:22:05-06:00",
+    "discovered_by": [
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-03T15:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_004e21d3ac8f32b8",
+    "event_url": "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "excerpt": "WEBINAR: How Collective Energy Shapes Performance. Date: Thu., December 3, 2026. Time: 2:00 pm EST (New York) | 8:00 pm CET (Brussels / Paris). Duration: 1 hour.",
+        "source_url": "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "How Collective Energy Shapes Performance. Dec 3, 2026 2:00 PM EST. 01:00:00. webcast.",
+        "source_url": "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance"
+      },
+      {
+        "claim": "relevance",
+        "excerpt": "This insider session features our leadership energy research on more than 600 teams and 34,000 relational ties... Intended Audience: For HR, Talent, and L&D Professionals; For Leaders & Managers.",
+        "source_url": "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Register Login: First Name *, Last Name *, Work Email *, Country *, Job Function *, Company/Organization * -> Register.",
+        "source_url": "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance"
+      }
+    ],
+    "language": "en",
+    "last_verified_at": null,
+    "organizer": "Center for Creative Leadership",
+    "organizer_url": "https://www.ccl.org",
+    "price_type": "unknown",
+    "registration_aliases": [
+      "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance"
+    ],
+    "registration_url": "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance",
+      "https://www.ccl.org/events-webinars/",
+      "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/"
+    ],
+    "start_datetime": "2026-12-03T14:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "HR, Talent, and L&D Professionals",
+            "Leaders & Managers",
+            "Leadership development practitioners"
+          ],
+          "cost": null,
+          "discovered_at": "2026-11-18T14:22:05-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": "2026-12-03T15:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "WEBINAR: How Collective Energy Shapes Performance. Date: Thu., December 3, 2026. Time: 2:00 pm EST (New York) | 8:00 pm CET (Brussels / Paris). Duration: 1 hour.",
+              "source_url": "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "How Collective Energy Shapes Performance. Dec 3, 2026 2:00 PM EST. 01:00:00. webcast.",
+              "source_url": "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance"
+            },
+            {
+              "claim": "relevance",
+              "excerpt": "This insider session features our leadership energy research on more than 600 teams and 34,000 relational ties... Intended Audience: For HR, Talent, and L&D Professionals; For Leaders & Managers.",
+              "source_url": "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Register Login: First Name *, Last Name *, Work Email *, Country *, Job Function *, Company/Organization * -> Register.",
+              "source_url": "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance"
+            }
+          ],
+          "language": "en",
+          "organizer": "Center for Creative Leadership",
+          "organizer_url": "https://www.ccl.org",
+          "price_type": "unknown",
+          "registration_url": "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance",
+          "source_urls": [
+            "https://events.ccl.org/wcc/eh/4553267/lp/5544239/how-collective-energy-shapes-team-culture-performance",
+            "https://www.ccl.org/events-webinars/",
+            "https://www.ccl.org/webinars/how-collective-energy-shapes-team-performance/"
+          ],
+          "start_datetime": "2026-12-03T14:00:00-05:00",
+          "summary": "Live one-hour CCL research webinar with Diane Bergeron, PhD, and Donna Porter, CPCC, PCC, sharing leadership energy findings across more than 600 teams and 34,000 relational ties, including six energy-draining behaviors and three evidence-based strategies to strengthen collective team energy.",
+          "timezone": "America/New_York",
+          "title": "How Collective Energy Shapes Performance",
+          "topics": [
+            "Leadership development",
+            "Team culture and performance",
+            "Collective energy and collaboration",
+            "Organizational research"
+          ]
+        },
+        "sha256": "f6bace5433050437e69874b89dec8300536d2c7ad5078876a811baaf5decf5f8"
+      }
+    ],
+    "summary": "Live one-hour CCL research webinar with Diane Bergeron, PhD, and Donna Porter, CPCC, PCC, sharing leadership energy findings across more than 600 teams and 34,000 relational ties, including six energy-draining behaviors and three evidence-based strategies to strengthen collective team energy.",
+    "timezone": "America/New_York",
+    "title": "How Collective Energy Shapes Performance",
+    "topics": [
+      "Leadership development",
+      "Team culture and performance",
+      "Collective energy and collaboration",
+      "Organizational research"
+    ],
+    "updated_at": "2026-11-18T14:22:05-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Instructional designers",
+      "Trainers",
+      "L&D professionals"
+    ],
+    "conflict_flags": [
+      "summary"
+    ],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-02T12:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_1b02f4289e55abe4",
+    "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Langevin webinar registration page: December 2, 2026, 11:00 am–12:00 pm ET; Adobe Connect; free; registration form available.",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Location: Adobe Connect",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Save your spot in this FREE exclusive 1-hour webinar!",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      },
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 2, 2026: 11:00 am - 12:00 pm ET",
+        "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Langevin Learning Services",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226"
+    ],
+    "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+    ],
+    "start_datetime": "2026-12-02T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "Instructional designers",
+            "Training developers"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-19T04:17:06Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T12:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "evidence": [
+            {
+              "claim": "start_datetime",
+              "excerpt": "December 2, 2026: 11:00 am - 12:00 pm ET",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Location: Adobe Connect",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Save your spot in this FREE exclusive 1-hour webinar!",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Langevin Learning Services",
+          "organizer_url": "https://langevin.com/",
+          "price_type": "free",
+          "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "source_urls": [
+            "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+          ],
+          "start_datetime": "2026-12-02T11:00:00-05:00",
+          "summary": "Marsha Weisleder presents an instructional design planning approach covering learner analysis, activities and testing for training programs.",
+          "timezone": "America/New_York",
+          "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+          "topics": [
+            "Instructional design",
+            "Learner analysis",
+            "Training assessment"
+          ]
+        },
+        "sha256": "bcd25bf0e73a626d195580cf30f343d1d8662d45612db1c6ecb5122e49e73980"
+      },
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Instructional designers",
+            "Trainers",
+            "L&D professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T12:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Langevin webinar registration page: December 2, 2026, 11:00 am–12:00 pm ET; Adobe Connect; free; registration form available.",
+              "source_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Langevin Learning Services",
+          "price_type": "free",
+          "registration_url": "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/",
+          "source_urls": [
+            "https://langevin.com/webinars/renovate-your-instructional-design-process-a-blueprint-for-success-120226/"
+          ],
+          "start_datetime": "2026-12-02T11:00:00-05:00",
+          "summary": "Marsha Weisleder reviews practical steps for planning instructional design, analyzing learners, categorizing content and designing assessments.",
+          "timezone": "America/New_York",
+          "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+          "topics": [
+            "Instructional design",
+            "Learner analysis",
+            "Assessment"
+          ]
+        },
+        "sha256": "d3a0b4af3702d2332ad401cf468fe4bf487d4b32eab93bc396ae6c66695c72b7"
+      }
+    ],
+    "summary": "Marsha Weisleder reviews practical steps for planning instructional design, analyzing learners, categorizing content and designing assessments.",
+    "timezone": "America/New_York",
+    "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+    "topics": [
+      "Instructional design",
+      "Learner analysis",
+      "Assessment"
+    ],
+    "updated_at": "2026-11-19T04:17:06Z",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D leaders",
+      "Instructional designers",
+      "Learning evaluation professionals"
+    ],
+    "conflict_flags": [
+      "summary"
+    ],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt",
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "selected",
+    "end_datetime": "2026-12-02T11:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_3f2f090963c7e1d0",
+    "event_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official iSpring webinar page: December 2, Wednesday, 10:00 AM EST; free; one hour; on-page registration form.",
+        "source_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+      },
+      {
+        "claim": "datetime",
+        "excerpt": "Dates: 02 Dec 2026 10:00 am (UTC -5) - 02 Dec 2026 11:00 am (UTC -5). In L&D as a Conductor, a free one-hour webinar on December 2 at 10:00 AM EST, Maria Starling, Lead Program Manager at iSpring, walks through the findings and what they mean for your team.",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "organizer",
+        "excerpt": "iSpring's second annual ROI study surveyed more than 140 L&D professionals across five regions... Maria Starling, Lead Program Manager at iSpring, walks through the findings and what they mean for your team.",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "price",
+        "excerpt": "A free webinar on why only 11% of L&D teams can prove ROI, the four hidden barriers behind the gap, and how successful teams align people, AI, and stakeholders around measurable outcomes. Online | Free | 1 hour",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Visit Website / Save your spot. -> https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "Place: Online. Online | Free | 1 hour",
+        "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "iSpring",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+    ],
+    "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://elearningindustry.com/elearning-events",
+      "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026",
+      "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+    ],
+    "start_datetime": "2026-12-02T10:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "L&D professionals",
+            "Learning leaders",
+            "Training managers",
+            "Instructional designers"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:21:32-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": "2026-12-02T11:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "Dates: 02 Dec 2026 10:00 am (UTC -5) - 02 Dec 2026 11:00 am (UTC -5). In L&D as a Conductor, a free one-hour webinar on December 2 at 10:00 AM EST, Maria Starling, Lead Program Manager at iSpring, walks through the findings and what they mean for your team.",
+              "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "Place: Online. Online | Free | 1 hour",
+              "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+            },
+            {
+              "claim": "price",
+              "excerpt": "A free webinar on why only 11% of L&D teams can prove ROI, the four hidden barriers behind the gap, and how successful teams align people, AI, and stakeholders around measurable outcomes. Online | Free | 1 hour",
+              "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+            },
+            {
+              "claim": "organizer",
+              "excerpt": "iSpring's second annual ROI study surveyed more than 140 L&D professionals across five regions... Maria Starling, Lead Program Manager at iSpring, walks through the findings and what they mean for your team.",
+              "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Visit Website / Save your spot. -> https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26",
+              "source_url": "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+            }
+          ],
+          "language": "en",
+          "organizer": "iSpring Solutions",
+          "organizer_url": "https://www.ispringsolutions.com",
+          "price_type": "free",
+          "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor?utm_source=elearningindustry&utm_medium=partner&utm_campaign=l-d-as-a-conductor-webinar-event-listing-11-26",
+          "source_urls": [
+            "https://elearningindustry.com/elearning-events",
+            "https://elearningindustry.com/elearning-events/ld-as-a-conductor-orchestrating-people-ai-and-business-priorities-nov-5-2026"
+          ],
+          "start_datetime": "2026-12-02T10:00:00-05:00",
+          "summary": "Live one-hour webinar led by Maria Starling (Lead Program Manager at iSpring) examining iSpring's 2026 ROI Playbook research across 140+ L&D professionals, the four hidden barriers to proving training ROI, and how L&D teams align people, AI, line managers, and finance stakeholders around measurable business outcomes.",
+          "timezone": "America/New_York",
+          "title": "L&D As A Conductor: Orchestrating People, AI, And Business Priorities",
+          "topics": [
+            "L&D ROI and measurement",
+            "AI in learning and development",
+            "Learning strategy and business alignment",
+            "Stakeholder partnership"
+          ]
+        },
+        "sha256": "4e374e5a2370bdaf489b3410935f4e182a972b1f4d9d8227573643c73cc963cf"
+      },
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D leaders",
+            "Instructional designers",
+            "Learning evaluation professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T11:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official iSpring webinar page: December 2, Wednesday, 10:00 AM EST; free; one hour; on-page registration form.",
+              "source_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+            }
+          ],
+          "language": "English",
+          "organizer": "iSpring",
+          "price_type": "free",
+          "registration_url": "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor",
+          "source_urls": [
+            "https://www.ispringsolutions.com/webinars/l-d-as-a-conductor"
+          ],
+          "start_datetime": "2026-12-02T10:00:00-05:00",
+          "summary": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+          "timezone": "America/New_York",
+          "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+          "topics": [
+            "Learning ROI",
+            "AI in L&D",
+            "Stakeholder alignment"
+          ]
+        },
+        "sha256": "b0aa986363f5cce0275f91ed7b0a80e8b8eeca29054b99bf6e7b7b49f01a2670"
+      }
+    ],
+    "summary": "Maria Starling discusses research on training ROI, measurable business outcomes, L&D stakeholder alignment and AI.",
+    "timezone": "America/New_York",
+    "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+    "topics": [
+      "Learning ROI",
+      "AI in L&D",
+      "Stakeholder alignment"
+    ],
+    "updated_at": "2026-11-18T14:21:32-06:00",
+    "verification_status": "verified"
+  },
+  {
+    "audience": [
+      "L&D leaders",
+      "Learning experience designers",
+      "Learning technology leaders"
+    ],
+    "conflict_flags": [
+      "summary"
+    ],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt",
+      "gemini"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "selected",
+    "event_format": "virtual",
+    "event_id": "evt_5b0c2b55e8407e36",
+    "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Training Industry webinar page: December 3, 2026 at 11:00 am ET; webinar and Reserve Your Spot link. Agenda shows presentations beginning 11:00 am ET.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      },
+      {
+        "claim": "datetime",
+        "excerpt": "[Leader Talk] The 2027 Learning Experience. Sponsored by Training Industry, Inc. 3 Dec 2026 11:00 am ET. AGENDA: 11:00 - 11:45 a.m. ET ... 3:00 - 3:45 p.m. ET.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      },
+      {
+        "claim": "price",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      },
+      {
+        "claim": "relevance",
+        "excerpt": "During this Training Industry Leader Talk, industry experts will share practical approaches for improving the learning experience. Explore how organizations are using AI, learning technology, content, personalization and learner support to design experiences that encourage engagement, support skill development and help employees apply what they learn on the job.",
+        "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+      },
+      {
+        "claim": "virtual_availability",
+        "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+        "source_url": "https://trainingindustry.com/webinar/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Training Industry",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience"
+    ],
+    "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://trainingindustry.com/webinar/",
+      "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+    ],
+    "start_datetime": "2026-12-03T11:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "L&D leaders",
+            "Learning experience designers",
+            "Learning technology leaders"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Training Industry webinar page: December 3, 2026 at 11:00 am ET; webinar and Reserve Your Spot link. Agenda shows presentations beginning 11:00 am ET.",
+              "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Training Industry",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+          ],
+          "start_datetime": "2026-12-03T11:00:00-05:00",
+          "summary": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+          "timezone": "America/New_York",
+          "title": "[Leader Talk] The 2027 Learning Experience",
+          "topics": [
+            "Learning experience",
+            "Learning technology",
+            "AI"
+          ]
+        },
+        "sha256": "210fa158a348372050898d750097aafedc6deae1c4204f845c03d544ecb5bacd"
+      },
+      {
+        "file": "intake/gemini/gemini-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "Learning and development leaders",
+            "Instructional designers",
+            "Learning technology managers",
+            "Corporate training practitioners"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-18T14:20:03-06:00",
+          "discovered_by": [
+            "gemini"
+          ],
+          "end_datetime": "2026-12-03T15:45:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "[Leader Talk] The 2027 Learning Experience. Sponsored by Training Industry, Inc. 3 Dec 2026 11:00 am ET. AGENDA: 11:00 - 11:45 a.m. ET ... 3:00 - 3:45 p.m. ET.",
+              "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+            },
+            {
+              "claim": "virtual_availability",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "price",
+              "excerpt": "These free virtual events feature thought leaders and practitioners covering workforce development, talent management, learning technologies, instructional design, leadership development and other critical areas of corporate learning.",
+              "source_url": "https://trainingindustry.com/webinar/"
+            },
+            {
+              "claim": "relevance",
+              "excerpt": "During this Training Industry Leader Talk, industry experts will share practical approaches for improving the learning experience. Explore how organizations are using AI, learning technology, content, personalization and learner support to design experiences that encourage engagement, support skill development and help employees apply what they learn on the job.",
+              "source_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+            }
+          ],
+          "language": "en",
+          "organizer": "Training Industry, Inc.",
+          "organizer_url": "https://trainingindustry.com",
+          "price_type": "free",
+          "registration_url": "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/",
+          "source_urls": [
+            "https://trainingindustry.com/webinar/",
+            "https://trainingindustry.com/webinar/strategy-alignment-and-planning/leader-talk-the-2027-learning-experience/"
+          ],
+          "start_datetime": "2026-12-03T11:00:00-05:00",
+          "summary": "Multi-session Training Industry Leader Talk exploring how organizations are building 2027 learning experience blueprints using AI, learning technology, personalization, learner support, and a five-step pilot framework for testing learning design.",
+          "timezone": "America/New_York",
+          "title": "[Leader Talk] The 2027 Learning Experience",
+          "topics": [
+            "Learning experience design",
+            "AI and learning technology",
+            "Learning strategy and planning",
+            "Instructional design testing"
+          ]
+        },
+        "sha256": "dc989b2f7a03b427612868973472f288e408b0437da5f6e90eb84833d6169dd2"
+      }
+    ],
+    "summary": "Virtual Leader Talk on learning experience strategy, personalization, learning technology and AI-enabled engagement.",
+    "timezone": "America/New_York",
+    "title": "[Leader Talk] The 2027 Learning Experience",
+    "topics": [
+      "Learning experience",
+      "Learning technology",
+      "AI"
+    ],
+    "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "verified"
+  },
+  {
+    "audience": [
+      "Leadership development professionals",
+      "People managers",
+      "Organizational development professionals"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "selected",
+    "end_datetime": "2026-12-02T13:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_7c9ea52644b1eb38",
+    "event_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official GRQC event page: Dec 02, 2026, 12:00–1:00 PM EST; webinar via Zoom; free to members and nonmembers; on-page Register button.",
+        "source_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Greater Rochester Quality Council",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+    ],
+    "registration_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+    ],
+    "start_datetime": "2026-12-02T12:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Leadership development professionals",
+            "People managers",
+            "Organizational development professionals"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-02T13:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official GRQC event page: Dec 02, 2026, 12:00–1:00 PM EST; webinar via Zoom; free to members and nonmembers; on-page Register button.",
+              "source_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+            }
+          ],
+          "language": "English",
+          "organizer": "Greater Rochester Quality Council",
+          "price_type": "free",
+          "registration_url": "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members",
+          "source_urls": [
+            "https://www.grqc.org/event-info/trauma-informed-leadership-balancing-support-and-accountability-for-struggling-team-members"
+          ],
+          "start_datetime": "2026-12-02T12:00:00-05:00",
+          "summary": "Samantha Koury introduces trauma-informed approaches to difficult performance conversations, including sample dialogue and practical support tools.",
+          "timezone": "America/New_York",
+          "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+          "topics": [
+            "Trauma-informed leadership",
+            "Coaching",
+            "Accountability"
+          ]
+        },
+        "sha256": "d6390226b5d506f08667c6f2d54d1d94f5deaf808cffadbd37b0f03750fc90fb"
+      }
+    ],
+    "summary": "Samantha Koury introduces trauma-informed approaches to difficult performance conversations, including sample dialogue and practical support tools.",
+    "timezone": "America/New_York",
+    "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+    "topics": [
+      "Trauma-informed leadership",
+      "Coaching",
+      "Accountability"
+    ],
+    "updated_at": "2026-11-18T19:39:10+00:00",
+    "verification_status": "verified"
+  },
+  {
+    "audience": [
       "L&D executives and directors",
       "Learning strategy leaders",
       "Talent development managers"
@@ -120,6 +863,133 @@
   },
   {
     "audience": [
+      "Professional learning directors",
+      "Instructional designers",
+      "Learning and development professionals"
+    ],
+    "conflict_flags": [],
+    "cost": null,
+    "discovered_at": "2026-11-19T04:17:06Z",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-01T16:30:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_97f33fc975aae3f7",
+    "event_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/",
+    "evidence": [
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 01, 2026 | 3:30 PM EST | 1 Hour",
+        "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Upcoming Live Webinar",
+        "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "Register Now",
+        "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+      },
+      {
+        "claim": "registration_form",
+        "excerpt": "Work Email",
+        "source_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "D2L",
+    "organizer_url": "https://www.d2l.com/",
+    "price_type": "unknown",
+    "registration_aliases": [
+      "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+    ],
+    "registration_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green",
+      "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+    ],
+    "start_datetime": "2026-12-01T15:30:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18.json",
+        "raw": {
+          "audience": [
+            "Professional learning directors",
+            "Instructional designers",
+            "Learning and development professionals"
+          ],
+          "cost": null,
+          "discovered_at": "2026-11-19T04:17:06Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-01T16:30:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/",
+          "evidence": [
+            {
+              "claim": "start_datetime",
+              "excerpt": "December 01, 2026 | 3:30 PM EST | 1 Hour",
+              "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Upcoming Live Webinar",
+              "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "Register Now",
+              "source_url": "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/"
+            },
+            {
+              "claim": "registration_form",
+              "excerpt": "Work Email",
+              "source_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+            }
+          ],
+          "language": "English",
+          "organizer": "D2L",
+          "organizer_url": "https://www.d2l.com/",
+          "price_type": "unknown",
+          "registration_url": "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green",
+          "source_urls": [
+            "https://www.d2l.com/events/how-iste-transformed-educator-professional-learning/",
+            "https://lp.go.d2l.com/l/1081323/2026-11-09/7ckfb1?Form_Fill_URL=%2Fevents%2Fhow-iste-transformed-educator-professional-learning%2F&d2l_text_color=white&d2l_theme=green"
+          ],
+          "start_datetime": "2026-12-01T15:30:00-05:00",
+          "summary": "D2L and ISTE+ASCD discuss scaling educator professional learning through personalized pathways, interactive learning design and progress tracking.",
+          "timezone": "America/New_York",
+          "title": "How ISTE+ASCD transformed educator professional learning",
+          "topics": [
+            "Educator professional learning",
+            "Learning design",
+            "Personalized learning pathways"
+          ]
+        },
+        "sha256": "25e11996461fade9d772e4d0933a972fc68d884e0dafd87506c99bfc526bda95"
+      }
+    ],
+    "summary": "D2L and ISTE+ASCD discuss scaling educator professional learning through personalized pathways, interactive learning design and progress tracking.",
+    "timezone": "America/New_York",
+    "title": "How ISTE+ASCD transformed educator professional learning",
+    "topics": [
+      "Educator professional learning",
+      "Learning design",
+      "Personalized learning pathways"
+    ],
+    "updated_at": "2026-11-19T04:17:06Z",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
       "Trainers",
       "Facilitators",
       "Learning and development professionals"
@@ -218,6 +1088,129 @@
     ],
     "updated_at": "2026-11-18T19:39:10+00:00",
     "verification_status": "verified"
+  },
+  {
+    "audience": [
+      "Instructional designers",
+      "Learning and development professionals"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-19T04:48:08Z",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-15T13:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_c5638f453ff6b598",
+    "event_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination",
+    "evidence": [
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 15 @ 12:00 pm – 1:00 pm EST",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Virtual Event",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      },
+      {
+        "claim": "price",
+        "excerpt": "Free",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "RSVP Here",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Learning Guild",
+    "organizer_url": "https://www.learningguild.com/",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+    ],
+    "registration_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination",
+    "roundup_week": "2026/RW51_2026-12-13_to_2026-12-19",
+    "source_urls": [
+      "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+    ],
+    "start_datetime": "2026-12-15T12:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-224822-356de3ee.json",
+        "raw": {
+          "audience": [
+            "Instructional designers",
+            "Learning and development professionals"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-19T04:48:08Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-15T13:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination",
+          "evidence": [
+            {
+              "claim": "start_datetime",
+              "excerpt": "December 15 @ 12:00 pm – 1:00 pm EST",
+              "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Virtual Event",
+              "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+            },
+            {
+              "claim": "price",
+              "excerpt": "Free",
+              "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "RSVP Here",
+              "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+            }
+          ],
+          "language": "English",
+          "organizer": "Learning Guild",
+          "organizer_url": "https://www.learningguild.com/",
+          "price_type": "free",
+          "registration_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination",
+          "source_urls": [
+            "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+          ],
+          "start_datetime": "2026-12-15T12:00:00-05:00",
+          "summary": "A webinar on designing short, mobile-friendly instructional content for learners who need timely performance support.",
+          "timezone": "America/New_York",
+          "title": "Microlearning + Mobile: A Winning Combination",
+          "topics": [
+            "Microlearning",
+            "Mobile learning",
+            "Performance support"
+          ]
+        },
+        "sha256": "8f15a6de658b65809b9f8b60fa232679066074fb6c9be19b0ae8a65e4d6b9005"
+      }
+    ],
+    "summary": "A webinar on designing short, mobile-friendly instructional content for learners who need timely performance support.",
+    "timezone": "America/New_York",
+    "title": "Microlearning + Mobile: A Winning Combination",
+    "topics": [
+      "Microlearning",
+      "Mobile learning",
+      "Performance support"
+    ],
+    "updated_at": "2026-11-19T04:48:08Z",
+    "verification_status": "pending"
   },
   {
     "audience": [
@@ -470,6 +1463,97 @@
     ],
     "updated_at": "2026-11-18T14:20:03-06:00",
     "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Facilitators",
+      "Leadership development professionals",
+      "Organizational development consultants"
+    ],
+    "conflict_flags": [],
+    "discovered_at": "2026-11-18T12:50:33-06:00",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "selected",
+    "end_datetime": "2026-12-01T14:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_f1f0bd8d082f4b90",
+    "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+    "evidence": [
+      {
+        "claim": "Official event listing and registration details",
+        "excerpt": "Official Leadership Strategies webinar page: Tuesday, December 1, 2026, 1:00–2:00 PM ET; live online; free; registration link listed.",
+        "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Leadership Strategies",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint"
+    ],
+    "registration_url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://www.leadstrat.com/services/facilitation-webinars/"
+    ],
+    "start_datetime": "2026-12-01T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-18-pilot.json",
+        "raw": {
+          "audience": [
+            "Facilitators",
+            "Leadership development professionals",
+            "Organizational development consultants"
+          ],
+          "discovered_at": "2026-11-18T12:50:33-06:00",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-01T14:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.leadstrat.com/services/facilitation-webinars/",
+          "evidence": [
+            {
+              "claim": "Official event listing and registration details",
+              "excerpt": "Official Leadership Strategies webinar page: Tuesday, December 1, 2026, 1:00–2:00 PM ET; live online; free; registration link listed.",
+              "source_url": "https://www.leadstrat.com/services/facilitation-webinars/"
+            }
+          ],
+          "language": "English",
+          "organizer": "Leadership Strategies",
+          "price_type": "free",
+          "registration_url": "https://watch.getcontrast.io/register/leadership-strategies-2026-webinars-2027-planning-sprint",
+          "source_urls": [
+            "https://www.leadstrat.com/services/facilitation-webinars/"
+          ],
+          "start_datetime": "2026-12-01T13:00:00-05:00",
+          "summary": "Live strategy-planning workshop with Michael Wilkinson focused on prioritization and using the Drivers Model to move from strategy to implementation.",
+          "timezone": "America/New_York",
+          "title": "2027 Planning Sprint",
+          "topics": [
+            "Strategic planning",
+            "Facilitation",
+            "Leadership"
+          ]
+        },
+        "sha256": "a53fbe39e1cd639409f0846d65cbf02440a6650d5fc05ba8b787019151d77889"
+      }
+    ],
+    "summary": "Live strategy-planning workshop with Michael Wilkinson focused on prioritization and using the Drivers Model to move from strategy to implementation.",
+    "timezone": "America/New_York",
+    "title": "2027 Planning Sprint",
+    "topics": [
+      "Strategic planning",
+      "Facilitation",
+      "Leadership"
+    ],
+    "updated_at": "2026-11-18T19:39:10+00:00",
+    "verification_status": "verified"
   },
   {
     "audience": [
