@@ -4,12 +4,21 @@
   "linkedin_max_characters": 3000,
   "exclude": [
     "on_demand",
-    "pending",
-    "conflicting",
-    "sales_only"
+    "unqualified",
+    "unresolved_registration_check",
+    "material_conflict",
+    "sales_only",
+    "owner_deferred"
   ],
   "pricing_required": false,
-  "include_descriptions": false,
+  "include_descriptions": true,
   "target_min_is_advisory": true,
-  "target_max_is_advisory": true
+  "target_max_is_advisory": true,
+  "linkedin_target_characters": 2800,
+  "description_max_characters": 220,
+  "pricing_display": {
+    "free": "Free only with explicit primary-source evidence",
+    "paid": "Paid with published price and currency when available",
+    "unknown": "Pricing not listed"
+  }
 }

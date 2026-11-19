@@ -9,8 +9,8 @@
     "cost": 0,
     "discovered_at": "2026-11-24T18:00:00Z",
     "discovered_by": [
-      "chatgpt",
-      "gemini"
+      "antigravity",
+      "chatgpt"
     ],
     "editorial_score": 0,
     "editorial_status": "pending",
@@ -41,7 +41,7 @@
     "start_datetime": "2026-12-01T12:00:00-06:00",
     "submissions": [
       {
-        "file": "intake/gemini/sample.json",
+        "file": "intake/antigravity/sample.json",
         "raw": {
           "audience": [
             "L&D professionals"
@@ -49,7 +49,7 @@
           "cost": 0,
           "discovered_at": "2026-11-24T18:00:00Z",
           "discovered_by": [
-            "gemini"
+            "antigravity"
           ],
           "end_datetime": null,
           "event_format": "virtual",
@@ -77,10 +77,10 @@
             "learning"
           ]
         },
-        "sha256": "335159facc5800744a2c17f9991e61e0800b29c08175e8a1290d790b9ceb3428"
+        "sha256": "257151e8e61c71eef7391651685e81ba9167e9672c0df3e238bf3efd62f5ac36"
       },
       {
-        "file": "intake/gemini/sample.json",
+        "file": "intake/antigravity/sample.json",
         "raw": {
           "audience": [
             "L&D professionals"
@@ -88,7 +88,7 @@
           "cost": 0,
           "discovered_at": "2026-11-24T18:00:00Z",
           "discovered_by": [
-            "gemini"
+            "antigravity"
           ],
           "end_datetime": null,
           "event_format": "virtual",
@@ -116,7 +116,7 @@
             "learning"
           ]
         },
-        "sha256": "5b9832ffcc153a077d5920b54625b75183d54b817cf4dd93b2bf1ec14482080c"
+        "sha256": "62753816cce091ffd2124c253ebb90fc455422718d9c40dcae7c06d10a19ccd4"
       },
       {
         "file": "intake/chatgpt/sample.json",
@@ -175,94 +175,7 @@
     "cost": 0,
     "discovered_at": "2026-11-24T18:00:00Z",
     "discovered_by": [
-      "chatgpt"
-    ],
-    "editorial_score": 0,
-    "editorial_status": "pending",
-    "end_datetime": null,
-    "event_format": "virtual",
-    "event_id": "evt_7385f7e1798f26e0",
-    "event_url": "https://example.org/events/transfer",
-    "evidence": [
-      {
-        "claim": "datetime",
-        "excerpt": "SYNTHETIC TEST DATA. Not a real event.",
-        "source_url": "https://example.org/events/transfer"
-      }
-    ],
-    "language": "en",
-    "last_verified_at": null,
-    "organizer": "Example Association",
-    "organizer_url": "https://example.org",
-    "price_type": "free",
-    "registration_aliases": [
-      "https://example.org/register/reviewed"
-    ],
-    "registration_url": "https://example.org/register/reviewed",
-    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
-    "source_urls": [
-      "https://example.org/events/transfer"
-    ],
-    "start_datetime": "2026-12-01T12:00:00-06:00",
-    "submissions": [
-      {
-        "file": "intake/chatgpt/reviewed.json",
-        "raw": {
-          "audience": [
-            "L&D professionals"
-          ],
-          "cost": 0,
-          "discovered_at": "2026-11-24T18:00:00Z",
-          "discovered_by": [
-            "chatgpt"
-          ],
-          "end_datetime": null,
-          "event_format": "virtual",
-          "event_url": "https://example.org/events/transfer",
-          "evidence": [
-            {
-              "claim": "datetime",
-              "excerpt": "SYNTHETIC TEST DATA. Not a real event.",
-              "source_url": "https://example.org/events/transfer"
-            }
-          ],
-          "language": "en",
-          "organizer": "Example Association",
-          "organizer_url": "https://example.org",
-          "price_type": "free",
-          "registration_url": "https://example.org/register/reviewed",
-          "source_urls": [
-            "https://example.org/events/transfer"
-          ],
-          "start_datetime": "2026-12-01T12:00:00-06:00",
-          "summary": "Practice planning support for learning transfer.",
-          "timezone": "America/Chicago",
-          "title": "Fixture: Reviewed learning session",
-          "topics": [
-            "learning"
-          ]
-        },
-        "sha256": "fd2ddc0f677298d65db0988f6a779457c3b878385323bc6b402e5262ab61c8bb"
-      }
-    ],
-    "summary": "Practice planning support for learning transfer.",
-    "timezone": "America/Chicago",
-    "title": "Fixture: Reviewed learning session",
-    "topics": [
-      "learning"
-    ],
-    "updated_at": "2026-11-24T18:00:00Z",
-    "verification_status": "pending"
-  },
-  {
-    "audience": [
-      "L&D professionals"
-    ],
-    "conflict_flags": [],
-    "cost": 0,
-    "discovered_at": "2026-11-24T18:00:00Z",
-    "discovered_by": [
-      "gemini"
+      "antigravity"
     ],
     "editorial_score": 0,
     "editorial_status": "pending",
@@ -293,7 +206,7 @@
     "start_datetime": "2027-01-05T12:00:00-06:00",
     "submissions": [
       {
-        "file": "intake/gemini/sample.json",
+        "file": "intake/antigravity/sample.json",
         "raw": {
           "audience": [
             "L&D professionals"
@@ -301,7 +214,7 @@
           "cost": 0,
           "discovered_at": "2026-11-24T18:00:00Z",
           "discovered_by": [
-            "gemini"
+            "antigravity"
           ],
           "end_datetime": null,
           "event_format": "virtual",
@@ -329,12 +242,99 @@
             "learning"
           ]
         },
-        "sha256": "359868c673aab62208b4857de851c1026b1cb2377e24ea579254c22de8ee6d68"
+        "sha256": "5f33b14e2c4b0fcb72d78e99f6967390385d010aec22c07f4e8d10edb88cf62b"
       }
     ],
     "summary": "Practice planning support for learning transfer.",
     "timezone": "America/Chicago",
     "title": "Fixture: Future event",
+    "topics": [
+      "learning"
+    ],
+    "updated_at": "2026-11-24T18:00:00Z",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "L&D professionals"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-24T18:00:00Z",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": null,
+    "event_format": "virtual",
+    "event_id": "evt_e012c2e331b93652",
+    "event_url": "https://example.org/events/transfer",
+    "evidence": [
+      {
+        "claim": "datetime",
+        "excerpt": "SYNTHETIC TEST DATA. Not a real event.",
+        "source_url": "https://example.org/events/transfer"
+      }
+    ],
+    "language": "en",
+    "last_verified_at": null,
+    "organizer": "Example Association",
+    "organizer_url": "https://example.org",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://example.org/register/qualified"
+    ],
+    "registration_url": "https://example.org/register/qualified",
+    "roundup_week": "2026/RW49_2026-11-29_to_2026-12-05",
+    "source_urls": [
+      "https://example.org/events/transfer"
+    ],
+    "start_datetime": "2026-12-01T12:00:00-06:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/qualified.json",
+        "raw": {
+          "audience": [
+            "L&D professionals"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-24T18:00:00Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": null,
+          "event_format": "virtual",
+          "event_url": "https://example.org/events/transfer",
+          "evidence": [
+            {
+              "claim": "datetime",
+              "excerpt": "SYNTHETIC TEST DATA. Not a real event.",
+              "source_url": "https://example.org/events/transfer"
+            }
+          ],
+          "language": "en",
+          "organizer": "Example Association",
+          "organizer_url": "https://example.org",
+          "price_type": "free",
+          "registration_url": "https://example.org/register/qualified",
+          "source_urls": [
+            "https://example.org/events/transfer"
+          ],
+          "start_datetime": "2026-12-01T12:00:00-06:00",
+          "summary": "Practice planning support for learning transfer.",
+          "timezone": "America/Chicago",
+          "title": "Fixture: Qualified learning session",
+          "topics": [
+            "learning"
+          ]
+        },
+        "sha256": "9dbd82da66cd12deb118c62e37918ef05dd1ad88fb4009f07b44a6c6d78dbe0e"
+      }
+    ],
+    "summary": "Practice planning support for learning transfer.",
+    "timezone": "America/Chicago",
+    "title": "Fixture: Qualified learning session",
     "topics": [
       "learning"
     ],

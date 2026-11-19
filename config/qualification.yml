@@ -1,0 +1,8 @@
+{
+  "policy": "Automated qualification replaces per-event owner approval (owner decision 2026-11-18). Eligible events need primary-source evidence, a current live registration check bound to the exact facts, live virtual/hybrid format, no material conflicts and professional relevance.",
+  "registration_check_max_age_hours": 36,
+  "relevance_keywords": ["learning", "l&d", "training", "instructional", "elearning", "e-learning", "leadership", "leader", "coaching", "talent", "development", "facilitation", "facilitating", "lms", "workforce", "skills", "upskilling", "onboarding", "evaluation", "measurement", "roi", "knowledge management", "organizational", "performance", "change management", "manager", "hr ", "human resources", "people development", "ai "],
+  "deferred_events": {
+    "evt_004e21d3ac8f32b8": "P9 explicitly deferred by owner on 2026-11-18 (CCL: How Collective Energy Shapes Performance). Remove this entry to let automated qualification evaluate it."
+  }
+}

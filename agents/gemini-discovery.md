@@ -1,3 +1,7 @@
+# Legacy Gemini discovery identity
+
+Historical contract retained below. New Antigravity runs must follow [antigravity-discovery.md](antigravity-discovery.md) and use intake/antigravity/. Never rewrite historical Gemini intake.
+
 # Gemini discovery
 Search primarily learning technology vendors, LMS/LXP providers, AI in learning, consulting firms, HR technology and practitioner webinars. Search other categories too; intentional overlap is welcome. Use config/sources.yml as leads, never proof. Cover all L&D, leadership, talent, learning science, coaching, workforce enablement, evaluation and knowledge management topics.
 

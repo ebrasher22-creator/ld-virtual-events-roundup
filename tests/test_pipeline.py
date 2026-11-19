@@ -9,6 +9,8 @@ import unittest
 from datetime import date, datetime
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from pipeline import *
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from helpers import confirm, GENERATED_AT
 
 class PipelineTests(unittest.TestCase):
     def setUp(self):
@@ -98,15 +100,47 @@ class PipelineTests(unittest.TestCase):
         ingest(self.root);events=assign(self.root,date(2026,11,24));e=events[0]
         review=dict(record_sha256=fingerprint(e),decision='verified',editorial_decision='selected',reviewer='Fixture reviewer',verified_at='2026-11-24T20:00:00Z',claims={k:dict(primary_url=e['event_url'],observation='Synthetic test observation') for k in CLAIMS})
         write(self.root/'data/reviews.json',{e['event_id']:review})
+        # Historical owner attestations still bind exact records, but they no longer gate publication.
         self.assertTrue(eligible(e,{e['event_id']:review}))
-        folder=generate(self.root,date(2026,11,24))
-        self.assertIn(e['title'],(folder/'linkedin-roundup.md').read_text())
         changed=dict(e,summary='Changed claim')
         self.assertFalse(eligible(changed,{e['event_id']:review}))
+        folder=generate(self.root,date(2026,11,24),generated_at=GENERATED_AT)
+        self.assertNotIn(e['title'],(folder/'linkedin-roundup.md').read_text())  # approval alone is insufficient: no live check
+        confirm(self.root,[e])
+        folder=generate(self.root,date(2026,11,24),generated_at=GENERATED_AT)
+        self.assertIn(e['title'],(folder/'linkedin-roundup.md').read_text())
     def test_length_limit(self):
-        ingest(self.root);assign(self.root,date(2026,11,24))
+        (self.root/'intake/gemini/sample.json').unlink()
+        ingest(self.root);confirm(self.root,assign(self.root,date(2026,11,24)))
         write(self.root/'config/editorial-rules.yml',dict(target_min=8,target_max=12,linkedin_max_characters=10))
-        with self.assertRaises(ValueError):generate(self.root,date(2026,11,24))
+        with self.assertRaises(ValueError):generate(self.root,date(2026,11,24),generated_at=GENERATED_AT)
+
+    def test_p1_agent_identity_and_legacy_compatibility(self):
+        self.assertEqual(SCHEMA['items']['properties']['discovered_by']['items']['enum'],['chatgpt','antigravity','gemini'])
+        ag=read(ROOT/'tests/fixtures/antigravity.json')
+        validate_intake_batch(self.root/'intake/antigravity/a.json',ag)
+        validate_intake_batch(self.root/'intake/gemini/legacy.json',read(ROOT/'tests/fixtures/gemini.json'))
+        for folder,data in [('antigravity',read(ROOT/'tests/fixtures/gemini.json')),('chatgpt',ag),('gemini',ag),('unknown',ag)]:
+            with self.subTest(folder=folder),self.assertRaises(ValueError):
+                validate_intake_batch(self.root/f'intake/{folder}/x.json',data)
+        self.assertEqual(canonical_streams(['gemini','chatgpt']),['antigravity','chatgpt'])
+        (self.root/'intake/gemini/sample.json').unlink()
+        write(self.root/'intake/antigravity/sample.json',ag)
+        events=ingest(self.root)
+        overlap=next(e for e in events if len(e['submissions'])>1)
+        self.assertEqual(overlap['discovered_by'],['antigravity','chatgpt'])
+        write(self.root/'intake/antigravity/mislabelled.json',read(ROOT/'tests/fixtures/chatgpt.json'))
+        with self.assertRaises(ValueError):ingest(self.root)
+
+    def test_historical_production_intake_is_preserved_and_valid(self):
+        gemini=ROOT/'intake/gemini/gemini-2026-11-18.json'
+        chatgpt=ROOT/'intake/chatgpt/chatgpt-2026-11-18-pilot.json'
+        manifest={e['repository_path']:e['sha256'] for e in read(ROOT/'reports/pilots/discovery-consolidation-2026-11-18/originals/manifest.json')}
+        import hashlib
+        self.assertEqual(hashlib.sha256(chatgpt.read_bytes()).hexdigest(),manifest['intake/chatgpt/chatgpt-2026-11-18-pilot.json'])
+        self.assertEqual(hashlib.sha256(gemini.read_bytes()).hexdigest(),manifest['intake/gemini/gemini-2026-11-18.json'])
+        for path in sorted((ROOT/'intake').glob('*/*.json')):validate_intake_batch(path,read(path))
+        for path in sorted((ROOT/'intake').rglob('*.json')):self.assertNotIn('SYNTHETIC',path.read_text(),path)
 
     def test_scoped_organizer_aliases_and_domain_enforcement(self):
         (self.root/'intake/chatgpt/sample.json').unlink()

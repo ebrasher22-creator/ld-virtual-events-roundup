@@ -127,11 +127,13 @@
         "items": {
           "enum": [
             "chatgpt",
+            "antigravity",
             "gemini"
           ]
         },
         "minItems": 1,
-        "uniqueItems": true
+        "uniqueItems": true,
+        "description": "Discovery stream. 'chatgpt' and 'antigravity' are the production agents. 'gemini' is a legacy identity retained only for historical Antigravity-stream records under intake/gemini/."
       },
       "source_urls": {
         "type": "array",

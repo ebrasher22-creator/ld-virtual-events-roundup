@@ -8,7 +8,10 @@ import tempfile
 import unittest
 import zipfile
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from pipeline import ROOT, read, write
+from pipeline import ROOT, read, write, ingest, assign
+from editorial_input import export_input
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from helpers import confirm
 from editorial_handoff import receive, sha
 
 
@@ -17,14 +20,17 @@ class HandoffTests(unittest.TestCase):
         self.tmp=tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root=Path(self.tmp.name)
-        # Exact existing RW49 records/approvals/input are a supervised fixture, never mutated live.
-        for folder in ['data','approvals','config','templates']:
+        # Isolated synthetic fixture (live RW49 data is never used or mutated by tests).
+        for folder in ['config','templates']:
             shutil.copytree(ROOT/folder,self.root/folder)
-        self.label='2026/RW49_2026-11-29_to_2026-12-05'
-        input_dir=self.root/'weeks'/self.label
-        input_dir.mkdir(parents=True)
-        shutil.copy(ROOT/'weeks'/self.label/'editorial-input.json',input_dir/'editorial-input.json')
-        self.draft=read(ROOT/'editorial-drafts/RW49_2026-11-29_to_2026-12-05/work-submission.json')
+        write(self.root/'data/canonical-events.json',[])
+        write(self.root/'intake/chatgpt/test.json',[read(ROOT/'tests/fixtures/chatgpt.json')[0]])
+        ingest(self.root)
+        confirm(self.root,assign(self.root,date(2026,11,24)))
+        payload=read(export_input(self.root,date(2026,11,24)))
+        self.label=payload['roundup_identifier']
+        text='Which question will you bring?\n\n'+payload['required_heading']+'\n\n'+payload['events'][0]['required_fact_block']+'\n\nShare another opportunity with the community.\n'
+        self.draft=dict(format_version=1,roundup_identifier=self.label,editorial_input_sha256=payload['editorial_input_sha256'],full_caption=text,compact_caption=text)
         self.path=self.root/'return.json'
         write(self.path,self.draft)
 
@@ -65,10 +71,10 @@ class HandoffTests(unittest.TestCase):
         records=read(self.root/'data/canonical-events.json')
         records[0]['summary']='Changed only in the isolated negative test'
         write(self.root/'data/canonical-events.json',records)
-        before=sha(self.root/'data/reviews.json')
+        before=sha(self.root/'data/registration-checks.json')
         packet,result=receive(self.root,self.path,date(2026,11,24))
         self.assertFalse(result['mechanical_validation_passed'])
-        self.assertEqual(before,sha(self.root/'data/reviews.json'))
+        self.assertEqual(before,sha(self.root/'data/registration-checks.json'))
 
     def test_wrong_week_or_malformed_json_fails_safely(self):
         self.draft['roundup_identifier']='2026/RW50_2026-12-06_to_2026-12-12'

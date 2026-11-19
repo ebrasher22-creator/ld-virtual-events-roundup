@@ -1,13 +1,19 @@
-# Chatgpt discovery
-Search primarily ATD chapters, ISPI, universities, research centers, professional associations, nonprofit and instructional design communities. Search other categories too; intentional overlap is welcome. Use config/sources.yml as leads, never proof. Cover all L&D, leadership, talent, learning science, coaching, workforce enablement, evaluation and knowledge management topics.
+# ChatGPT discovery — production
 
-On Tuesday target the following Sunday–Saturday in America/Chicago. Retain later events. Return a JSON array matching schemas/event-discovery.schema.json. Supply primary URLs, timezone-aware dates, short claim evidence excerpts and discovery timestamp. Use null for unavailable optional facts; never invent dates, prices, descriptions or links. Discovery does not establish verification. Leave verification pending. Save manually to intake/chatgpt/ via a reviewed pull request. Do not assume unattended GitHub write access.
+Production repository: ebrasher22-creator/ld-virtual-events-roundup, base `main`.
+Use the existing authorized GitHub connection; never create or expose credentials.
+Run Tuesday at 07:00 America/Chicago (DST-aware); calculate the following Sunday–Saturday via `pipeline.target` and retain later confirmed events. Do not pin a pilot date in recurring runs.
 
-## Exact intake contract
-Return only a JSON array, without Markdown fences, comments, trailing commas, or an enclosing `events` object. Use `discovered_by: ["chatgpt"]` (lowercase). Use `event_format` from `virtual`, `hybrid`, `in_person`, `on_demand`; `price_type` from `free`, `paid`, `unknown`. Use an IANA timezone such as `America/Chicago`, never `CST` or `Central Time`. Timestamps need seconds plus an explicit offset (e.g. `2026-12-01T12:00:00-06:00`) or UTC `Z`. Nonzero local offsets must match the named zone, including DST.
+Read AGENTS.md, schemas/event-discovery.schema.json, config/sources.yml and config/qualification.yml from current main. Research primary organizer and registration pages for L&D, instructional design, leadership, talent, performance improvement, learning science, coaching and workforce development. The source registry supplies leads, not evidence or an allowlist. Search for real upcoming events; never manufacture a date/time, timezone, price, registration URL, excerpt, or source-check timestamp. Keep incomplete leads outside intake and report them. Do not infer free admission.
 
-Every record needs all 16 required fields listed in the schema. `audience`, `topics`, `source_urls`, `discovered_by`, and `evidence` are nonempty arrays. Each evidence object has only `claim`, `source_url`, `excerpt`, all nonempty text. URLs must be absolute HTTP(S), with no placeholders. Unknown price is `unknown`; unknown numeric cost is null or omitted. Omit optional editorial/canonical fields; the pipeline assigns them. Null is allowed only where the schema explicitly permits it. Do not include currency symbols in numeric cost; document the currency in the evidence excerpt if relevant.
+Return one JSON array with all required schema fields and `discovered_by: ["chatgpt"]`. Use IANA zones, RFC3339 seconds/offsets consistent with DST, accurate pricing or unknown/null where allowed, nonempty evidence/source/topic/audience arrays. Preserve exact short primary-source excerpts, URLs, actual discovery timestamps and provenance. Never add approval or editorial fields. Historical gemini records stay unchanged; all new Antigravity records use antigravity.
 
-If the confirmed start time, IANA timezone or registration destination cannot be established, leave that lead outside machine intake and report it separately for human follow-up; do not fabricate required fields. The source registry is not an allowlist. Its null URLs need independent discovery; it is not evidence of active event publication. Consult `tests/fixtures/chatgpt.json` for structure only (all fixture events are fictional).
+On a clean current checkout of main, save the proposed JSON outside tracked production paths, then run:
 
-For the first pilot, explicitly search November 29 through December 5, 2026, America/Chicago (`RW49`). Use November 24, 2026 as the workflow `as_of` discovery date, regardless of when the test is executed. Retain confirmed later events too.
+```
+python3 scripts/submit_intake.py --agent chatgpt --file /absolute/path/findings.json --base main
+```
+
+The trusted helper validates, creates a unique intake/chatgpt-... branch, appends a new file under intake/chatgpt/ and opens a draft PR against main. Never overwrite existing submissions or push directly to main. The main-controlled intake processor polls every 15 minutes, validates raw blobs as data, preserves invalid originals in quarantine, consolidates valid submissions and closes processed PRs without merging their code. Source identity is checked against the intake folder and the authorized PR author.
+
+Report target week, total events, later events, excluded/incomplete leads, source access failures, validation results, branch/commit/PR link and CI. Stop on denied permissions; do not retry the same denial. No paid APIs, new services, merges, approvals or LinkedIn publication. Primary pages are rechecked by the automated editorial pipeline; no separate routine owner event-approval step exists. Eddie alone reviews and publishes the finished caption.

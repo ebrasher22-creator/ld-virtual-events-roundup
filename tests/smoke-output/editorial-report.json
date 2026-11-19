@@ -1,25 +1,38 @@
 {
   "above_target": false,
   "advisories": [
-    "BELOW_TARGET: shorter roundup permitted; do not fill from other weeks."
+    "BELOW_TARGET: 1 eligible events (target 8–12); no events were added from other weeks."
   ],
-  "approval_blockers": [],
   "artifact_relative_path": "weeks/2026/RW49_2026-11-29_to_2026-12-05",
   "as_of": "2026-11-24",
   "below_target": true,
-  "canonical_sha256": "6ef53c99b96f12b3c327fdc5eebdd6d24ecece5fc71a5eeaf859a5215273563a",
+  "canonical_sha256": "3c0677dfc9db0bc2b074ca2d74ef9f977825b527017bc1d1f4486fda0b787b27",
   "caption_strategy": "full",
   "character_counts": {
-    "compact": 315,
-    "full": 438,
-    "limit": 3000
+    "compact": 390,
+    "full": 513,
+    "limit": 3000,
+    "working_budget": 2800
   },
+  "descriptions_included": true,
   "editorial_exceptions": [],
+  "event_warnings": [
+    {
+      "event_id": "evt_e012c2e331b93652",
+      "title": "Fixture: Qualified learning session",
+      "warnings": [
+        "pricing_not_listed"
+      ]
+    }
+  ],
   "events_excluded": [
     {
+      "all_reasons": [
+        "unresolved_conflict:start_datetime"
+      ],
       "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
       "event_id": "evt_57f0a009caaeba39",
-      "reason": "missing_or_stale_approval",
+      "reason": "unresolved_conflict:start_datetime",
       "title": "Fixture: Learning transfer workshop"
     },
     {
@@ -31,20 +44,75 @@
   ],
   "events_included": [
     {
-      "event_id": "evt_7385f7e1798f26e0",
-      "record_sha256": "9579f10bd2f06ebf2bbf3a7846aec10700b9da7ef072190895e950ce23d03b1c",
-      "title": "Fixture: Reviewed learning session"
+      "event_id": "evt_e012c2e331b93652",
+      "pricing_label": "Pricing not listed",
+      "record_sha256": "08b17e05d75ad00ef7a0a846fc591eeca0149e6a548270cd4bc704cc6c712e32",
+      "title": "Fixture: Qualified learning session"
     }
   ],
-  "generated_at": "2026-11-24T20:00:00Z",
-  "missing_optional_pricing": [],
+  "generated_at": "2026-11-25T13:05:00Z",
+  "missing_optional_pricing": [
+    {
+      "event_id": "evt_e012c2e331b93652",
+      "original_price_type": "free",
+      "title": "Fixture: Qualified learning session"
+    }
+  ],
   "publication_approval_status": "awaiting_final_human_review",
-  "reviews_sha256": "e5e358cf8d75e2c593134894b9b9e47d158945cafe0c80d188b68313fe2f7af6",
+  "qualification_mode": "automated_no_per_event_human_approval",
+  "qualification_outcomes": [
+    {
+      "discovered_by": [
+        "antigravity",
+        "chatgpt"
+      ],
+      "eligible": false,
+      "event_id": "evt_57f0a009caaeba39",
+      "pricing_label": "Pricing not listed",
+      "problems": [
+        "unresolved_conflict:start_datetime"
+      ],
+      "registration_check": "confirmed",
+      "registration_checked_at": "2026-11-24T06:00:00Z",
+      "title": "Fixture: Learning transfer workshop",
+      "warnings": [
+        "pricing_not_listed"
+      ]
+    },
+    {
+      "discovered_by": [
+        "chatgpt"
+      ],
+      "eligible": true,
+      "event_id": "evt_e012c2e331b93652",
+      "pricing_label": "Pricing not listed",
+      "problems": [],
+      "registration_check": "confirmed",
+      "registration_checked_at": "2026-11-24T06:00:00Z",
+      "title": "Fixture: Qualified learning session",
+      "warnings": [
+        "pricing_not_listed"
+      ]
+    }
+  ],
+  "readiness_status": "ready_with_warnings",
+  "registration_checks_sha256": "7d8483609a32d166d1f98287416f436c87e4281828b028ef3c3f6ee9f88914e9",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
   "source_commit": null,
   "target_max": 12,
   "target_min": 8,
-  "total_approved_events_for_target_week": 1,
+  "total_eligible_events_for_target_week": 1,
+  "total_qualified_candidates": 1,
+  "unresolved_events": [
+    {
+      "event_id": "evt_57f0a009caaeba39",
+      "reasons": [
+        "unresolved_conflict:start_datetime"
+      ],
+      "registration_check": "confirmed",
+      "title": "Fixture: Learning transfer workshop"
+    }
+  ],
   "within_character_limit": true,
   "workflow_run_url": null
 }

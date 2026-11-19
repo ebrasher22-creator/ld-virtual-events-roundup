@@ -6,192 +6,239 @@ import sys
 import tempfile
 import unittest
 
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from pipeline import (ROOT, read, write, ingest, assign, generate, eligible, fingerprint,
-                      confirmed_price_label, CLAIMS)
-from record_attestation import record
-from prepare_wednesday import is_wednesday_slot, prepare
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pipeline import ROOT, read, write, ingest, assign, generate
+from qualification import (qualification, pricing_label, classify_page, check_event, run_checks, is_eligible, CHECKS_PATH)
+from prepare_wednesday import is_wednesday_slot, should_run_scheduled, prepare
 from validate_post import validate_output
+from helpers import confirm, CHECKED_AT, GENERATED_AT
+
+AS_OF = date(2026, 11, 24)
+REF = datetime.fromisoformat('2026-11-25T13:05:00+00:00')
 
 
 class EditorialTests(unittest.TestCase):
     def setUp(self):
-        self.temp=tempfile.TemporaryDirectory()
+        self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root=Path(self.temp.name)
-        for directory in ['config','templates']: shutil.copytree(ROOT/directory,self.root/directory)
-        self.source=self.root/'approvals/test-owner.md'
-        self.source.parent.mkdir()
-        self.statement='Synthetic test owner approves these synthetic events for inclusion.'
-        self.source.write_text(self.statement)
-        write(self.root/'data/canonical-events.json',[])
-        write(self.root/'data/reviews.json',{})
-        self.raw=read(ROOT/'tests/fixtures/chatgpt.json')[0]
-        write(self.root/'intake/chatgpt/test.json',[self.raw])
+        self.root = Path(self.temp.name)
+        for directory in ['config', 'templates']:
+            shutil.copytree(ROOT / directory, self.root / directory)
+        write(self.root / 'data/canonical-events.json', [])
+        self.raw = read(ROOT / 'tests/fixtures/chatgpt.json')[0]
+        write(self.root / 'intake/chatgpt/test.json', [self.raw])
         ingest(self.root)
-        self.events=assign(self.root,date(2026,11,24))
-        self.e=self.events[0]
-        self.approve()
+        self.events = assign(self.root, AS_OF)
+        self.e = self.events[0]
+        confirm(self.root)
 
-    def approve(self):
-        events=read(self.root/'data/canonical-events.json')
-        return record(self.root,[e['event_id'] for e in events],'Synthetic test owner','approvals/test-owner.md',self.statement,recorded_at='2026-11-18T20:00:00Z',select=True)
+    def gen(self, day=AS_OF, generated_at=GENERATED_AT):
+        return generate(self.root, day, generated_at=generated_at)
 
-    def test_explicit_owner_attestation_has_no_invented_observations_or_check_time(self):
-        e=read(self.root/'data/canonical-events.json')[0]
-        reviews=read(self.root/'data/reviews.json')
-        review=reviews[e['event_id']]
-        self.assertTrue(eligible(e,reviews,self.root))
-        self.assertEqual(review['claims'],{})
-        self.assertIsNone(review['verified_at'])
-        self.assertIsNone(e['last_verified_at'])
-        self.assertEqual(review['attestation']['recorded_at'],'2026-11-18T20:00:00Z')
+    def set_events(self, events):
+        write(self.root / 'data/canonical-events.json', events)
+        assign(self.root, AS_OF)
+        return read(self.root / 'data/canonical-events.json')
 
-    def test_unknown_pricing_stays_eligible_without_price_claim(self):
-        events=read(self.root/'data/canonical-events.json')
-        events[0]['price_type']='unknown'
-        write(self.root/'data/canonical-events.json',events)
-        self.approve()
-        folder=generate(self.root,date(2026,11,24))
-        report=read(folder/'editorial-report.json')
-        text=(folder/'linkedin-post.md').read_text()
-        self.assertEqual(len(report['events_included']),1)
-        self.assertNotIn('Free',text)
-        self.assertNotIn('Paid',text)
-        self.assertNotIn('unknown',text)
-        self.assertEqual(read(self.root/'data/canonical-events.json')[0]['price_type'],'unknown')
-        self.assertEqual(len(report['missing_optional_pricing']),1)
+    def test_qualified_without_any_human_review_record(self):
+        self.assertFalse((self.root / 'data/reviews.json').exists())
+        folder = self.gen()
+        report = read(folder / 'editorial-report.json')
+        self.assertEqual(report['qualification_mode'], 'automated_no_per_event_human_approval')
+        self.assertEqual([e['event_id'] for e in report['events_included']], [self.e['event_id']])
+        self.assertEqual(self.e['verification_status'], 'pending')  # no approval is fabricated
 
-    def test_known_but_unconfirmed_price_is_not_advertised_or_changed(self):
-        folder=generate(self.root,date(2026,11,24))
-        self.assertNotIn('| Free',(folder/'linkedin-post.md').read_text())
-        self.assertEqual(read(self.root/'data/canonical-events.json')[0]['price_type'],'free')
-
-    def test_confirmed_free_and_paid_labels(self):
-        for kind in ['free','paid']:
+    def test_unchecked_stale_old_and_unresolved_checks_are_excluded(self):
+        write(self.root / CHECKS_PATH, {})
+        self.assertIn('registration_not_checked', qualification(self.e, self.root, REF)[0])
+        confirm(self.root, checked_at='2026-11-20T00:00:00Z')
+        self.assertIn('registration_check_too_old', qualification(self.e, self.root, REF)[0])
+        confirm(self.root)
+        changed = dict(self.e, start_datetime='2026-12-01T13:00:00-06:00')
+        self.assertIn('registration_check_stale_for_current_facts', qualification(changed, self.root, REF)[0])
+        for kind in ['registration_unreachable', 'cancel_or_closed_signal', 'event_details_unconfirmed', 'registration_not_found']:
+            confirm(self.root, classification=kind)
             with self.subTest(kind=kind):
-                events=read(self.root/'data/canonical-events.json')
-                events[0]['price_type']=kind
-                write(self.root/'data/canonical-events.json',events)
-                reviews=self.approve()
-                reviews[events[0]['event_id']]['claims']['price']={'primary_url':self.raw['event_url'],'observation':'Synthetic independent price confirmation'}
-                write(self.root/'data/reviews.json',reviews)
-                folder=generate(self.root,date(2026,11,24))
-                self.assertIn('| '+kind.title(),(folder/'linkedin-post.md').read_text())
+                self.assertIn('registration_check:' + kind, qualification(self.e, self.root, REF)[0])
 
-    def test_legacy_observations_without_optional_price_claim(self):
-        e=read(self.root/'data/canonical-events.json')[0]
-        review=dict(record_sha256=fingerprint(e),decision='verified',editorial_decision='selected',reviewer='Synthetic human',verified_at='2026-11-18T20:00:00Z',claims={k:dict(primary_url=e['event_url'],observation='Synthetic independently recorded observation') for k in CLAIMS-{'price'}})
-        self.assertTrue(eligible(e,{e['event_id']:review},self.root))
-        review['claims'].pop('datetime')
-        self.assertFalse(eligible(e,{e['event_id']:review},self.root))
+    def test_live_page_classification_never_treats_blocked_page_as_canceled(self):
+        def fake(status, body=''):
+            return lambda url: dict(status=status, final_url=url, body=body, error=None if status == 200 else f'HTTP {status}')
+        page = f'<html><title>{self.e["title"]}</title><p>Example Association online webinar December 1, 2026 12:00 PM CST</p></html>'
+        self.assertEqual(classify_page(fake(403)(''), self.e)['classification'], 'inaccessible_bot_or_auth')
+        self.assertEqual(classify_page(fake(429)(''), self.e)['classification'], 'inaccessible_bot_or_auth')
+        self.assertEqual(classify_page(fake(200, '<title>Just a moment...</title> cf-chl')(''), self.e)['classification'], 'inaccessible_bot_or_auth')
+        self.assertEqual(classify_page(fake(404)(''), self.e)['classification'], 'not_found')
+        self.assertEqual(classify_page(dict(status=None, final_url='', body='', error='URLError'), self.e)['classification'], 'inaccessible')
+        confirmed = classify_page(fake(200, page)(''), self.e)
+        self.assertEqual(confirmed['classification'], 'confirmed')
+        self.assertTrue(confirmed['date_match'])
+        self.assertEqual(classify_page(fake(200, page + ' This event has been cancelled.')(''), self.e)['classification'], 'cancel_or_closed_signal')
+        self.assertEqual(check_event(self.e, fake(403))['classification'], 'registration_unreachable')
+        self.assertEqual(check_event(self.e, fake(200, page))['classification'], 'confirmed')
 
-    def test_record_or_source_change_invalidates_approval(self):
-        e=read(self.root/'data/canonical-events.json')[0]
-        reviews=read(self.root/'data/reviews.json')
-        for field,value in [('title','Changed title'),('registration_url','https://example.org/changed'),('start_datetime','2026-12-02T12:00:00-06:00'),('price_type','unknown')]:
-            with self.subTest(field=field):self.assertFalse(eligible(dict(e,**{field:value}),reviews,self.root))
-        self.source.write_text(self.statement+' changed')
-        self.assertFalse(eligible(e,reviews,self.root))
+    def test_material_conflicts_excluded_description_variants_warned(self):
+        events = read(self.root / 'data/canonical-events.json')
+        events[0]['conflict_flags'] = ['start_datetime']
+        events = self.set_events(events)
+        self.assertIn('unresolved_conflict:start_datetime', qualification(events[0], self.root, REF)[0])
+        events[0]['conflict_flags'] = ['summary']
+        events = self.set_events(events)
+        confirm(self.root, events)
+        problems, warnings = qualification(events[0], self.root, REF)
+        self.assertEqual(problems, [])
+        self.assertTrue(any('description_variants' in w for w in warnings))
 
-    def test_incomplete_or_fake_attestation_cannot_approve(self):
-        e=read(self.root/'data/canonical-events.json')[0]
-        reviews=read(self.root/'data/reviews.json')
-        for key,value in [('authority','assistant'),('covered_claims',[]),('statement','Not in the supplied source'),('source_path','../outside.md')]:
-            modified=copy.deepcopy(reviews)
-            modified[e['event_id']]['attestation'][key]=value
-            with self.subTest(key=key): self.assertFalse(eligible(e,modified,self.root))
-        modified=copy.deepcopy(reviews)
-        modified[e['event_id']]['editorial_decision']='pending'
-        self.assertFalse(eligible(e,modified,self.root))
+    def test_owner_deferred_relevance_and_primary_evidence_rules(self):
+        config = read(self.root / 'config/qualification.yml')
+        config['deferred_events'] = {self.e['event_id']: 'test deferral'}
+        self.assertIn('owner_deferred: test deferral', qualification(self.e, self.root, REF, config=config)[0])
+        unrelated = dict(self.e, title='Quarterly tax filing for restaurants', summary='Tax forms.', topics=['taxes'], audience=['accountants'])
+        self.assertIn('not_professionally_relevant', qualification(unrelated, self.root, REF)[0])
+        third_party = dict(self.e, evidence=[dict(claim='datetime', source_url='https://aggregator.example.net/x', excerpt='listing')])
+        self.assertIn('no_primary_source_evidence', qualification(third_party, self.root, REF)[0])
+
+    def test_pricing_is_never_inferred(self):
+        free_evidence = [dict(claim='price', source_url=self.e['event_url'], excerpt='Registration is free.')]
+        self.assertEqual(pricing_label(dict(self.e, price_type='free', evidence=free_evidence)), 'Free')
+        self.assertEqual(pricing_label(dict(self.e, price_type='free')), 'Pricing not listed')  # no explicit evidence
+        paid = [dict(claim='price', source_url=self.e['event_url'], excerpt='Members $49; registration open.')]
+        self.assertEqual(pricing_label(dict(self.e, price_type='paid', cost=49, evidence=paid)), 'Paid: $49')
+        self.assertEqual(pricing_label(dict(self.e, price_type='paid')), 'Paid (price on registration page)')
+        self.assertEqual(pricing_label(dict(self.e, price_type='unknown')), 'Pricing not listed')
+        text = (self.gen() / 'linkedin-post.md').read_text()
+        self.assertIn('| Pricing not listed', text)
+        self.assertNotIn('| Free', text)
+
+    def test_post_contains_description_host_time_price_and_link(self):
+        text = (self.gen() / 'linkedin-post.md').read_text()
+        for part in [self.e['title'], 'Hosted by ' + self.e['organizer'], 'Tue, Dec 1, 2026 | 12:00 PM CST', self.e['summary'], self.raw['registration_url']]:
+            self.assertIn(part, text)
 
     def test_future_week_is_excluded_and_remains_available(self):
-        events=read(self.root/'data/canonical-events.json')
-        future=copy.deepcopy(events[0])
-        future.update(event_id='future-test',start_datetime='2026-12-08T12:00:00-06:00',title='Synthetic future event',registration_url='https://example.org/future',roundup_week='2026/RW50_2026-12-06_to_2026-12-12')
-        events.append(future)
-        write(self.root/'data/canonical-events.json',events)
-        self.approve()
-        folder=prepare(self.root,date(2026,11,24))
-        report=read(folder/'editorial-report.json')
-        self.assertEqual(len(report['events_included']),1)
-        self.assertEqual(report['events_excluded'][0]['reason'],'outside_target_week')
-        self.assertEqual(len(read(self.root/'data/future-events.json')),1)
-        later=generate(self.root,date(2026,12,1))
-        self.assertIn('Synthetic future event',(later/'linkedin-post.md').read_text())
+        events = read(self.root / 'data/canonical-events.json')
+        future = copy.deepcopy(events[0])
+        future.update(event_id='future-test', start_datetime='2026-12-08T12:00:00-06:00', title='Synthetic future learning event',
+                      registration_url='https://example.org/future')
+        events = self.set_events(events + [future])
+        confirm(self.root, events)
+        report = read(self.gen() / 'editorial-report.json')
+        self.assertEqual(len(report['events_included']), 1)
+        self.assertIn('outside_target_week', [x['reason'] for x in report['events_excluded']])
+        self.assertEqual(len(read(self.root / 'data/future-events.json')), 1)
+        confirm(self.root, events, checked_at='2026-12-02T13:00:00Z')  # checks expire; Wednesday re-checks
+        later = self.gen(date(2026, 12, 1), '2026-12-02T13:05:00Z')
+        self.assertIn('Synthetic future learning event', (later / 'linkedin-post.md').read_text())
 
     def test_above_target_does_not_silently_cap_collection(self):
-        baseline=read(self.root/'data/canonical-events.json')[0]
-        events=[]
+        baseline = read(self.root / 'data/canonical-events.json')[0]
+        events = []
         for index in range(13):
-            e=copy.deepcopy(baseline)
-            e.update(event_id=f'event-{index}',title=f'Event {index}',organizer='Host',registration_url=f'https://example.org/{index}')
+            e = copy.deepcopy(baseline)
+            e.update(event_id=f'event-{index}', title=f'Learning transfer clinic {index}', registration_url=f'https://example.org/{index}', summary='Short.')
             events.append(e)
-        write(self.root/'data/canonical-events.json',events)
-        self.approve()
-        folder=generate(self.root,date(2026,11,24))
-        report=read(folder/'editorial-report.json')
-        self.assertEqual(len(report['events_included']),13)
-        self.assertTrue(report['above_target'])
+        events = self.set_events(events)
+        confirm(self.root, events)
+        report = read(self.gen() / 'editorial-report.json')
+        self.assertEqual(len(report['events_included']), 12)
+        self.assertEqual(report['total_qualified_candidates'], 13)
 
     def test_overflow_writes_explicit_exception_and_preserves_all_events(self):
-        rules=read(self.root/'config/editorial-rules.yml')
-        rules['linkedin_max_characters']=50
-        write(self.root/'config/editorial-rules.yml',rules)
-        with self.assertRaises(ValueError):generate(self.root,date(2026,11,24))
-        folder=self.root/'weeks/2026/RW49_2026-11-29_to_2026-12-05'
-        report=read(folder/'editorial-report.json')
-        self.assertEqual(len(report['events_included']),1)
+        rules = read(self.root / 'config/editorial-rules.yml')
+        rules['linkedin_max_characters'] = 50
+        rules['linkedin_target_characters'] = 40
+        write(self.root / 'config/editorial-rules.yml', rules)
+        with self.assertRaises(ValueError):
+            self.gen()
+        folder = self.root / 'weeks/2026/RW49_2026-11-29_to_2026-12-05'
+        report = read(folder / 'editorial-report.json')
+        self.assertEqual(len(report['events_included']), 1)
         self.assertFalse(report['within_character_limit'])
-        self.assertTrue(report['editorial_exceptions'])
-        self.assertIn(self.raw['title'],(folder/'linkedin-post.md').read_text())
+        self.assertEqual(report['readiness_status'], 'not_ready_action_required')
+        self.assertIn(self.raw['title'], (folder / 'linkedin-post.md').read_text())
 
     def test_shorten_optional_text_before_dropping_essential_details(self):
-        brand=read(self.root/'config/branding.yml')
-        brand['introduction']='Long introductory text '*300
-        write(self.root/'config/branding.yml',brand)
-        folder=generate(self.root,date(2026,11,24))
-        report=read(folder/'editorial-report.json')
+        brand = read(self.root / 'config/branding.yml')
+        brand['introduction'] = 'Long introductory text ' * 150
+        write(self.root / 'config/branding.yml', brand)
+        report = read(self.gen() / 'editorial-report.json')
         self.assertTrue(report['within_character_limit'])
-        self.assertEqual(report['caption_strategy'],'shortened_introduction')
-        self.assertIn(self.raw['registration_url'],(folder/'linkedin-post.md').read_text())
+        self.assertEqual(report['caption_strategy'], 'shortened_introduction')
+        self.assertTrue(report['descriptions_included'])
+        self.assertLessEqual(report['character_counts']['full'], 2800)
 
-    def test_repeat_execution_stable_except_declared_timestamp(self):
-        folder=generate(self.root,date(2026,11,24),generated_at='2026-11-18T20:00:00Z')
-        full=(folder/'linkedin-post.md').read_bytes()
-        compact=(folder/'linkedin-post-compact.md').read_bytes()
-        first=read(folder/'editorial-report.json')
-        generate(self.root,date(2026,11,24),generated_at='2026-11-18T20:00:01Z')
-        second=read(folder/'editorial-report.json')
-        self.assertEqual(full,(folder/'linkedin-post.md').read_bytes())
-        self.assertEqual(compact,(folder/'linkedin-post-compact.md').read_bytes())
-        self.assertNotEqual(first.pop('generated_at'),second.pop('generated_at'))
-        self.assertEqual(first,second)
-        self.assertTrue(read(folder/'review.json')['below_target'])
-        validate_output(self.root,date(2026,11,24))
+    def test_repeat_execution_stable_and_validator_passes(self):
+        folder = self.gen(generated_at=GENERATED_AT)
+        full = (folder / 'linkedin-post.md').read_bytes()
+        first = read(folder / 'editorial-report.json')
+        self.gen(generated_at='2026-11-25T13:06:00Z')
+        second = read(folder / 'editorial-report.json')
+        self.assertEqual(full, (folder / 'linkedin-post.md').read_bytes())
+        self.assertNotEqual(first.pop('generated_at'), second.pop('generated_at'))
+        self.assertEqual(first, second)
+        validate_output(self.root, AS_OF)
 
-    def test_stale_selected_record_causes_workflow_exception(self):
-        events=read(self.root/'data/canonical-events.json')
-        events[0]['summary']='Substantively changed after approval'
-        write(self.root/'data/canonical-events.json',events)
-        with self.assertRaises(ValueError):prepare(self.root,date(2026,11,24))
-        report=read(self.root/'weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-report.json')
-        self.assertEqual(report['events_included'],[])
-        self.assertEqual(report['approval_blockers'][0]['reason'],'missing_or_stale_approval')
+    def test_validator_rejects_changed_data_after_generation(self):
+        self.gen()
+        events = read(self.root / 'data/canonical-events.json')
+        events[0]['summary'] = 'Changed after generation'
+        write(self.root / 'data/canonical-events.json', events)
+        with self.assertRaises(ValueError):
+            validate_output(self.root, AS_OF)
 
-    def test_wednesday_seven_central_guard_handles_dst(self):
-        for timestamp,expected in [('2026-11-25T13:00:00+00:00',True),('2026-07-01T12:00:00+00:00',True),('2026-11-25T12:00:00+00:00',False),('2026-07-01T13:00:00+00:00',False),('2026-11-24T13:00:00+00:00',False)]:
-            with self.subTest(timestamp=timestamp):self.assertEqual(is_wednesday_slot(datetime.fromisoformat(timestamp)),expected)
+    def test_handoff_readiness_states(self):
+        self.gen()
+        handoff = read(self.root / 'weeks/current-handoff.json')
+        self.assertEqual(handoff['readiness_status'], 'ready_with_warnings')  # below target + pricing not listed
+        self.assertEqual(handoff['event_count'], 1)
+        self.assertTrue(handoff['post_url'].endswith('weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post.md'))
+        self.assertEqual(handoff['publication_approval_status'], 'awaiting_final_human_review')
+        self.assertIn("READY WITH WARNINGS", (self.root / 'weeks/current-handoff.md').read_text())
+        write(self.root / CHECKS_PATH, {})
+        self.gen()
+        self.assertEqual(read(self.root / 'weeks/current-handoff.json')['readiness_status'], 'not_ready_action_required')
+        rules = read(self.root / 'config/editorial-rules.yml')
+        rules['target_min'] = 1
+        write(self.root / 'config/editorial-rules.yml', rules)
+        events = read(self.root / 'data/canonical-events.json')
+        events[0]['evidence'].append(dict(claim='price', source_url=self.e['event_url'], excerpt='Free webinar.'))
+        events = self.set_events(events)
+        confirm(self.root, events)
+        self.gen()
+        self.assertEqual(read(self.root / 'weeks/current-handoff.json')['readiness_status'], 'ready_for_review')
+
+    def test_prepare_runs_checks_with_injected_fetcher(self):
+        page = f'<h1>{self.e["title"]}</h1> Example Association online webinar December 1, 2026 12:00 PM CST'
+        folder = prepare(self.root, AS_OF, True, lambda url: dict(status=200, final_url=url, body=page, error=None), GENERATED_AT)
+        self.assertEqual(read(self.root / CHECKS_PATH)[self.e['event_id']]['classification'], 'confirmed')
+        self.assertEqual(len(read(folder / 'editorial-report.json')['events_included']), 1)
+        prepare(self.root, AS_OF, True, lambda url: dict(status=403, final_url=url, body='', error='HTTP 403'), GENERATED_AT)
+        self.assertEqual(len(read(folder / 'editorial-report.json')['events_included']), 0)
+
+    def test_wednesday_guards_handle_dst_and_run_once(self):
+        for timestamp, expected in [('2026-11-25T13:00:00+00:00', True), ('2026-07-01T12:00:00+00:00', True), ('2026-11-25T12:00:00+00:00', False),
+                                    ('2026-07-01T13:00:00+00:00', False), ('2026-11-24T13:00:00+00:00', False)]:
+            with self.subTest(timestamp=timestamp):
+                self.assertEqual(is_wednesday_slot(datetime.fromisoformat(timestamp)), expected)
+        empty = self.root / 'empty'
+        self.assertTrue(should_run_scheduled(datetime.fromisoformat('2026-11-25T13:00:00+00:00'), empty))   # 07:00 CST
+        self.assertTrue(should_run_scheduled(datetime.fromisoformat('2026-11-25T14:30:00+00:00'), empty))   # delayed 08:30 CST
+        self.assertFalse(should_run_scheduled(datetime.fromisoformat('2026-11-25T12:00:00+00:00'), empty))  # 06:00 CST
+        self.assertTrue(should_run_scheduled(datetime.fromisoformat('2026-07-01T12:00:00+00:00'), empty))   # 07:00 CDT
+        write(empty / 'weeks/current-handoff.json', dict(generated_on_local_date='2026-11-25', roundup_identifier='2026/RW49_2026-11-29_to_2026-12-05'))
+        self.assertFalse(should_run_scheduled(datetime.fromisoformat('2026-11-25T14:00:00+00:00'), empty))  # already ran today
 
     def test_cdt_and_cst_display(self):
-        for timestamp,as_of,expected in [('2026-12-01T12:00:00-06:00',date(2026,11,24),'12:00 PM CST'),('2026-07-01T12:00:00-05:00',date(2026,6,24),'12:00 PM CDT')]:
-            events=read(self.root/'data/canonical-events.json')
-            events[0]['start_datetime']=timestamp
-            write(self.root/'data/canonical-events.json',events)
-            assign(self.root,as_of)
-            self.approve()
-            folder=generate(self.root,as_of)
-            self.assertIn(expected,(folder/'linkedin-post.md').read_text())
+        for timestamp, as_of, expected in [('2026-12-01T12:00:00-06:00', AS_OF, '12:00 PM CST'), ('2026-07-01T12:00:00-05:00', date(2026, 6, 24), '12:00 PM CDT')]:
+            events = read(self.root / 'data/canonical-events.json')
+            events[0]['start_datetime'] = timestamp
+            write(self.root / 'data/canonical-events.json', events)
+            events = assign(self.root, as_of)
+            confirm(self.root, events, checked_at=('2026-06-25T13:00:00Z' if as_of.month == 6 else CHECKED_AT))
+            folder = self.gen(as_of, '2026-06-25T13:05:00Z' if as_of.month == 6 else GENERATED_AT)
+            self.assertIn(expected, (folder / 'linkedin-post.md').read_text())
 
 
-if __name__=='__main__':unittest.main()
+if __name__ == '__main__':
+    unittest.main()

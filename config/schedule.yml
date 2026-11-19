@@ -7,14 +7,11 @@
     "local_time": "07:00",
     "timezone": "America/Chicago",
     "weekday": "Wednesday",
-    "recurring_enabled": false,
-    "planned_utc_crons": [
-      "0 12 * * 3",
-      "0 13 * * 3"
-    ],
-    "guard": "run only when America/Chicago weekday is Wednesday and hour is 7",
+    "recurring_enabled": true,
+    "planned_utc_crons": [],
+    "guard": "Wednesday 07:00\u201310:59 America/Chicago; one successful generation per local day",
     "pilot_as_of": "2026-11-24",
     "jarvis_briefing_local_time": "08:00",
-    "jarvis_delivery": "manual packet transfer; no automatic access assumed"
+    "jarvis_delivery": "Native Cloud handoff task reads weeks/current-handoff.json; never publishes"
   }
 }

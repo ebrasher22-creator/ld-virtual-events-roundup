@@ -7,7 +7,7 @@
     "cost": 0,
     "discovered_at": "2026-11-24T18:00:00Z",
     "discovered_by": [
-      "gemini"
+      "antigravity"
     ],
     "editorial_score": 0,
     "editorial_status": "pending",
@@ -38,7 +38,7 @@
     "start_datetime": "2027-01-05T12:00:00-06:00",
     "submissions": [
       {
-        "file": "intake/gemini/sample.json",
+        "file": "intake/antigravity/sample.json",
         "raw": {
           "audience": [
             "L&D professionals"
@@ -46,7 +46,7 @@
           "cost": 0,
           "discovered_at": "2026-11-24T18:00:00Z",
           "discovered_by": [
-            "gemini"
+            "antigravity"
           ],
           "end_datetime": null,
           "event_format": "virtual",
@@ -74,7 +74,7 @@
             "learning"
           ]
         },
-        "sha256": "359868c673aab62208b4857de851c1026b1cb2377e24ea579254c22de8ee6d68"
+        "sha256": "5f33b14e2c4b0fcb72d78e99f6967390385d010aec22c07f4e8d10edb88cf62b"
       }
     ],
     "summary": "Practice planning support for learning transfer.",

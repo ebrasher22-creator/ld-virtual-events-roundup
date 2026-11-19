@@ -1,58 +1,37 @@
-name: Wednesday LinkedIn preparation (manual pilot)
+name: Wednesday LinkedIn preparation
 on:
+  schedule:
+    - cron: '0 7 * * 3'
+      timezone: America/Chicago
   workflow_dispatch:
     inputs:
       as_of:
-        description: 'Discovery date: 2026-11-24 targets RW49 (Nov 29–Dec 5); blank uses current Chicago date'
-        required: false
-        default: '2026-11-24'
-        type: string
-      draft_path:
-        description: 'Optional owner-uploaded JSON under editorial-drafts/ to validate (no unattended Work write assumed)'
+        description: Optional discovery date for supervised rehearsal; blank uses current Chicago date
         required: false
         default: ''
         type: string
-# Recurrence deliberately inactive. After owner approval, remove the fixed pilot default,
-# enable config/schedule.yml, add UTC cron entries for 12:00 and 13:00 Wednesdays,
-# and use the America/Chicago guard to run only the matching 07:00 local window.
 permissions:
-  contents: read
+  contents: write
 concurrency:
-  group: wednesday-preparation-${{ github.ref }}
+  group: production-data
   cancel-in-progress: false
 jobs:
   prepare:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          persist-credentials: false
-      - uses: actions/setup-python@v5
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
-      - name: Check future recurring activation and Chicago window
-        id: gate
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        shell: bash
+      - name: Validate production code and intake
         run: |
-          python - <<'PYTHON'
-          import os, sys
-          from datetime import datetime, timezone
-          sys.path.insert(0, 'scripts')
-          from pipeline import read
-          from prepare_wednesday import is_wednesday_slot
-          enabled = read('config/schedule.yml')['wednesday_preparation']['recurring_enabled']
-          run = os.environ['EVENT_NAME'] != 'schedule' or (enabled and is_wednesday_slot(datetime.now(timezone.utc)))
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
-              output.write('run=' + str(run).lower() + '\n')
-          PYTHON
-      - run: python -m unittest discover -s tests -v
-        if: steps.gate.outputs.run == 'true'
-      - run: python scripts/validate.py
-        if: steps.gate.outputs.run == 'true'
-      - name: Prepare and validate approved target-week events
-        if: steps.gate.outputs.run == 'true'
+          python -m unittest discover -s tests -v
+          python scripts/validate.py
+      - name: Recheck primary pages and prepare final-review draft
         env:
           AS_OF: ${{ inputs.as_of }}
           EVENT_NAME: ${{ github.event_name }}
@@ -62,33 +41,22 @@ jobs:
           if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
           if [[ "$EVENT_NAME" == schedule ]]; then args+=(--scheduled); fi
           python scripts/prepare_wednesday.py "${args[@]}"
-      - name: Validate returned Work editorial draft
-        if: steps.gate.outputs.run == 'true' && inputs.draft_path != ''
-        env:
-          DRAFT_PATH: ${{ inputs.draft_path }}
-          AS_OF: ${{ inputs.as_of }}
-        shell: bash
+      - name: Persist generated draft, checks and handoff
         run: |
-          args=()
-          if [[ -n "$AS_OF" ]]; then args+=(--as-of "$AS_OF"); fi
-          python scripts/validate_editorial_drafts.py "${args[@]}" -- "$DRAFT_PATH"
-      - name: Upload Work validation report
-        if: always() && inputs.draft_path != ''
-        uses: actions/upload-artifact@v4
-        with:
-          name: work-editorial-validation
-          path: reports/work-editorial/
-          if-no-files-found: error
-      - name: Upload review artifacts (including editorial exceptions)
-        if: always() && steps.gate.outputs.run == 'true'
-        uses: actions/upload-artifact@v4
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add weeks data/canonical-events.json data/future-events.json data/registration-checks.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Prepare checked weekly LinkedIn draft for Eddie review'
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
         with:
           name: wednesday-linkedin-review
-          path: weeks/
+          path: |
+            weeks/
+            data/registration-checks.json
           if-no-files-found: error
-      - name: Briefing handoff
-        if: always() && steps.gate.outputs.run == 'true'
-        shell: bash
-        run: |
-          echo 'Drafts and Jarvis handoff are in the wednesday-linkedin-review artifact.' >> "$GITHUB_STEP_SUMMARY"
-          echo 'Final human caption approval and manual LinkedIn publication remain required.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Final review reminder
+        run: echo 'Draft and qualification report are on main at weeks/current-handoff.json. Eddie alone decides publication.' >> "$GITHUB_STEP_SUMMARY"

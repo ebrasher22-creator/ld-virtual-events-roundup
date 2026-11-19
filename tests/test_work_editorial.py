@@ -6,8 +6,9 @@ import sys
 import tempfile
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from helpers import confirm, GENERATED_AT
 from pipeline import ROOT, read, write, ingest, assign, generate
-from record_attestation import record
 from editorial_input import build_input, export_input
 from validate_work_caption import validate_submission
 from validate_editorial_drafts import validate_files
@@ -19,10 +20,6 @@ class WorkEditorialTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.root=Path(self.tmp.name)
         for directory in ['config','templates']:shutil.copytree(ROOT/directory,self.root/directory)
-        statement='Synthetic owner approves the synthetic fixture for editorial inclusion.'
-        source=self.root/'approvals/test.md'
-        source.parent.mkdir()
-        source.write_text(statement)
         write(self.root/'data/canonical-events.json',[])
         write(self.root/'data/reviews.json',{})
         self.raw=read(ROOT/'tests/fixtures/chatgpt.json')[0]
@@ -30,7 +27,7 @@ class WorkEditorialTests(unittest.TestCase):
         write(self.root/'intake/chatgpt/test.json',[self.raw])
         ingest(self.root)
         events=assign(self.root,date(2026,11,24))
-        record(self.root,[e['event_id'] for e in events],'Synthetic owner','approvals/test.md',statement,recorded_at='2026-11-18T20:00:00Z',select=True)
+        confirm(self.root,events)
         self.input_path=export_input(self.root,date(2026,11,24))
         self.payload=read(self.input_path)
         text='What question would you like to explore?\n\n'+self.payload['required_heading']+'\n\n'+self.payload['events'][0]['required_fact_block']+'\n\nShare another worthwhile opportunity with the community.\n'
@@ -50,7 +47,7 @@ class WorkEditorialTests(unittest.TestCase):
         self.assertTrue((self.output/'linkedin-work-post.md').is_file())
         self.assertEqual(read(self.output/'validation-report.json')['publication_approval_status'],'awaiting_final_human_review')
 
-    def test_only_approved_target_week_members_are_exported(self):
+    def test_only_qualified_target_week_members_are_exported(self):
         events=read(self.root/'data/canonical-events.json')
         for event_id,when in [('future','2026-12-08T12:00:00-06:00'),('pending','2026-12-02T12:00:00-06:00')]:
             e=copy.deepcopy(events[0]);e.update(event_id=event_id,start_datetime=when,title=event_id,verification_status='pending')
@@ -63,7 +60,7 @@ class WorkEditorialTests(unittest.TestCase):
 
     def test_no_generation_timestamp_churn_in_editorial_input(self):
         self.assertEqual(self.payload,build_input(self.root,date(2026,11,24)))
-        generate(self.root,date(2026,11,24),generated_at='2026-11-18T20:00:00Z')
+        generate(self.root,date(2026,11,24),generated_at=GENERATED_AT)
         self.assertEqual(self.payload,read(self.input_path))
 
     def test_reject_changed_event_facts_links_and_length(self):
@@ -127,7 +124,7 @@ class WorkEditorialTests(unittest.TestCase):
         extra.update(event_id='second-event',title='Second approved synthetic event',start_datetime='2026-12-02T12:00:00-06:00',registration_url='https://example.org/second',submissions=[])
         events.append(extra)
         write(self.root/'data/canonical-events.json',events)
-        record(self.root,[extra['event_id']],'Synthetic owner','approvals/test.md','Synthetic owner approves the synthetic fixture for editorial inclusion.',recorded_at='2026-11-18T20:00:00Z',select=True)
+        confirm(self.root,[extra])
         self.input_path=export_input(self.root,date(2026,11,24))
         self.payload=read(self.input_path)
         draft=copy.deepcopy(self.draft)

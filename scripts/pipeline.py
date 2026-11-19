@@ -102,6 +102,37 @@ def validate(e):
         raise ValueError('end must follow start')
     return e
 
+# Production discovery streams. 'gemini' is a legacy identity for historical Antigravity records.
+INTAKE_IDENTITIES = {'chatgpt': {'chatgpt'}, 'antigravity': {'antigravity'}, 'gemini': {'gemini'}}
+PRODUCTION_AGENTS = ('chatgpt', 'antigravity')
+LEGACY_STREAMS = {'gemini': 'antigravity'}
+
+def canonical_streams(values):
+    """Map raw discovered_by values to production stream names without rewriting raw records."""
+    return sorted({LEGACY_STREAMS.get(v, v) for v in values})
+
+def identity_problem(path, e):
+    folder = Path(path).parent.name
+    allowed = INTAKE_IDENTITIES.get(folder)
+    if allowed is None:
+        return f'unrecognized intake folder intake/{folder}/'
+    if set(e.get('discovered_by') or []) != allowed:
+        return f'discovered_by {e.get("discovered_by")} does not match intake/{folder}/ (expected {sorted(allowed)})'
+    return None
+
+def validate_intake_batch(path, batch):
+    """Validate one intake file: array shape, schema, offsets and source identity."""
+    if not isinstance(batch, list): raise ValueError(f'{path}: intake file must contain an array')
+    if not batch: raise ValueError(f'{path}: intake array is empty')
+    for index, e in enumerate(batch):
+        try:
+            validate(e)
+        except (ValueError, KeyError, TypeError) as exc:
+            raise ValueError(f'{path}[{index}]: {exc}') from exc
+        problem = identity_problem(path, e)
+        if problem: raise ValueError(f'{path}[{index}]: {problem}')
+    return batch
+
 def normalized(value):
     return re.sub(r'\W+', ' ',value.casefold()).strip()
 
@@ -262,20 +293,18 @@ def week(value):
 def target(day):
     return week(day + timedelta(days=7-(day.weekday()+1)%7))
 
-def ingest(root=ROOT):
+def ingest(root=ROOT, migrate_reviews=True):
     root = Path(root)
     events = read(root/'data/canonical-events.json')
     reviews_path = root/'data/reviews.json'
     reviews = read(reviews_path) if reviews_path.is_file() else {}
     for path in sorted((root/'intake').glob('*/*.json')):
-        batch = read(path)
-        if not isinstance(batch,list): raise ValueError('intake file must contain an array')
-        for e in batch: validate(e)
+        validate_intake_batch(path, read(path))
     pre_approved = {}
     for existing in events:
         eid = existing.get('event_id')
         rev = reviews.get(eid)
-        if isinstance(rev, dict) and rev.get('decision') == 'verified':
+        if migrate_reviews and isinstance(rev, dict) and rev.get('decision') == 'verified':
             check_rev = {eid: dict(rev, editorial_decision='selected')}
             if approval_problem(existing, check_rev, root) is None:
                 pre_approved[eid] = (json.loads(json.dumps(existing)), fingerprint(existing))
@@ -569,10 +598,14 @@ def main(command):
     parser.add_argument('files',nargs='*')
     args=parser.parse_args()
     if command=='validate':
+        intake_root=(args.root/'intake').resolve()
         for path in args.files or sorted((args.root/'intake').glob('*/*.json')):
             batch=read(path)
             if not isinstance(batch,list): raise ValueError('expected array')
-            for e in batch: validate(e)
+            # Source identity is enforced for repository intake folders; archived copies elsewhere are schema-checked.
+            if Path(path).resolve().parent.parent==intake_root: validate_intake_batch(path,batch)
+            else:
+                for e in batch: validate(e)
     elif command=='ingest': ingest(args.root)
     elif command=='assign_weeks': assign(args.root,day=args.as_of)
     elif command=='generate_post': print(generate(args.root,day=args.as_of))

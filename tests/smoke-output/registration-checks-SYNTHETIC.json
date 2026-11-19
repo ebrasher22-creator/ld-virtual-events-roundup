@@ -1,0 +1,53 @@
+{
+  "evt_57f0a009caaeba39": {
+    "checked_at": "2026-11-24T06:00:00Z",
+    "classification": "confirmed",
+    "date_confirmed_on_page": true,
+    "event_id": "evt_57f0a009caaeba39",
+    "pages": [
+      {
+        "classification": "confirmed",
+        "observed_text": "SYNTHETIC TEST DATA. Not a real event.",
+        "role": "registration",
+        "status": 200,
+        "synthetic_test_check": true,
+        "url": "https://example.org/register/transfer"
+      }
+    ],
+    "record_key": "d0d334bf1271d8be1db6eee50b33250db03845dcf5655df44cc2f53928c7a7e8"
+  },
+  "evt_a5c040a6b949b710": {
+    "checked_at": "2026-11-24T06:00:00Z",
+    "classification": "confirmed",
+    "date_confirmed_on_page": true,
+    "event_id": "evt_a5c040a6b949b710",
+    "pages": [
+      {
+        "classification": "confirmed",
+        "observed_text": "SYNTHETIC TEST DATA. Not a real event.",
+        "role": "registration",
+        "status": 200,
+        "synthetic_test_check": true,
+        "url": "https://example.org/register/future"
+      }
+    ],
+    "record_key": "e9f672cb60643fcf3ec6833ef2a8dfb82fbe22a6178d91eb50826d8424ef45e9"
+  },
+  "evt_e012c2e331b93652": {
+    "checked_at": "2026-11-24T06:00:00Z",
+    "classification": "confirmed",
+    "date_confirmed_on_page": true,
+    "event_id": "evt_e012c2e331b93652",
+    "pages": [
+      {
+        "classification": "confirmed",
+        "observed_text": "SYNTHETIC TEST DATA. Not a real event.",
+        "role": "registration",
+        "status": 200,
+        "synthetic_test_check": true,
+        "url": "https://example.org/register/qualified"
+      }
+    ],
+    "record_key": "1033aea47db6e841fedd98d2ac8672360e9a97b9ec1657759bed426170e9540d"
+  }
+}

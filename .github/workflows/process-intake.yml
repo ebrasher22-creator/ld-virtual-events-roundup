@@ -1,0 +1,56 @@
+name: Process discovery intake
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: production-data
+  cancel-in-progress: false
+jobs:
+  process:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Validate trusted production code
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/validate.py
+      - name: Read authorized intake blobs as data only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: python scripts/process_intake.py --repo "$REPO" --phase stage --report-out "$RUNNER_TEMP/intake-report.json"
+      - name: Validate and persist processing result
+        id: persist
+        run: |
+          python scripts/validate.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add intake/chatgpt intake/antigravity data/canonical-events.json data/future-events.json reports/intake-processing quarantine
+          if ! git diff --cached --quiet; then
+            git commit -m 'Process validated discovery intake and preserve audit records'
+            git push origin HEAD:main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Notify processed PRs without merging their code
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          COMMIT_SHA: ${{ steps.persist.outputs.sha }}
+        run: python scripts/process_intake.py --repo "$REPO" --phase notify --report-out "$RUNNER_TEMP/intake-report.json" --commit "$COMMIT_SHA"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: intake-processing-report
+          path: ${{ runner.temp }}/intake-report.json
+          if-no-files-found: ignore
