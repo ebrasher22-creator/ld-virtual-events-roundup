@@ -12,6 +12,8 @@ on:
         type: string
 permissions:
   contents: write
+  pull-requests: write
+  actions: write
 concurrency:
   group: production-data
   cancel-in-progress: false
@@ -46,10 +48,10 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add weeks data/canonical-events.json data/future-events.json data/registration-checks.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Prepare checked weekly LinkedIn draft for Eddie review'
-            git push origin HEAD:main
-          fi
+          python scripts/persist_outputs.py --kind editorial --repo "$REPO"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:

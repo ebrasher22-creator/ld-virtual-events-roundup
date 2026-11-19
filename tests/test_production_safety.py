@@ -59,3 +59,12 @@ class ProductionSafetyTests(unittest.TestCase):
         for metadata in [dict(user={'login':'attacker'},base={'ref':'main'}),dict(user={'login':'owner'},base={'ref':'other'})]:
             pr=dict(number=1,head=dict(ref='intake/chatgpt-test',sha='abc',repo={'full_name':'owner/repo'}),**metadata)
             self.assertEqual(review_pull_request(Path('.'),None,'owner/repo',pr)['outcome'],'rejected')
+
+    def test_persistence_accepts_only_generated_data_paths(self):
+        from persist_outputs import allowed_output
+        for kind in ['intake','editorial']:
+            for path in ['scripts/pipeline.py','.github/workflows/validate.yml','data/reviews.json','approvals/x.md']:
+                self.assertFalse(allowed_output(path,kind))
+        self.assertTrue(allowed_output('intake/chatgpt/real.json','intake'))
+        self.assertFalse(allowed_output('intake/gemini/old.json','intake'))
+        self.assertTrue(allowed_output('weeks/current-handoff.json','editorial'))
