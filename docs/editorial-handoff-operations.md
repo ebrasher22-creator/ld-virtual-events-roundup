@@ -14,7 +14,7 @@ The observed Work account uses the existing Pro plan. This implementation uses P
 
 ## Simplest reliable route
 
-1. Python preparation produces approved-only `weeks/YYYY/RWnn_START_to_END/editorial-input.json`. The current manual Wednesday Actions workflow already produces this artifact and the deterministic fallback caption. Production recurrence remains inactive.
+1. Python preparation writes the existing `weeks/editorial-current.json` manifest and produces approved-only `weeks/YYYY/RWnn_START_to_END/editorial-input.json`. The current manual Wednesday Actions workflow already produces this artifact and the deterministic fallback caption. Production recurrence remains inactive. The hosted artifact contains a fresh manifest, but this workflow does not commit it back to GitHub; scheduled Work access to the fresh artifact or an owner-mediated export must be established.
 2. Work must receive an explicit repository **ref and path**, or the owner must paste/upload the complete approved input and `agents/linkedin-editor-work.md`. Validate the identifier, export status, count and checksum. If retrieval fails, stop; never reconstruct or discover replacement events.
 3. Work follows the existing agent instructions and returns the exact five-field JSON contract in `work-submission.json`. Its output is an unvalidated draft. A scheduled task may be configured later only with owner approval; the supervised read test does not prove scheduled retrieval.
 4. Owner downloads the file. From this review checkout run:
