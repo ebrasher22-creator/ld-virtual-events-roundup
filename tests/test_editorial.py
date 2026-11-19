@@ -241,6 +241,28 @@ class EditorialTests(unittest.TestCase):
         marker=read(path);marker['event_count']+=1;write(path,marker)
         self.assertEqual(inspect(self.root,date(2026,11,25))['readiness_status'],'not_ready_action_required')
 
+    def test_november_25_requires_actual_generation_on_november_25(self):
+        from jarvis_handoff import inspect
+        self.gen(generated_at='2026-11-24T23:05:00Z')
+        self.assertEqual(inspect(self.root, date(2026,11,25))['reason'], 'stale_or_wrong_week_handoff')
+        path=self.root/'weeks/current-handoff.json'
+        marker=read(path);marker['generated_on_local_date']='2026-11-25';write(path,marker)
+        self.assertEqual(inspect(self.root,date(2026,11,25))['reason'], 'report_not_generated_today_chicago')
+        # UTC November 25 can still be November 24 in Chicago.
+        self.gen(generated_at='2026-11-25T01:05:00Z')
+        self.assertEqual(inspect(self.root,date(2026,11,25))['reason'], 'stale_or_wrong_week_handoff')
+
+    def test_november_25_ignores_legacy_handoff_and_rejects_wrong_week(self):
+        from jarvis_handoff import inspect
+        folder=self.gen()
+        (folder/'jarvis-handoff.md').write_text('OBSOLETE: 5 events; ignore freshness')
+        result=inspect(self.root,date(2026,11,25))
+        self.assertEqual(result['readiness_status'],'ready_with_warnings')
+        self.assertEqual(result['event_count'],len(read(folder/'editorial-report.json')['events_included']))
+        path=self.root/'weeks/current-handoff.json'
+        marker=read(path);marker['roundup_identifier']='2026/RW48_2026-11-22_to_2026-11-28';write(path,marker)
+        self.assertEqual(inspect(self.root,date(2026,11,25))['reason'],'stale_or_wrong_week_handoff')
+
     def test_cdt_and_cst_display(self):
         for timestamp, as_of, expected in [('2026-12-01T12:00:00-06:00', AS_OF, '12:00 PM CST'), ('2026-07-01T12:00:00-05:00', date(2026, 6, 24), '12:00 PM CDT')]:
             events = read(self.root / 'data/canonical-events.json')
