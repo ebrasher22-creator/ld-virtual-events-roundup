@@ -1,0 +1,56 @@
+{
+  "consolidation": {
+    "cross_agent_consolidated": [
+      "evt_3f2f090963c7e1d0",
+      "evt_5b0c2b55e8407e36",
+      "evt_fb9c960a4c6a704d"
+    ],
+    "events_by_week": {
+      "2026/RW49_2026-11-29_to_2026-12-05": 7,
+      "2026/RW50_2026-12-06_to_2026-12-12": 3,
+      "2027/RW03_2027-01-17_to_2027-01-23": 1,
+      "2027/RW04_2027-01-24_to_2027-01-30": 1
+    },
+    "events_with_conflict_flags": {
+      "evt_1b02f4289e55abe4": [
+        "summary"
+      ],
+      "evt_3f2f090963c7e1d0": [
+        "summary"
+      ],
+      "evt_5b0c2b55e8407e36": [
+        "summary"
+      ],
+      "evt_fb9c960a4c6a704d": [
+        "registration_url",
+        "summary"
+      ]
+    },
+    "future_events": 12,
+    "new_canonical_events": [
+      "evt_97f33fc975aae3f7"
+    ],
+    "target_week": "2026/RW48_2026-11-22_to_2026-11-28",
+    "total_canonical_events": 12
+  },
+  "ingestion_run": true,
+  "processed_at": "2026-11-19T04:33:13+00:00",
+  "pull_requests": [
+    {
+      "agent": "chatgpt",
+      "branch": "intake/chatgpt-2026-11-18-221802-1e93a978",
+      "files": [
+        {
+          "file": "intake/chatgpt/chatgpt-2026-11-18.json",
+          "outcome": "accepted",
+          "records": 2,
+          "sha256": "dd66db36725d0f974700869f48acba1979efcebeee8249287061ee11b43b7652"
+        }
+      ],
+      "head_sha": "c87e596271407955e275c0e0ad9012957e8bc224",
+      "number": 6,
+      "outcome": "accepted"
+    }
+  ],
+  "repository": "ebrasher22-creator/ld-virtual-events-roundup"
+}
