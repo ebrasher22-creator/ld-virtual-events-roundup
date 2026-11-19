@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Microlearning + Mobile: A Winning Combination",
+    "organizer": "Learning Guild",
+    "organizer_url": "https://www.learningguild.com/",
+    "event_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination",
+    "registration_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination",
+    "start_datetime": "2026-12-15T12:00:00-05:00",
+    "end_datetime": "2026-12-15T13:00:00-05:00",
+    "timezone": "America/New_York",
+    "event_format": "virtual",
+    "language": "English",
+    "price_type": "free",
+    "cost": 0,
+    "summary": "A webinar on designing short, mobile-friendly instructional content for learners who need timely performance support.",
+    "audience": [
+      "Instructional designers",
+      "Learning and development professionals"
+    ],
+    "topics": [
+      "Microlearning",
+      "Mobile learning",
+      "Performance support"
+    ],
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "source_urls": [
+      "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+    ],
+    "discovered_at": "2026-11-19T04:48:08Z",
+    "evidence": [
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 15 @ 12:00 pm – 1:00 pm EST",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Virtual Event",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      },
+      {
+        "claim": "price",
+        "excerpt": "Free",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "RSVP Here",
+        "source_url": "https://www.learningguild.com/event/microlearning-mobile-a-winning-combination"
+      }
+    ]
+  }
+]
