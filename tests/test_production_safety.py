@@ -68,3 +68,10 @@ class ProductionSafetyTests(unittest.TestCase):
         self.assertTrue(allowed_output('intake/chatgpt/real.json','intake'))
         self.assertFalse(allowed_output('intake/gemini/old.json','intake'))
         self.assertTrue(allowed_output('weeks/current-handoff.json','editorial'))
+
+    def test_free_is_not_inferred_from_unrelated_or_negated_text(self):
+        from qualification import explicit_free
+        self.assertTrue(explicit_free('Registration is free.'))
+        self.assertTrue(explicit_free('A complimentary webinar.'))
+        self.assertFalse(explicit_free('This event is not free.'))
+        self.assertFalse(explicit_free('Download our free resources.'))

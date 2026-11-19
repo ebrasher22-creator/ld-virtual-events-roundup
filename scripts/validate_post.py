@@ -3,7 +3,7 @@ import argparse
 from datetime import date, datetime, time as clock
 from pathlib import Path
 from pipeline import ROOT, CENTRAL, read, target, dt, editorial_registration_url
-from editorial import evaluate_week, sha_file, central_time
+from editorial import evaluate_week, sha_file, central_time, compose
 from qualification import CHECKS_PATH, pricing_label
 
 
@@ -22,8 +22,12 @@ def validate_output(root=ROOT, day=None):
         raise ValueError('Generated membership differs from automatically qualified target-week events')
     if report['editorial_exceptions'] or not report['within_character_limit']:
         raise ValueError('Unresolved editorial exception')
+    chosen, compact = compose(root, read(root/'config/branding.yml'), read(root/'config/editorial-rules.yml'), label, expected)
+    expected_text = {'full': chosen[1], 'compact': compact}
     for filename, key in [('linkedin-post.md', 'full'), ('linkedin-post-compact.md', 'compact')]:
         text = (folder / filename).read_text()
+        if text != expected_text[key]:
+            raise ValueError('Caption differs from the qualified template, descriptions or pricing')
         if len(text) != report['character_counts'][key] or len(text) > report['character_counts']['limit']:
             raise ValueError('Character count or limit mismatch')
         last = -1
