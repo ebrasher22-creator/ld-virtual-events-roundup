@@ -1,14 +1,11 @@
 # Final manual publication review
 
-Publication approval: **awaiting final human review**. Event approval does not approve this caption.
+Publication approval: **awaiting Eddie's final review**. Automated qualification and mechanical validation are not publication approval.
 
-- [ ] Confirm this is the intended Sunday–Saturday period and all events have current human approval.
-- [ ] Review complete titles, organizer names, readability, spacing and date order.
-- [ ] Confirm dates/times display Central Time as CST/CDT and registration links are intact.
-- [ ] Confirm price labels have explicit support; omitted prices make no free-admission claim.
-- [ ] Review the full and compact captions, character counts and any editorial exceptions.
-- [ ] Accept the below-target advisory if applicable; do not add future or unapproved events.
-- [ ] Recheck current event status/links as appropriate before manual publication.
-- [ ] Explicitly approve the chosen final caption, then manually publish to LinkedIn.
+- [ ] Confirm this is the intended Sunday–Saturday period.
+- [ ] Read titles, hosts, descriptions, dates/times (Central, CST/CDT) and pricing labels.
+- [ ] Spot-check registration links; the editorial report lists the live check result for each event.
+- [ ] Review advisories (below target, pricing not listed, unresolved events).
+- [ ] Choose the full or compact caption and publish manually on LinkedIn.
 
-Final reviewer: ______  Decision (approve / hold / reject): ______  Time: ______
+Decision (publish / hold / revise): ______  Time: ______

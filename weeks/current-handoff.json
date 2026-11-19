@@ -1,0 +1,86 @@
+{
+  "advisories": [
+    "BELOW_TARGET: 2 eligible events (target 8–12); no events were added from other weeks."
+  ],
+  "as_of": "2026-11-24",
+  "character_counts": {
+    "compact": 913,
+    "full": 1162,
+    "limit": 3000,
+    "working_budget": 2800
+  },
+  "compact_post_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post-compact.md",
+  "editorial_exceptions": [],
+  "event_count": 2,
+  "event_warnings": [
+    {
+      "event_id": "evt_1b02f4289e55abe4",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+      "warnings": [
+        "description_variants_between_agents (canonical description used)",
+        "pricing_not_listed"
+      ]
+    }
+  ],
+  "generated_at": "2026-11-19T04:36:55+00:00",
+  "generated_on_local_date": "2026-11-18",
+  "notice": "Mechanical validation is not publication approval. Eddie reviews and publishes manually.",
+  "post_raw_url": "https://raw.githubusercontent.com/ebrasher22-creator/ld-virtual-events-roundup/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post.md",
+  "post_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/linkedin-post.md",
+  "publication_approval_status": "awaiting_final_human_review",
+  "qualification_mode": "automated_no_per_event_human_approval",
+  "readiness_label": "READY WITH WARNINGS",
+  "readiness_status": "ready_with_warnings",
+  "registration_check_results": {
+    "confirmed": 2,
+    "event_details_unconfirmed": 5
+  },
+  "report_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/blob/main/weeks/2026/RW49_2026-11-29_to_2026-12-05/editorial-report.json",
+  "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
+  "source_commit": "35b941ad5670837c42ffd2bdbef65e4e91fe01f6",
+  "unresolved_events": [
+    {
+      "event_id": "evt_004e21d3ac8f32b8",
+      "reasons": [
+        "owner_deferred: P9 explicitly deferred by owner on 2026-11-18 (CCL: How Collective Energy Shapes Performance). Remove this entry to let automated qualification evaluate it.",
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "How Collective Energy Shapes Performance"
+    },
+    {
+      "event_id": "evt_3f2f090963c7e1d0",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "event_id": "evt_5b0c2b55e8407e36",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "[Leader Talk] The 2027 Learning Experience"
+    },
+    {
+      "event_id": "evt_97f33fc975aae3f7",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "How ISTE+ASCD transformed educator professional learning"
+    },
+    {
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "2027 Planning Sprint"
+    }
+  ],
+  "within_character_limit": true,
+  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44459512006"
+}

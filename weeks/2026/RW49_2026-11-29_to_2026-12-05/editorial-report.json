@@ -1,32 +1,74 @@
 {
   "above_target": false,
   "advisories": [
-    "BELOW_TARGET: shorter roundup permitted; do not fill from other weeks."
+    "BELOW_TARGET: 2 eligible events (target 8–12); no events were added from other weeks."
   ],
-  "approval_blockers": [],
   "artifact_relative_path": "weeks/2026/RW49_2026-11-29_to_2026-12-05",
   "as_of": "2026-11-24",
   "below_target": true,
-  "canonical_sha256": "b44094a56c407560ae34d82311f3d5f76250d1b097325dd5a776ec79294e23b2",
+  "canonical_sha256": "f5c1ad243a75fd6eabfdbf3c93b9cbeb0fcfc9aaec74e6f2742d40f955cff6a9",
   "caption_strategy": "full",
   "character_counts": {
-    "compact": 1246,
-    "full": 1369,
-    "limit": 3000
+    "compact": 913,
+    "full": 1162,
+    "limit": 3000,
+    "working_budget": 2800
   },
+  "descriptions_included": true,
   "editorial_exceptions": [],
+  "event_warnings": [
+    {
+      "event_id": "evt_1b02f4289e55abe4",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+      "warnings": [
+        "description_variants_between_agents (canonical description used)",
+        "pricing_not_listed"
+      ]
+    }
+  ],
   "events_excluded": [
     {
+      "all_reasons": [
+        "owner_deferred: P9 explicitly deferred by owner on 2026-11-18 (CCL: How Collective Energy Shapes Performance). Remove this entry to let automated qualification evaluate it.",
+        "registration_check:event_details_unconfirmed"
+      ],
       "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
       "event_id": "evt_004e21d3ac8f32b8",
-      "reason": "missing_or_stale_approval",
+      "reason": "owner_deferred: P9 explicitly deferred by owner on 2026-11-18 (CCL: How Collective Energy Shapes Performance). Remove this entry to let automated qualification evaluate it.",
       "title": "How Collective Energy Shapes Performance"
+    },
+    {
+      "all_reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "event_id": "evt_3f2f090963c7e1d0",
+      "reason": "registration_check:event_details_unconfirmed",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "all_reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "event_id": "evt_5b0c2b55e8407e36",
+      "reason": "registration_check:event_details_unconfirmed",
+      "title": "[Leader Talk] The 2027 Learning Experience"
     },
     {
       "assigned_week": "2027/RW04_2027-01-24_to_2027-01-30",
       "event_id": "evt_8f29d1a3deb28dec",
       "reason": "outside_target_week",
       "title": "[Leader Talk] L&D Strategy for Business Results in 2027"
+    },
+    {
+      "all_reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "event_id": "evt_97f33fc975aae3f7",
+      "reason": "registration_check:event_details_unconfirmed",
+      "title": "How ISTE+ASCD transformed educator professional learning"
     },
     {
       "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
@@ -47,6 +89,15 @@
       "title": "[Research Spotlight] Better Leaders by Design: Updating L&D’s Approach to Leadership Development"
     },
     {
+      "all_reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "assigned_week": "2026/RW49_2026-11-29_to_2026-12-05",
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "reason": "registration_check:event_details_unconfirmed",
+      "title": "2027 Planning Sprint"
+    },
+    {
       "assigned_week": "2026/RW50_2026-12-06_to_2026-12-12",
       "event_id": "evt_fb9c960a4c6a704d",
       "reason": "outside_target_week",
@@ -55,71 +106,200 @@
   ],
   "events_included": [
     {
-      "event_id": "evt_f1f0bd8d082f4b90",
-      "record_sha256": "6f45e3359d8a6c66f3bbcf0e0c9ea14400d9d4210e7efde7b620b8eaf89d7acf",
-      "title": "2027 Planning Sprint"
-    },
-    {
-      "event_id": "evt_3f2f090963c7e1d0",
-      "record_sha256": "f2b5a5aae63afb5787c493625ba78570a57f5d2c91049b5a1eee1bcb2702b71c",
-      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
-    },
-    {
       "event_id": "evt_1b02f4289e55abe4",
-      "record_sha256": "25d07b2e776b43b4b7082e9a573dc34c45f1d49e9163e669b1544cafe3b58fe7",
+      "pricing_label": "Pricing not listed",
+      "record_sha256": "acfb7bf0b7acbdeec67aabc51be9bc6f818ffd8a8fea4f9cca6f5e866ae6105c",
       "title": "Renovate Your Instructional Design Process: A Blueprint for Success"
     },
     {
       "event_id": "evt_7c9ea52644b1eb38",
+      "pricing_label": "Free",
       "record_sha256": "4e1f30b2f196f686c2f767f1e7ca8140e0c8eef9517811c74a1f95ae8ade8d3a",
       "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
-    },
-    {
-      "event_id": "evt_5b0c2b55e8407e36",
-      "record_sha256": "44b2bbb5a116165bd9c34f7f4ed8dd9dbfe09620b396174fa52f4c753b78eabe",
-      "title": "[Leader Talk] The 2027 Learning Experience"
     }
   ],
-  "generated_at": "2026-11-18T20:06:40+00:00",
+  "generated_at": "2026-11-19T04:36:55+00:00",
   "missing_optional_pricing": [
-    {
-      "event_id": "evt_f1f0bd8d082f4b90",
-      "original_price_type": "free",
-      "reason": "unknown_or_not_separately_confirmed",
-      "title": "2027 Planning Sprint"
-    },
-    {
-      "event_id": "evt_3f2f090963c7e1d0",
-      "original_price_type": "free",
-      "reason": "unknown_or_not_separately_confirmed",
-      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
-    },
     {
       "event_id": "evt_1b02f4289e55abe4",
       "original_price_type": "free",
-      "reason": "unknown_or_not_separately_confirmed",
       "title": "Renovate Your Instructional Design Process: A Blueprint for Success"
-    },
-    {
-      "event_id": "evt_7c9ea52644b1eb38",
-      "original_price_type": "free",
-      "reason": "unknown_or_not_separately_confirmed",
-      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members"
-    },
-    {
-      "event_id": "evt_5b0c2b55e8407e36",
-      "original_price_type": "free",
-      "reason": "unknown_or_not_separately_confirmed",
-      "title": "[Leader Talk] The 2027 Learning Experience"
     }
   ],
   "publication_approval_status": "awaiting_final_human_review",
-  "reviews_sha256": "1fa239442924f8d513593143fa466df3b184713e520ea2a2aa68bb5522f355d7",
+  "qualification_mode": "automated_no_per_event_human_approval",
+  "qualification_outcomes": [
+    {
+      "discovered_by": [
+        "gemini"
+      ],
+      "eligible": false,
+      "event_id": "evt_004e21d3ac8f32b8",
+      "pricing_label": "Pricing not listed",
+      "problems": [
+        "owner_deferred: P9 explicitly deferred by owner on 2026-11-18 (CCL: How Collective Energy Shapes Performance). Remove this entry to let automated qualification evaluate it.",
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "registration_checked_at": "2026-11-19T04:36:51+00:00",
+      "title": "How Collective Energy Shapes Performance",
+      "warnings": [
+        "pricing_not_listed"
+      ]
+    },
+    {
+      "discovered_by": [
+        "chatgpt"
+      ],
+      "eligible": true,
+      "event_id": "evt_1b02f4289e55abe4",
+      "pricing_label": "Pricing not listed",
+      "problems": [],
+      "registration_check": "confirmed",
+      "registration_checked_at": "2026-11-19T04:36:52+00:00",
+      "title": "Renovate Your Instructional Design Process: A Blueprint for Success",
+      "warnings": [
+        "description_variants_between_agents (canonical description used)",
+        "pricing_not_listed"
+      ]
+    },
+    {
+      "discovered_by": [
+        "chatgpt",
+        "gemini"
+      ],
+      "eligible": false,
+      "event_id": "evt_3f2f090963c7e1d0",
+      "pricing_label": "Pricing not listed",
+      "problems": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "registration_checked_at": "2026-11-19T04:36:53+00:00",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities",
+      "warnings": [
+        "description_variants_between_agents (canonical description used)",
+        "pricing_not_listed"
+      ]
+    },
+    {
+      "discovered_by": [
+        "chatgpt",
+        "gemini"
+      ],
+      "eligible": false,
+      "event_id": "evt_5b0c2b55e8407e36",
+      "pricing_label": "Pricing not listed",
+      "problems": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "registration_checked_at": "2026-11-19T04:36:53+00:00",
+      "title": "[Leader Talk] The 2027 Learning Experience",
+      "warnings": [
+        "description_variants_between_agents (canonical description used)",
+        "pricing_not_listed"
+      ]
+    },
+    {
+      "discovered_by": [
+        "chatgpt"
+      ],
+      "eligible": true,
+      "event_id": "evt_7c9ea52644b1eb38",
+      "pricing_label": "Free",
+      "problems": [],
+      "registration_check": "confirmed",
+      "registration_checked_at": "2026-11-19T04:36:53+00:00",
+      "title": "Trauma-Informed Leadership: Balancing Support and Accountability for Struggling Team Members",
+      "warnings": []
+    },
+    {
+      "discovered_by": [
+        "chatgpt"
+      ],
+      "eligible": false,
+      "event_id": "evt_97f33fc975aae3f7",
+      "pricing_label": "Pricing not listed",
+      "problems": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "registration_checked_at": "2026-11-19T04:36:54+00:00",
+      "title": "How ISTE+ASCD transformed educator professional learning",
+      "warnings": [
+        "pricing_not_listed"
+      ]
+    },
+    {
+      "discovered_by": [
+        "chatgpt"
+      ],
+      "eligible": false,
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "pricing_label": "Pricing not listed",
+      "problems": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "registration_checked_at": "2026-11-19T04:36:55+00:00",
+      "title": "2027 Planning Sprint",
+      "warnings": [
+        "pricing_not_listed"
+      ]
+    }
+  ],
+  "readiness_status": "ready_with_warnings",
+  "registration_checks_sha256": "346d696fc3dbe9a2ba1483c935e55f8277d395dce7fa393331a120477a5c23c4",
   "roundup_identifier": "2026/RW49_2026-11-29_to_2026-12-05",
-  "source_commit": "ce2a301c73365ce9c30d5ca50b566a69a4007ed3",
+  "source_commit": "35b941ad5670837c42ffd2bdbef65e4e91fe01f6",
   "target_max": 12,
   "target_min": 8,
-  "total_approved_events_for_target_week": 5,
+  "total_eligible_events_for_target_week": 2,
+  "total_qualified_candidates": 2,
+  "unresolved_events": [
+    {
+      "event_id": "evt_004e21d3ac8f32b8",
+      "reasons": [
+        "owner_deferred: P9 explicitly deferred by owner on 2026-11-18 (CCL: How Collective Energy Shapes Performance). Remove this entry to let automated qualification evaluate it.",
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "How Collective Energy Shapes Performance"
+    },
+    {
+      "event_id": "evt_3f2f090963c7e1d0",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "L&D as a Conductor: Orchestrating People, AI, and Business Priorities"
+    },
+    {
+      "event_id": "evt_5b0c2b55e8407e36",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "[Leader Talk] The 2027 Learning Experience"
+    },
+    {
+      "event_id": "evt_97f33fc975aae3f7",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "How ISTE+ASCD transformed educator professional learning"
+    },
+    {
+      "event_id": "evt_f1f0bd8d082f4b90",
+      "reasons": [
+        "registration_check:event_details_unconfirmed"
+      ],
+      "registration_check": "event_details_unconfirmed",
+      "title": "2027 Planning Sprint"
+    }
+  ],
   "within_character_limit": true,
-  "workflow_run_url": null
+  "workflow_run_url": "https://github.com/ebrasher22-creator/ld-virtual-events-roundup/actions/runs/44459512006"
 }
