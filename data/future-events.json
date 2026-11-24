@@ -1,6 +1,119 @@
 [
   {
     "audience": [
+      "Learning and development professionals",
+      "Talent development leaders"
+    ],
+    "conflict_flags": [],
+    "cost": null,
+    "discovered_at": "2026-11-24T13:00:41Z",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-09T13:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_439acdda2cad11eb",
+    "event_url": "https://tdmaryland.org/event-6907191",
+    "evidence": [
+      {
+        "claim": "date",
+        "excerpt": "Wednesday, December 09, 2026",
+        "source_url": "https://tdmaryland.org/event-6907191"
+      },
+      {
+        "claim": "start_datetime",
+        "excerpt": "2026-12-09T17:00:00Z",
+        "source_url": "https://tdmaryland.org/event-6907191"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Virtual",
+        "source_url": "https://tdmaryland.org/event-6907191"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "ATD Maryland",
+    "price_type": "unknown",
+    "registration_aliases": [
+      "https://tdmaryland.org/event-6907191/Registration"
+    ],
+    "registration_url": "https://tdmaryland.org/event-6907191/Registration",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://tdmaryland.org/event-6907191",
+      "https://tdmaryland.org/event-6907191/Registration"
+    ],
+    "start_datetime": "2026-12-09T12:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-24.json",
+        "raw": {
+          "audience": [
+            "Learning and development professionals",
+            "Talent development leaders"
+          ],
+          "cost": null,
+          "discovered_at": "2026-11-24T13:00:41Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-09T13:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://tdmaryland.org/event-6907191",
+          "evidence": [
+            {
+              "claim": "date",
+              "excerpt": "Wednesday, December 09, 2026",
+              "source_url": "https://tdmaryland.org/event-6907191"
+            },
+            {
+              "claim": "start_datetime",
+              "excerpt": "2026-12-09T17:00:00Z",
+              "source_url": "https://tdmaryland.org/event-6907191"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Virtual",
+              "source_url": "https://tdmaryland.org/event-6907191"
+            }
+          ],
+          "language": "English",
+          "organizer": "ATD Maryland",
+          "price_type": "unknown",
+          "registration_url": "https://tdmaryland.org/event-6907191/Registration",
+          "source_urls": [
+            "https://tdmaryland.org/event-6907191",
+            "https://tdmaryland.org/event-6907191/Registration"
+          ],
+          "start_datetime": "2026-12-09T12:00:00-05:00",
+          "summary": "Leidos learning leader Gretchen Ringer describes how the organization is building a skills taxonomy, expanding technical upskilling, and using skills information to support internal mobility.",
+          "timezone": "America/New_York",
+          "title": "Employee Learning Week (ELW) - From Learning to Skills: Leidos' Journey Toward a Skills-Based Organization",
+          "topics": [
+            "Skills-based organizations",
+            "Upskilling",
+            "Career mobility"
+          ]
+        },
+        "sha256": "70a49d0a3099c4c2ada306b95bd05435158d3fe22ca94aba7a9d5ccbe74fa11d"
+      }
+    ],
+    "summary": "Leidos learning leader Gretchen Ringer describes how the organization is building a skills taxonomy, expanding technical upskilling, and using skills information to support internal mobility.",
+    "timezone": "America/New_York",
+    "title": "Employee Learning Week (ELW) - From Learning to Skills: Leidos' Journey Toward a Skills-Based Organization",
+    "topics": [
+      "Skills-based organizations",
+      "Upskilling",
+      "Career mobility"
+    ],
+    "updated_at": "2026-11-24T13:00:41Z",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
       "L&D executives and directors",
       "Learning strategy leaders",
       "Talent development managers"
@@ -461,6 +574,127 @@
       "Corporate training delivery"
     ],
     "updated_at": "2026-11-18T14:20:03-06:00",
+    "verification_status": "pending"
+  },
+  {
+    "audience": [
+      "Learning leaders",
+      "Learning strategy professionals"
+    ],
+    "conflict_flags": [],
+    "cost": 0,
+    "discovered_at": "2026-11-24T13:00:41Z",
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "editorial_score": 0,
+    "editorial_status": "pending",
+    "end_datetime": "2026-12-08T14:00:00-05:00",
+    "event_format": "virtual",
+    "event_id": "evt_e0b524ff4f54cdb8",
+    "event_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy",
+    "evidence": [
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 8 @ 1:00 pm – 2:00 pm EST",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Virtual Event",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      },
+      {
+        "claim": "price",
+        "excerpt": "Free",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "RSVP Here",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      }
+    ],
+    "language": "English",
+    "last_verified_at": null,
+    "organizer": "Learning Guild",
+    "price_type": "free",
+    "registration_aliases": [
+      "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+    ],
+    "registration_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy",
+    "roundup_week": "2026/RW50_2026-12-06_to_2026-12-12",
+    "source_urls": [
+      "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+    ],
+    "start_datetime": "2026-12-08T13:00:00-05:00",
+    "submissions": [
+      {
+        "file": "intake/chatgpt/chatgpt-2026-11-24.json",
+        "raw": {
+          "audience": [
+            "Learning leaders",
+            "Learning strategy professionals"
+          ],
+          "cost": 0,
+          "discovered_at": "2026-11-24T13:00:41Z",
+          "discovered_by": [
+            "chatgpt"
+          ],
+          "end_datetime": "2026-12-08T14:00:00-05:00",
+          "event_format": "virtual",
+          "event_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy",
+          "evidence": [
+            {
+              "claim": "start_datetime",
+              "excerpt": "December 8 @ 1:00 pm – 2:00 pm EST",
+              "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+            },
+            {
+              "claim": "event_format",
+              "excerpt": "Virtual Event",
+              "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+            },
+            {
+              "claim": "price",
+              "excerpt": "Free",
+              "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+            },
+            {
+              "claim": "registration_url",
+              "excerpt": "RSVP Here",
+              "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+            }
+          ],
+          "language": "English",
+          "organizer": "Learning Guild",
+          "price_type": "free",
+          "registration_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy",
+          "source_urls": [
+            "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+          ],
+          "start_datetime": "2026-12-08T13:00:00-05:00",
+          "summary": "A panel with Thinkific and Articulate discusses how learning teams can connect content and AI investment decisions to business outcomes and measure the return.",
+          "timezone": "America/New_York",
+          "title": "The Learning Business Playbook: Content, AI, and Revenue in One Strategy",
+          "topics": [
+            "Learning strategy",
+            "AI in learning",
+            "Learning ROI"
+          ]
+        },
+        "sha256": "7e1724527232c40eabae014f485bdd836fb81525bda74c6cc2fac8a5edbc0bdf"
+      }
+    ],
+    "summary": "A panel with Thinkific and Articulate discusses how learning teams can connect content and AI investment decisions to business outcomes and measure the return.",
+    "timezone": "America/New_York",
+    "title": "The Learning Business Playbook: Content, AI, and Revenue in One Strategy",
+    "topics": [
+      "Learning strategy",
+      "AI in learning",
+      "Learning ROI"
+    ],
+    "updated_at": "2026-11-24T13:00:41Z",
     "verification_status": "pending"
   },
   {
