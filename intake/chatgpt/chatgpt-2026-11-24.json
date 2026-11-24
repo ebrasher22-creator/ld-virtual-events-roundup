@@ -1,0 +1,155 @@
+[
+  {
+    "title": "(Virtual) Workshop: Strategic Learning Architect - Driving Performance in the Age of AI",
+    "organizer": "ATD St. Louis",
+    "event_url": "https://www.atdstl.org/event-6525033",
+    "registration_url": "https://www.atdstl.org/event-6525033/Registration",
+    "start_datetime": "2026-12-02T11:00:00-06:00",
+    "end_datetime": "2026-12-02T13:00:00-06:00",
+    "timezone": "America/Chicago",
+    "event_format": "virtual",
+    "language": "English",
+    "price_type": "paid",
+    "cost": 69,
+    "summary": "Debbie Richards leads a workshop on AI-assisted learning design, diagnosing performance problems, and using professional judgment to connect learning work to business priorities.",
+    "audience": [
+      "Talent development professionals",
+      "Instructional designers"
+    ],
+    "topics": [
+      "Learning strategy",
+      "Performance improvement",
+      "AI in learning"
+    ],
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "source_urls": [
+      "https://www.atdstl.org/event-6525033",
+      "https://www.atdstl.org/event-6525033/Registration"
+    ],
+    "discovered_at": "2026-11-24T13:00:41Z",
+    "evidence": [
+      {
+        "claim": "date",
+        "excerpt": "02 Dec 2026",
+        "source_url": "https://www.atdstl.org/event-6525033"
+      },
+      {
+        "claim": "start_datetime",
+        "excerpt": "2026-12-02T17:00:00Z",
+        "source_url": "https://www.atdstl.org/event-6525033"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Zoom",
+        "source_url": "https://www.atdstl.org/event-6525033"
+      },
+      {
+        "claim": "price",
+        "excerpt": "Non-Member/Guest – $69.00",
+        "source_url": "https://www.atdstl.org/event-6525033"
+      }
+    ]
+  },
+  {
+    "title": "Employee Learning Week (ELW) - From Learning to Skills: Leidos' Journey Toward a Skills-Based Organization",
+    "organizer": "ATD Maryland",
+    "event_url": "https://tdmaryland.org/event-6907191",
+    "registration_url": "https://tdmaryland.org/event-6907191/Registration",
+    "start_datetime": "2026-12-09T12:00:00-05:00",
+    "end_datetime": "2026-12-09T13:00:00-05:00",
+    "timezone": "America/New_York",
+    "event_format": "virtual",
+    "language": "English",
+    "price_type": "unknown",
+    "cost": null,
+    "summary": "Leidos learning leader Gretchen Ringer describes how the organization is building a skills taxonomy, expanding technical upskilling, and using skills information to support internal mobility.",
+    "audience": [
+      "Learning and development professionals",
+      "Talent development leaders"
+    ],
+    "topics": [
+      "Skills-based organizations",
+      "Upskilling",
+      "Career mobility"
+    ],
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "source_urls": [
+      "https://tdmaryland.org/event-6907191",
+      "https://tdmaryland.org/event-6907191/Registration"
+    ],
+    "discovered_at": "2026-11-24T13:00:41Z",
+    "evidence": [
+      {
+        "claim": "date",
+        "excerpt": "Wednesday, December 09, 2026",
+        "source_url": "https://tdmaryland.org/event-6907191"
+      },
+      {
+        "claim": "start_datetime",
+        "excerpt": "2026-12-09T17:00:00Z",
+        "source_url": "https://tdmaryland.org/event-6907191"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Virtual",
+        "source_url": "https://tdmaryland.org/event-6907191"
+      }
+    ]
+  },
+  {
+    "title": "The Learning Business Playbook: Content, AI, and Revenue in One Strategy",
+    "organizer": "Learning Guild",
+    "event_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy",
+    "registration_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy",
+    "start_datetime": "2026-12-08T13:00:00-05:00",
+    "end_datetime": "2026-12-08T14:00:00-05:00",
+    "timezone": "America/New_York",
+    "event_format": "virtual",
+    "language": "English",
+    "price_type": "free",
+    "cost": 0,
+    "summary": "A panel with Thinkific and Articulate discusses how learning teams can connect content and AI investment decisions to business outcomes and measure the return.",
+    "audience": [
+      "Learning leaders",
+      "Learning strategy professionals"
+    ],
+    "topics": [
+      "Learning strategy",
+      "AI in learning",
+      "Learning ROI"
+    ],
+    "discovered_by": [
+      "chatgpt"
+    ],
+    "source_urls": [
+      "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+    ],
+    "discovered_at": "2026-11-24T13:00:41Z",
+    "evidence": [
+      {
+        "claim": "start_datetime",
+        "excerpt": "December 8 @ 1:00 pm – 2:00 pm EST",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      },
+      {
+        "claim": "event_format",
+        "excerpt": "Virtual Event",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      },
+      {
+        "claim": "price",
+        "excerpt": "Free",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      },
+      {
+        "claim": "registration_url",
+        "excerpt": "RSVP Here",
+        "source_url": "https://www.learningguild.com/event/the-learning-business-playbook-content-ai-and-revenue-in-one-strategy"
+      }
+    ]
+  }
+]
